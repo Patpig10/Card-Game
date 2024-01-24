@@ -16,7 +16,7 @@ public class PlayerHp : MonoBehaviour
     void Start()
     {
         maxHp = 25000;
-        staticHp = 500;
+        staticHp = 25000;
     }
 
     // Update is called once per frame

@@ -418,6 +418,37 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &3489130558585911867
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4518463168375870439}
+  m_Layer: 0
+  m_Name: tbm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4518463168375870439
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3489130558585911867}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -408.01965, y: 265.83032, z: 0.1788297}
+  m_LocalScale: {x: 1.0153521, y: 1.0153521, z: 1.0153521}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2775509763007370127}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3686903845662346786
 GameObject:
   m_ObjectHideFlags: 0
@@ -801,6 +832,7 @@ RectTransform:
   - {fileID: 5405263548321541218}
   - {fileID: 6918763830821961737}
   - {fileID: 6711469541021098578}
+  - {fileID: 4518463168375870439}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -877,6 +909,17 @@ MonoBehaviour:
   canBeSummon: 0
   summoned: 0
   battleZone: {fileID: 0}
+  drawXcards: 0
+  addXmaxGil: 0
+  attackBorder: {fileID: 3489130558585911867}
+  Target: {fileID: 0}
+  Enemy: {fileID: 0}
+  summoningSickness: 0
+  cantAttack: 0
+  canAttack: 0
+  targeting: 0
+  targetingEnemy: 0
+  onlyThisCardAttack: 0
 --- !u!114 &8165409430906034498
 MonoBehaviour:
   m_ObjectHideFlags: 0

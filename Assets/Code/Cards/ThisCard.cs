@@ -39,6 +39,21 @@ public class ThisCard : MonoBehaviour
     public static int drawX;
     public int drawXcards;
     public int addXmaxGil;
+
+    public GameObject attackBorder;
+    public GameObject Target;
+    public GameObject Enemy;
+    public bool summoningSickness;
+    public bool cantAttack;
+    public bool canAttack;
+    public static bool staticTargeting;
+    public static bool staticTargetingEnemy;
+
+    public bool targeting;
+    public bool targetingEnemy;
+
+    public bool onlyThisCardAttack;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -49,6 +64,14 @@ public class ThisCard : MonoBehaviour
         summoned = false;
 
         drawX = 0;
+
+        canAttack = false;
+        summoningSickness = true;
+        Enemy = GameObject.Find("Enemy HP");
+        targeting = false;
+        targetingEnemy = false;
+
+
     }
 
     // Update is called once per frame
@@ -127,6 +150,45 @@ public class ThisCard : MonoBehaviour
             }
         }
 
+        if(canAttack == true)
+        {
+            attackBorder.SetActive(true);
+        }
+        else
+        {
+            attackBorder.SetActive(false);
+        }
+
+        if(TurnSystem.isYourTurn == false && summoned == true)
+        {
+            summoningSickness = false;
+            cantAttack = false;
+        }
+
+        if(TurnSystem.isYourTurn == true && summoningSickness == false && cantAttack == false)
+        {
+            canAttack = true;
+        }
+        else
+        {
+            canAttack = false;
+        }
+        targeting = staticTargeting;
+        targetingEnemy = staticTargetingEnemy;
+
+        if(targetingEnemy == true)
+        {
+            Target = Enemy;
+        }
+        else
+        {
+            Target = null;
+        }
+
+        if(targeting == true && targetingEnemy == true && onlyThisCardAttack == true)
+        {
+            Attack();
+        }
 
         
     }
@@ -149,5 +211,60 @@ public class ThisCard : MonoBehaviour
         powerText.text = power.ToString();
         descriptionText.text = cardDescription;
         thatImage.sprite = thisSprite;
+    }
+    public void Attack()
+    {
+
+        if(canAttack == true) 
+        {
+          if(Target != null)
+            {
+                if(Target == Enemy)
+                {
+
+                    EnemyHp.staticHp -= power;
+                    targeting = false;
+                    cantAttack = true;
+
+                }
+
+                if (Target.name == "CardToHand(Clone)")
+                {
+                     canAttack = true;
+                }
+            }
+        
+        
+        }
+
+
+    }
+    public void UntargetEnemy()
+    {
+        staticTargetingEnemy = false;
+    }
+    public void TargetEnemy()
+    {
+        staticTargetingEnemy = true;
+    }
+
+    public void StartAttack()
+    {
+        staticTargeting = true;
+    }
+
+    public void StopAttack()
+    {
+        staticTargeting = false;
+
+    }
+    public void OneCardAttack()
+    {
+        onlyThisCardAttack = true;
+    }
+    public void OneCardAttackStop()
+    {
+        onlyThisCardAttack = false;
+
     }
 }

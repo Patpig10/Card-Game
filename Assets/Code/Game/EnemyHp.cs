@@ -15,7 +15,7 @@ public class EnemyHp : MonoBehaviour
     void Start()
     {
         maxHp = 25000;
-        staticHp = 15000;
+        staticHp = 25000;
     }
 
     // Update is called once per frame
