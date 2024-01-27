@@ -16,6 +16,11 @@ public class Card
     public Sprite thisImage;
 
     public string color;
+
+    public int returnXcards;
+
+    public int healXpower;
+    public int boostXpower;
     // Start is called before the first frame update
     public Card()
     {
@@ -23,7 +28,7 @@ public class Card
     }
 
     // Update is called once per frame
-    public Card(int ID, string CardName, int Cost, int Power, string CardDescription, Sprite ThisImage, string Color, int DrawXCards, int AddXmaxGil)
+    public Card(int ID, string CardName, int Cost, int Power, string CardDescription, Sprite ThisImage, string Color, int DrawXCards, int AddXmaxGil, int ReturnXcards, int HealXpower,int BoostXpower)
     {
         id = ID;
         cardName = CardName;
@@ -35,5 +40,8 @@ public class Card
         color = Color;
         drawXcards = DrawXCards;
         addXmaxGil = AddXmaxGil;
+        returnXcards = ReturnXcards;
+        healXpower = HealXpower;
+        boostXpower = BoostXpower;
     }
 }

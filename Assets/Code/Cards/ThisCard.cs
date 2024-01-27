@@ -54,12 +54,30 @@ public class ThisCard : MonoBehaviour
 
     public bool onlyThisCardAttack;
 
+    public GameObject summonBorder;
+
+    public bool canBeDestroyed;
+    public GameObject Graveyard;
+    public bool beInGraveyard;
+    public int hurted;
+    public int actualpower;
+    public int returnXcards;
+    public bool useReturn;
+
+    public static bool UcanReturn;
+    public int healXpower;
+    public bool canHeal;
+
+    public int boostXpower;
+    public bool canBoost;
     // Start is called before the first frame update
     void Start()
     {
         CardBackScript = GetComponent<CardBack>();
         thisCardList.Add(CardDataBase.cardList[Random.Range(1, CardDataBase.cardList.Count)]);
-        UpdateUI();
+        thatImage.sprite = thisCardList[0].thisImage;
+
+        //UpdateUI();
         canBeSummon = false;
         summoned = false;
 
@@ -70,8 +88,9 @@ public class ThisCard : MonoBehaviour
         Enemy = GameObject.Find("Enemy HP");
         targeting = false;
         targetingEnemy = false;
-
-
+        beInGraveyard = false;
+        canHeal = true;
+        canBoost = true;
     }
 
     // Update is called once per frame
@@ -86,13 +105,16 @@ public class ThisCard : MonoBehaviour
         id = thisCardList[0].id;
         cardName = thisCardList[0].cardName;
         cost = thisCardList[0].cost;
+        actualpower = power - hurted;
         power = thisCardList[0].power;
         cardDescription = thisCardList[0].cardDescription;
         thisSprite = thisCardList[0].thisImage;
 
         drawXcards = thisCardList[0].drawXcards;
         addXmaxGil = thisCardList[0].addXmaxGil;
-
+        returnXcards = thisCardList[0].returnXcards;
+        healXpower = thisCardList[0].healXpower;
+        boostXpower = thisCardList[0].boostXpower;
         // Check for color condition using the color property of the Card class
         if (thisCardList[0].color == "White")
         {
@@ -124,7 +146,7 @@ public class ThisCard : MonoBehaviour
         }
         if (this.tag != "Clone")
         {
-            if (TurnSystem.currentGil >= cost && !summoned)
+            if (TurnSystem.currentGil >= cost && summoned == false && beInGraveyard == false)
             {
                 canBeSummon = true;
             }
@@ -150,7 +172,7 @@ public class ThisCard : MonoBehaviour
             }
         }
 
-        if(canAttack == true)
+        if(canAttack == true && beInGraveyard == false)
         {
             attackBorder.SetActive(true);
         }
@@ -190,7 +212,46 @@ public class ThisCard : MonoBehaviour
             Attack();
         }
 
+        if(canBeSummon == true || UcanReturn == true && beInGraveyard == true) 
+        { 
+            summonBorder.SetActive(true);
         
+        
+        }
+        else
+        { 
+            summonBorder.SetActive(false);
+        }
+
+        if(actualpower <= 0)
+        {
+            Destroy();
+            canBeDestroyed = true;
+        }
+        if(returnXcards >=0 && summoned == true && useReturn == false)
+        {
+            Return(returnXcards);
+            useReturn = true;
+        }
+        if(TurnSystem.isYourTurn == false)
+        {
+            UcanReturn = false;
+        }
+        
+        if(canHeal == true && summoned == true)
+        {
+            Heal();
+            canHeal = false;
+        }
+
+        if(canBoost == true && summoned == true)
+        {
+            AttackBoost();
+           // canBoost = false;
+        }
+
+
+
     }
     public void Summon()
     {
@@ -206,16 +267,17 @@ public class ThisCard : MonoBehaviour
     }
     void UpdateUI()
     {
+
         nameText.text = cardName;
         costText.text = cost.ToString();
-        powerText.text = power.ToString();
+        powerText.text = actualpower.ToString();
         descriptionText.text = cardDescription;
         thatImage.sprite = thisSprite;
     }
     public void Attack()
     {
 
-        if(canAttack == true) 
+        if(canAttack == true && summoned == true) 
         {
           if(Target != null)
             {
@@ -267,4 +329,56 @@ public class ThisCard : MonoBehaviour
         onlyThisCardAttack = false;
 
     }
+
+    public void Destroy()
+    {
+        Graveyard = GameObject.Find("MyGraveyard");
+
+        if(canBeDestroyed == true)
+        {
+            this.transform.SetParent(Graveyard.transform);
+            canBeDestroyed = false;
+            summoned = false;
+            beInGraveyard = true;
+
+            hurted = 0;
+        }
+    }
+
+    public void Return(int x)
+    {
+        for(int i = 0; i <= x; i++)
+        {
+            ReturnCard();
+        }
+    }
+    
+    public void ReturnCard()
+    {
+        UcanReturn = true;
+    }
+
+    public void ReturnThis()
+    {
+        if (beInGraveyard == true && UcanReturn == true && Graveyard.transform.childCount > 0)
+        {
+            this.transform.SetParent(Hand.transform);
+            UcanReturn = false;
+            beInGraveyard = false;
+            summoningSickness = true;
+        }
+    }
+
+    public void Heal()
+    {
+        PlayerHp.staticHp += healXpower;
+    }
+
+    public void AttackBoost()
+    {
+        power += boostXpower; // Update power first
+        actualpower = power - hurted; // Update actualpower after modifying power
+        UpdateUI();
+    }
+
 }

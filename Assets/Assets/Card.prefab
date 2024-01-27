@@ -920,6 +920,7 @@ MonoBehaviour:
   targeting: 0
   targetingEnemy: 0
   onlyThisCardAttack: 0
+  summonBorder: {fileID: 3489130558585911867}
 --- !u!114 &8165409430906034498
 MonoBehaviour:
   m_ObjectHideFlags: 0

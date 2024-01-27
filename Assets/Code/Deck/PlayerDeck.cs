@@ -24,6 +24,9 @@ public class PlayerDeck : MonoBehaviour
 
     public GameObject Hand;
 
+    // Reference to ThisCard script
+    public ThisCard thisCardScript;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +39,9 @@ public class PlayerDeck : MonoBehaviour
             x = Random.Range(1, 4);
             deck.Add(CardDataBase.cardList[x]);
         }
+
+        // Get reference to ThisCard script
+        thisCardScript = GetComponentInChildren<ThisCard>(); // Change this line
 
         StartCoroutine(StartGame());
     }
@@ -103,12 +109,21 @@ public class PlayerDeck : MonoBehaviour
             Card drawnCard = deck[deck.Count - 1];
             deck.RemoveAt(deck.Count - 1);
 
+            // Set the ID on the ThisCard script before instantiating
+            if (thisCardScript != null) // Add this check
+            {
+                thisCardScript.thisID = drawnCard.id;
+            }
+            else
+            {
+                Debug.LogError("thisCardScript is null");
+            }
+
             // Instantiate the CardToHand object
             Instantiate(CardToHand, transform.position, transform.rotation);
             deckSize--;
         }
     }
-
     public void Shuffle()
     {
         for (int i = 0; i < deckSize; i++)
