@@ -70,6 +70,8 @@ public class ThisCard : MonoBehaviour
 
     public int boostXpower;
     public bool canBoost;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -146,7 +148,7 @@ public class ThisCard : MonoBehaviour
         }
         if (this.tag != "Clone")
         {
-            if (TurnSystem.currentGil >= cost && summoned == false && beInGraveyard == false)
+            if (TurnSystem.currentGil >= cost && summoned == false && beInGraveyard == false && TurnSystem.isYourTurn ==true)
             {
                 canBeSummon = true;
             }
@@ -228,7 +230,7 @@ public class ThisCard : MonoBehaviour
             Destroy();
             canBeDestroyed = true;
         }
-        if(returnXcards >=0 && summoned == true && useReturn == false)
+        if(returnXcards >=0 && summoned == true && useReturn == false && TurnSystem.isYourTurn == true)
         {
             Return(returnXcards);
             useReturn = true;

@@ -101,7 +101,7 @@ public class PlayerDeck : MonoBehaviour
         }
     }
 
-    void DrawCardToHand()
+    public void DrawCardToHand()
     {
         if (deck.Count > 0)
         {
