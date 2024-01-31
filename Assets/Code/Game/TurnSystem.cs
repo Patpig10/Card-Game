@@ -24,7 +24,9 @@ public class TurnSystem : MonoBehaviour
     public int seconds;
     public bool timerStart;
     public Image timerImage; // Reference to the Image component for the timer fill.
-
+    public  static int maxEnemyGil;
+    public static int currentEnemyGil;
+    public TextMeshProUGUI enemyGilText;
     // Start is called before the first frame update
     void Start()
     {
@@ -84,6 +86,9 @@ public class TurnSystem : MonoBehaviour
         gilText.text = currentGil + "/" + maxGil;
         float fillAmount = (float)seconds / 60f; // Assuming 60 seconds
         timerImage.fillAmount = fillAmount;
+
+        enemyGilText.text = currentEnemyGil + "/" + maxEnemyGil;
+
     }
 
     public void EndYourTurn()
@@ -94,8 +99,12 @@ public class TurnSystem : MonoBehaviour
         yourTurn--;
         seconds = 60;
         // timerStart = true;
+        maxEnemyGil += 1;
+        currentEnemyGil = maxEnemyGil;
         StartCoroutine(EnemyTimer());
 
+
+        AI.draw = false;
     }
 
     public void EndYourOpponentTurn()
@@ -123,6 +132,8 @@ public class TurnSystem : MonoBehaviour
 
             maxGil = 1;
             currentGil = 1;
+            maxEnemyGil = 0;
+            currentEnemyGil = 0;
             startTurn = false;
         }
         if(random == 1)
@@ -130,10 +141,11 @@ public class TurnSystem : MonoBehaviour
             isYourTurn = false;
             yourTurn = 0;
             yourOpponentTurn = 1;
-
+            maxEnemyGil = 1;
+            currentEnemyGil = 1;
             maxGil = 0;
             currentGil = 0;
-            startTurn = true;
+            //startTurn = true;
         }
     }
 

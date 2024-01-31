@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class PlayerDeck : MonoBehaviour
 {
     public List<Card> deck = new List<Card>();
@@ -27,6 +27,9 @@ public class PlayerDeck : MonoBehaviour
     // Reference to ThisCard script
     public ThisCard thisCardScript;
 
+    public TextMeshProUGUI LoseText;
+
+    public GameObject LoseTextGameObject;
     // Start is called before the first frame update
     void Start()
     {
@@ -49,6 +52,14 @@ public class PlayerDeck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(deckSize <= 0)
+        {
+            LoseTextGameObject.SetActive(true);
+            LoseText.text = "Deck Out, You Lose";
+
+        }
+
+
         staticDeck = deck;
         if (deckSize < 30)
         {

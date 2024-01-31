@@ -570,6 +570,10 @@ MonoBehaviour:
   actualpower: 0
   returnXcards: 0
   useReturn: 0
+  healXpower: 0
+  canHeal: 0
+  boostXpower: 0
+  canBoost: 0
 --- !u!114 &3656087161273925857
 MonoBehaviour:
   m_ObjectHideFlags: 0
