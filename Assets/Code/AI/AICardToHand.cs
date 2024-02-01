@@ -7,10 +7,9 @@ using UnityEngine.UI;
 public class AICardToHand : MonoBehaviour
 {
 
-    private List<Card> thisCardList = new List<Card>();
-    public List<Card> cardsInHand = new List<Card>();
-    public static List<Card> cardsInHandStatic = new List<Card>();
-    public static int cardsInHandNumber;
+    public List<Card> thisCardList = new List<Card>();
+
+   
 
     public int thisID;
 
@@ -48,7 +47,6 @@ public class AICardToHand : MonoBehaviour
     void Start()
     {
 
-        cardsInHandStatic = cardsInHand;
 
 
         thisCardList.Add(CardDataBase.cardList[Random.Range(1, CardDataBase.cardList.Count)]);
@@ -108,8 +106,7 @@ public class AICardToHand : MonoBehaviour
 
         if (this.tag == "Deck")
         {
-            cardsInHand[cardsInHandNumber] = AI.staticEnemyDeck[numberOfCardsInDeck - 1];
-            cardsInHandNumber++;
+           
 
 
             thisCardList[0] = AI.staticEnemyDeck[numberOfCardsInDeck - 1];
@@ -118,13 +115,7 @@ public class AICardToHand : MonoBehaviour
             this.tag = "Untagged";
         }
         UpdateUI();
-        for(int i = 0; i < 40; i++)
-        {
-            if (cardsInHand[i].id !=0)
-            {
-                cardsInHandStatic[i] = cardsInHand[i];
-            }
-        }
+      
     }
     void UpdateUI()
     {
