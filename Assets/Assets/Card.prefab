@@ -921,6 +921,19 @@ MonoBehaviour:
   targetingEnemy: 0
   onlyThisCardAttack: 0
   summonBorder: {fileID: 3489130558585911867}
+  canBeDestroyed: 0
+  Graveyard: {fileID: 0}
+  beInGraveyard: 0
+  hurted: 0
+  actualpower: 0
+  returnXcards: 0
+  useReturn: 0
+  healXpower: 0
+  canHeal: 0
+  boostXpower: 0
+  canBoost: 0
+  EnemyZone: {fileID: 0}
+  aiCardToHand: {fileID: 2339499335537532960, guid: 284dd9e0a21bff94c88dbb0ba741ea11, type: 3}
 --- !u!114 &8165409430906034498
 MonoBehaviour:
   m_ObjectHideFlags: 0

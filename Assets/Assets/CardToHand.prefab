@@ -574,6 +574,8 @@ MonoBehaviour:
   canHeal: 0
   boostXpower: 0
   canBoost: 0
+  EnemyZone: {fileID: 0}
+  aiCardToHand: {fileID: 2339499335537532960, guid: 284dd9e0a21bff94c88dbb0ba741ea11, type: 3}
 --- !u!114 &3656087161273925857
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -7,6 +7,7 @@ TagManager:
   - Clone
   - Deck
   - Deck1
+  - EDeck
   layers:
   - Default
   - TransparentFX

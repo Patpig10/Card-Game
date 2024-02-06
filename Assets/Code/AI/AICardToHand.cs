@@ -30,11 +30,11 @@ public class AICardToHand : MonoBehaviour
 
     public Image frame;
 
-    public static int drawX;
-    public int drawXcards;
+   public static int drawX;
+   public int drawXcards;
     public int addXmaxGil;
 
-    public int hurted;
+    public  int hurted;
     public int actualpower;
     public int returnXcards;
 
@@ -43,6 +43,14 @@ public class AICardToHand : MonoBehaviour
     public GameObject It;
 
     public int numberOfCardsInDeck;
+
+    public bool isTarget;
+    public GameObject Graveyard;
+
+    public bool thisCardCanBeDestroyed;
+
+    public GameObject cardBack;
+    public GameObject AiZone;
     // Start is called before the first frame update
     void Start()
     {
@@ -57,6 +65,10 @@ public class AICardToHand : MonoBehaviour
 
         z = 0;
         numberOfCardsInDeck = AI.deckSize;
+
+        Graveyard = GameObject.Find("EnemyGraveyard");
+        StartCoroutine(AfterVoidStart());
+        AiZone = GameObject.Find("EnemyZone");
 
     }
 
@@ -76,14 +88,15 @@ public class AICardToHand : MonoBehaviour
         id = thisCardList[0].id;
         cardName = thisCardList[0].cardName;
         cost = thisCardList[0].cost;
-        actualpower = power - hurted;
         power = thisCardList[0].power;
+        actualpower = power - hurted;
         cardDescription = thisCardList[0].cardDescription;
         thisSprite = thisCardList[0].thisImage;
 
         drawXcards = thisCardList[0].drawXcards;
         addXmaxGil = thisCardList[0].addXmaxGil;
         returnXcards = thisCardList[0].returnXcards;
+
         //healXpower = thisCardList[0].healXpower;
         //boostXpower = thisCardList[0].boostXpower;
 
@@ -104,7 +117,7 @@ public class AICardToHand : MonoBehaviour
             frame.color = new Color32(51, 32, 32, 255);  // Set the color to white
         }
 
-        if (this.tag == "Deck")
+        if (this.tag == "EDeck")
         {
            
 
@@ -112,11 +125,40 @@ public class AICardToHand : MonoBehaviour
             thisCardList[0] = AI.staticEnemyDeck[numberOfCardsInDeck - 1];
             numberOfCardsInDeck--;
             AI.deckSize--;
-            this.tag = "Untagged";
+            this.tag = "Clone";
         }
         UpdateUI();
-      
+      if(hurted >= power && thisCardCanBeDestroyed == true)
+        {
+           this.transform.SetParent(Graveyard.transform);
+            hurted = 0;
+        }
+       
+      if(this.transform.parent == Hand.transform)
+        {
+           cardBack.SetActive(true);
+        }
+        if (this.transform.parent == AiZone.transform)
+        {
+            cardBack.SetActive(false);
+        }
     }
+
+    public void BeingTarget()
+    {
+        isTarget = true;
+    }
+    public void DontBeingTarget()
+    {
+        isTarget = false;
+    }
+
+
+    IEnumerator AfterVoidStart()
+    {
+        yield return new WaitForSeconds(1);
+       thisCardCanBeDestroyed = true;
+            }
     void UpdateUI()
     {
 

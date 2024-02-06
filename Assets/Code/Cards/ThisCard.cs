@@ -71,6 +71,8 @@ public class ThisCard : MonoBehaviour
     public int boostXpower;
     public bool canBoost;
 
+    public GameObject EnemyZone;
+    public AICardToHand aiCardToHand;
 
     // Start is called before the first frame update
     void Start()
@@ -93,6 +95,9 @@ public class ThisCard : MonoBehaviour
         beInGraveyard = false;
         canHeal = true;
         canBoost = true;
+
+        EnemyZone = GameObject.Find("EnemyZone");
+
     }
 
     // Update is called once per frame
@@ -107,8 +112,8 @@ public class ThisCard : MonoBehaviour
         id = thisCardList[0].id;
         cardName = thisCardList[0].cardName;
         cost = thisCardList[0].cost;
-        actualpower = power - hurted;
         power = thisCardList[0].power;
+        actualpower = power - hurted;
         cardDescription = thisCardList[0].cardDescription;
         thisSprite = thisCardList[0].thisImage;
 
@@ -209,7 +214,7 @@ public class ThisCard : MonoBehaviour
             Target = null;
         }
 
-        if(targeting == true && targetingEnemy == true && onlyThisCardAttack == true)
+        if(targeting == true && onlyThisCardAttack == true)
         {
             Attack();
         }
@@ -248,7 +253,7 @@ public class ThisCard : MonoBehaviour
 
         if(canBoost == true && summoned == true)
         {
-            AttackBoost();
+           // AttackBoost();
            // canBoost = false;
         }
 
@@ -278,31 +283,43 @@ public class ThisCard : MonoBehaviour
     }
     public void Attack()
     {
-
-        if(canAttack == true && summoned == true) 
+        if (canAttack && summoned && Target != null)
         {
-          if(Target != null)
+            Debug.Log("Attempting to attack.");
+
+            if (Target == Enemy)
             {
-                if(Target == Enemy)
-                {
-
-                    EnemyHp.staticHp -= power;
-                    targeting = false;
-                    cantAttack = true;
-
-                }
-
-                if (Target.name == "CardToHand(Clone)")
-                {
-                     canAttack = true;
-                }
+                Debug.Log("Attacking Enemy");
+                EnemyHp.staticHp -= power;
+                targeting = false;
+                cantAttack = true;
             }
-        
-        
         }
+        else
+        {
+            // Debug.Log("Attempting to attack AI.");
 
+            foreach (Transform child in EnemyZone.transform)
+            {
+                AICardToHand childAICard = child.GetComponent<AICardToHand>();
 
+                if ( childAICard.isTarget == true && cantAttack == false)
+                {
+                    Debug.Log("Target found in EnemyZone.");
+                    childAICard.hurted += actualpower;  // Adjusting hurted value by the power of the attacking card
+                    hurted = childAICard.actualpower;
+                    cantAttack = true;
+                }
+               /* else
+                {
+                    Debug.LogError("AICardToHand component not found or conditions not met on the target AI card.");
+                }*/
+            }
+        }
     }
+
+
+
     public void UntargetEnemy()
     {
         staticTargetingEnemy = false;

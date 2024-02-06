@@ -87,10 +87,10 @@ public class AI : MonoBehaviour
             cardInDeck4.SetActive(false);
         }
 
-        if (ThisCard.drawX > 0)
+        if (AICardToHand.drawX > 0)
         {
-            StartCoroutine(Draw(ThisCard.drawX));
-            ThisCard.drawX = 0;
+            StartCoroutine(Draw(AICardToHand.drawX));
+            AICardToHand.drawX = 0;
         }
 
         if (TurnSystem.startTurn == false && draw == false)
