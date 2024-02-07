@@ -431,13 +431,11 @@ GameObject:
   - component: {fileID: 8934991355552615291}
   - component: {fileID: 9160674924930595494}
   - component: {fileID: 1375192828824552989}
-  - component: {fileID: 1053449871351076268}
-  - component: {fileID: 2625762926929055621}
-  - component: {fileID: 2396831901135782619}
   - component: {fileID: -5781638738838702586}
+  - component: {fileID: 1733781197923404360}
   m_Layer: 5
-  m_Name: CardBack
-  m_TagString: Deck
+  m_Name: AICardBack
+  m_TagString: Deck1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -449,7 +447,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5782265181162736036}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.98488003, y: 0.98488003, z: 0.98488003}
   m_ConstrainProportionsScale: 0
@@ -506,89 +504,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1053449871351076268
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5782265181162736036}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7e897f38a6842845bd0268a694dc041, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thisID: 1
-  id: 0
-  cardName: 
-  cost: 0
-  power: 0
-  cardDescription: 
-  nameText: {fileID: 1601913333882513708}
-  costText: {fileID: 726528713826314276}
-  powerText: {fileID: 6637137423759002901}
-  descriptionText: {fileID: 1091971053252280737}
-  thisSprite: {fileID: 0}
-  thatImage: {fileID: 19589670634743395}
-  frame: {fileID: 1375192828824552989}
-  cardBack: 1
-  Hand: {fileID: 0}
-  numberOfCardsInDeck: 0
-  canBeSummon: 0
-  summoned: 0
-  battleZone: {fileID: 0}
-  drawXcards: 0
-  addXmaxGil: 0
-  attackBorder: {fileID: 0}
-  Target: {fileID: 0}
-  Enemy: {fileID: 0}
-  summoningSickness: 0
-  cantAttack: 0
-  canAttack: 0
-  targeting: 0
-  targetingEnemy: 0
-  onlyThisCardAttack: 0
-  summonBorder: {fileID: 0}
-  canBeDestroyed: 0
-  Graveyard: {fileID: 0}
-  beInGraveyard: 0
-  hurted: 0
-  actualpower: 0
-  returnXcards: 0
-  useReturn: 0
-  healXpower: 0
-  canHeal: 0
-  boostXpower: 0
-  canBoost: 0
-  EnemyZone: {fileID: 0}
-  aiCardToHand: {fileID: 0}
---- !u!114 &2625762926929055621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5782265181162736036}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe7295d9da24e6d45abff0536ee424f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cardBack: {fileID: 5336694097997162471}
---- !u!114 &2396831901135782619
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5782265181162736036}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0d4666618504f74097c27e7472551ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Deck: {fileID: 0}
-  It: {fileID: 5782265181162736036}
 --- !u!225 &-5781638738838702586
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -601,6 +516,20 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &1733781197923404360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5782265181162736036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbcaeb26bce452f419bf933f6117837f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Deck: {fileID: 0}
+  It: {fileID: 5782265181162736036}
 --- !u!1 &5829195246729276515
 GameObject:
   m_ObjectHideFlags: 0

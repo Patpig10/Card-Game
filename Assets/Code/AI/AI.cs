@@ -10,6 +10,8 @@ public class AI : MonoBehaviour
 
     public List<Card> cardsInHand = new List<Card>();
 
+    public List<Card> cardsInZone = new List<Card>();
+
     public GameObject Hand;
     public GameObject Zone;
     public GameObject Graveyard;
@@ -26,7 +28,7 @@ public class AI : MonoBehaviour
     public GameObject[] Clones;
     public static bool draw;
 
-    public GameObject CardBack;
+    public GameObject AICardBack;
 
     public int currentGil;
     public bool[] AiCanSummon;
@@ -42,9 +44,13 @@ public class AI : MonoBehaviour
     public int summonThisId;
 
     public int howManyCards;
+    public bool[] canAttack;
+    public static bool AiEndPhase;
+   
 
-    // Start is called before the first frame update
-    void Start()
+// public GameObject AICardBack;
+// Start is called before the first frame update
+void Start()
     {
         StartCoroutine(WaitFiveSeconds());
         StartCoroutine(StartGame());
@@ -60,7 +66,7 @@ public class AI : MonoBehaviour
 
         for (int i = 0; i < deckSize; i++)
         {
-            x = Random.Range(1, 4);
+            x = Random.Range(1, 5);// Remember to change whenever you add a new card
             deck.Add(CardDataBase.cardList[x]);
         }
     }
@@ -199,6 +205,78 @@ public class AI : MonoBehaviour
             summonPhase = false;
             attackPhase = true;
         }
+
+        if(0 == 0)
+        {
+            int k = 0;
+           int howManyCards2 = 0;
+           cardsInHand.Clear();
+
+            foreach (Transform child in Zone.transform)
+            {
+               howManyCards2++;
+            }
+            foreach (Transform child in Zone.transform)
+            {
+                canAttack[k] = child.GetComponent<AICardToHand>().canAttack;
+                k++;
+            }
+            for(int i = 0; i < 40; i++)
+            {
+                if (i >= howManyCards2)
+                {
+                    canAttack[i] = false;
+                }
+            }
+            k = 0;
+        }
+
+        if (0 == 0)
+        {
+            int l = 0;
+            int howManyCards3 = 0;
+            cardsInZone.Clear();  // Clear the list before populating it
+
+            foreach (Transform child in Zone.transform)
+            {
+                howManyCards3++;
+            }
+            foreach (Transform child in Zone.transform)
+            {
+                cardsInZone.Add(child.GetComponent<AICardToHand>().thisCardList[0]);
+                l++;
+            }
+            for (int i = 0; i < 40; i++)
+            {
+                if (i >= howManyCards3)
+                {
+                    cardsInZone.Add(CardDataBase.cardList[0]);
+                }
+            }
+            l = 0;
+        }
+
+        if (attackPhase == true && endPhase == false)
+        {
+           
+            for (int i = 0; i < 40; i++)
+            {
+                if (canAttack[i] == true)
+                {
+                    PlayerHp.staticHp -= cardsInZone[i].power;
+                }
+            }
+
+            endPhase = true;
+        }
+
+        if(endPhase == true)
+        {
+            AiEndPhase = true;
+
+            
+        }
+
     }
 
     public void Shuffle()
@@ -211,7 +289,7 @@ public class AI : MonoBehaviour
             deck[randomIndex] = container[0];
         }
 
-        Instantiate(CardBack, transform.position, transform.rotation);
+        Instantiate(AICardBack, transform.position, transform.rotation);
         StartCoroutine(ShuffleNow());
     }
 

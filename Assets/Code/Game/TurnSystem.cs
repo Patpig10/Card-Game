@@ -89,6 +89,15 @@ public class TurnSystem : MonoBehaviour
 
         enemyGilText.text = currentEnemyGil + "/" + maxEnemyGil;
 
+        if(AI.AiEndPhase == true)
+        {
+            EndYourOpponentTurn();
+            AI.AiEndPhase = false;
+        }
+
+
+
+
     }
 
     public void EndYourTurn()

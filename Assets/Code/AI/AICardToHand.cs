@@ -33,11 +33,12 @@ public class AICardToHand : MonoBehaviour
    public static int drawX;
    public int drawXcards;
     public int addXmaxGil;
+    public bool canHeal;
 
-    public  int hurted;
+    public int hurted;
     public int actualpower;
     public int returnXcards;
-
+    public int healXpower;
     public GameObject Hand;
     public int z = 0;
     public GameObject It;
@@ -48,9 +49,12 @@ public class AICardToHand : MonoBehaviour
     public GameObject Graveyard;
 
     public bool thisCardCanBeDestroyed;
+    public bool summoned;
 
     public GameObject cardBack;
     public GameObject AiZone;
+    public bool canAttack;
+    public bool summoningSickness;
     // Start is called before the first frame update
     void Start()
     {
@@ -69,6 +73,9 @@ public class AICardToHand : MonoBehaviour
         Graveyard = GameObject.Find("EnemyGraveyard");
         StartCoroutine(AfterVoidStart());
         AiZone = GameObject.Find("EnemyZone");
+        canHeal = true;
+        summoned = false;
+        summoningSickness = true;
 
     }
 
@@ -97,7 +104,7 @@ public class AICardToHand : MonoBehaviour
         addXmaxGil = thisCardList[0].addXmaxGil;
         returnXcards = thisCardList[0].returnXcards;
 
-        //healXpower = thisCardList[0].healXpower;
+        healXpower = thisCardList[0].healXpower;
         //boostXpower = thisCardList[0].boostXpower;
 
         if (thisCardList[0].color == "White")
@@ -116,7 +123,15 @@ public class AICardToHand : MonoBehaviour
         {
             frame.color = new Color32(51, 32, 32, 255);  // Set the color to white
         }
-
+        if (canHeal == true && summoned == true)
+        {
+            Heal();
+            canHeal = false;
+        }
+        if(this.transform.parent == AiZone.transform)
+        {
+            summoned = true;
+        }
         if (this.tag == "EDeck")
         {
            
@@ -142,8 +157,25 @@ public class AICardToHand : MonoBehaviour
         {
             cardBack.SetActive(false);
         }
-    }
 
+        if(TurnSystem.isYourTurn == false && summoningSickness == false)
+        {
+           canAttack = true;
+        }
+        else
+        {
+            canAttack = false;
+        }
+
+        if(TurnSystem.isYourTurn == true && this.transform.parent == AiZone.transform)
+        {
+            summoningSickness = false;
+        }
+    }
+    public void Heal()
+    {
+        EnemyHp.staticHp += healXpower;
+    }
     public void BeingTarget()
     {
         isTarget = true;

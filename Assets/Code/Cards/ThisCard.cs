@@ -73,7 +73,10 @@ public class ThisCard : MonoBehaviour
 
     public GameObject EnemyZone;
     public AICardToHand aiCardToHand;
-
+    public bool spell;
+    public int damageDealtBySpell;
+    public bool dealDamage;
+    public bool stopDealDamage;
     // Start is called before the first frame update
     void Start()
     {
@@ -122,6 +125,8 @@ public class ThisCard : MonoBehaviour
         returnXcards = thisCardList[0].returnXcards;
         healXpower = thisCardList[0].healXpower;
         boostXpower = thisCardList[0].boostXpower;
+        spell = thisCardList[0].spell;
+        damageDealtBySpell = thisCardList[0].damageDealtBySpell;
         // Check for color condition using the color property of the Card class
         if (thisCardList[0].color == "White")
         {
@@ -179,12 +184,14 @@ public class ThisCard : MonoBehaviour
             }
         }
 
-        if(canAttack == true && beInGraveyard == false)
+        if(canAttack == true && beInGraveyard == false )
         {
+            Debug.Log("Can attack1.");
             attackBorder.SetActive(true);
         }
         else
         {
+            Debug.Log("Can't attack1.");
             attackBorder.SetActive(false);
         }
 
@@ -230,12 +237,12 @@ public class ThisCard : MonoBehaviour
             summonBorder.SetActive(false);
         }
 
-        if(actualpower <= 0)
+        if(actualpower <= 0 && spell == false)
         {
             Destroy();
             canBeDestroyed = true;
         }
-        if(returnXcards >=0 && summoned == true && useReturn == false && TurnSystem.isYourTurn == true)
+        if(returnXcards > 0 && summoned == true && useReturn == false && TurnSystem.isYourTurn == true)
         {
             Return(returnXcards);
             useReturn = true;
@@ -256,9 +263,39 @@ public class ThisCard : MonoBehaviour
            // AttackBoost();
            // canBoost = false;
         }
+        if(damageDealtBySpell >0)
+        {
+            dealDamage = true;
+        }
+        if(dealDamage == true && this.transform.parent == battleZone.transform && spell ==true)
+        {
+            Debug.Log("spell test1.");
+            attackBorder.SetActive(true);
+        }
+        else if(dealDamage == false && this.transform.parent == battleZone.transform && spell == true)
+        {
+            Debug.Log("spell test2.");  
+            attackBorder.SetActive(false);
+        }
+        if(dealDamage == true && this.transform.parent == battleZone.transform)
+        {
+            Debug.Log("Attempting to speelll test.");
+            dealxDamage(damageDealtBySpell);
+        }
+        if(stopDealDamage == true)
+        {
+            Debug.Log("Stop deal damage test.");
+            attackBorder.SetActive(false);
+            dealDamage = false;
+        }
+        if(this.transform.parent == battleZone.transform && spell == true && dealDamage == false)
+        {
+            Debug.Log("Spell gone");
+            canBeDestroyed = true;
+            Destroy();
+        }
 
-
-
+        
     }
     public void Summon()
     {
@@ -399,5 +436,35 @@ public class ThisCard : MonoBehaviour
         actualpower = power - hurted; // Update actualpower after modifying power
         UpdateUI();
     }
+    public void dealxDamage(int x)
+    {
+        if (Target != null)
+        {
+            if (staticTargetingEnemy = true && stopDealDamage == false && Input.GetMouseButton(0))
+            {
+                EnemyHp.staticHp -= damageDealtBySpell;
+                stopDealDamage = true;
 
+            }
+
+        }
+
+        else
+        {
+            foreach (Transform child in EnemyZone.transform)
+            {
+               Debug.Log("Attempting to deal damage to AI.");
+                AICardToHand childAICard = child.GetComponent<AICardToHand>();
+
+                if (childAICard.isTarget == true && stopDealDamage == false)
+                {
+                    
+                    childAICard.hurted += damageDealtBySpell;  // Adjusting hurted value by the power of the attacking card
+                    stopDealDamage = true;
+                   Debug.Log("Test)");
+                }
+            }
+        }
+        }
+    
 }
