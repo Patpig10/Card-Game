@@ -77,6 +77,8 @@ public class ThisCard : MonoBehaviour
     public int damageDealtBySpell;
     public bool dealDamage;
     public bool stopDealDamage;
+    public bool ward;
+    public bool directattack;
     // Start is called before the first frame update
     void Start()
     {
@@ -98,7 +100,7 @@ public class ThisCard : MonoBehaviour
         beInGraveyard = false;
         canHeal = true;
         canBoost = true;
-
+        directattack = true;
         EnemyZone = GameObject.Find("EnemyZone");
 
     }
@@ -127,6 +129,7 @@ public class ThisCard : MonoBehaviour
         boostXpower = thisCardList[0].boostXpower;
         spell = thisCardList[0].spell;
         damageDealtBySpell = thisCardList[0].damageDealtBySpell;
+        ward = thisCardList[0].ward;
         // Check for color condition using the color property of the Card class
         if (thisCardList[0].color == "White")
         {
@@ -294,8 +297,19 @@ public class ThisCard : MonoBehaviour
             canBeDestroyed = true;
             Destroy();
         }
+        foreach (Transform child in EnemyZone.transform)
+        {
+            AICardToHand childAICard = child.GetComponent<AICardToHand>();
+            if (childAICard.ward == true)
+            {
+                directattack = false;
+            }
+            else
+            {
+                directattack = true;
+            }
+        }
 
-        
     }
     public void Summon()
     {
@@ -324,7 +338,7 @@ public class ThisCard : MonoBehaviour
         {
             Debug.Log("Attempting to attack.");
 
-            if (Target == Enemy)
+            if (Target == Enemy && directattack == true)
             {
                 Debug.Log("Attacking Enemy");
                 EnemyHp.staticHp -= power;

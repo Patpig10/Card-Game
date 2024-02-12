@@ -58,7 +58,7 @@ public class CardInCollection : MonoBehaviour
         thisSprite = thisCardList[0].thisImage;
         if (beGrey == true)
         {
-            frame.color = new Color(155, 155, 155, 255);
+            frame.color = new Color(255, 0, 0, 255);
         }
         else
         {

@@ -2415,12 +2415,13 @@ RectTransform:
   m_LocalScale: {x: 1.366402, y: 1.366402, z: 1.366402}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1972913345}
   - {fileID: 1380604008}
   m_Father: {fileID: 1782722684}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 853, y: -67}
+  m_AnchoredPosition: {x: 886, y: -67}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &328848070
@@ -3424,7 +3425,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 841, y: 32}
+  m_AnchoredPosition: {x: 871, y: 32}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &837396174
@@ -3666,6 +3667,7 @@ MonoBehaviour:
     boostXpower: 0
     spell: 0
     damageDealtBySpell: 0
+    ward: 0
   cardsInHand: []
   cardsInZone:
   - id: 0
@@ -3682,6 +3684,7 @@ MonoBehaviour:
     boostXpower: 0
     spell: 0
     damageDealtBySpell: 0
+    ward: 0
   - id: 0
     cardName: 
     cost: 0
@@ -3696,6 +3699,7 @@ MonoBehaviour:
     boostXpower: 0
     spell: 0
     damageDealtBySpell: 0
+    ward: 0
   - id: 0
     cardName: 
     cost: 0
@@ -3710,6 +3714,7 @@ MonoBehaviour:
     boostXpower: 0
     spell: 0
     damageDealtBySpell: 0
+    ward: 0
   - id: 0
     cardName: 
     cost: 0
@@ -3724,6 +3729,7 @@ MonoBehaviour:
     boostXpower: 0
     spell: 0
     damageDealtBySpell: 0
+    ward: 0
   - id: 0
     cardName: 
     cost: 0
@@ -3738,6 +3744,7 @@ MonoBehaviour:
     boostXpower: 0
     spell: 0
     damageDealtBySpell: 0
+    ward: 0
   - id: 0
     cardName: 
     cost: 0
@@ -3752,6 +3759,7 @@ MonoBehaviour:
     boostXpower: 0
     spell: 0
     damageDealtBySpell: 0
+    ward: 0
   - id: 0
     cardName: 
     cost: 0
@@ -3766,6 +3774,7 @@ MonoBehaviour:
     boostXpower: 0
     spell: 0
     damageDealtBySpell: 0
+    ward: 0
   - id: 0
     cardName: 
     cost: 0
@@ -3780,6 +3789,7 @@ MonoBehaviour:
     boostXpower: 0
     spell: 0
     damageDealtBySpell: 0
+    ward: 0
   - id: 0
     cardName: 
     cost: 0
@@ -3794,6 +3804,7 @@ MonoBehaviour:
     boostXpower: 0
     spell: 0
     damageDealtBySpell: 0
+    ward: 0
   - id: 0
     cardName: 
     cost: 0
@@ -3808,6 +3819,7 @@ MonoBehaviour:
     boostXpower: 0
     spell: 0
     damageDealtBySpell: 0
+    ward: 0
   - id: 0
     cardName: 
     cost: 0
@@ -3822,6 +3834,7 @@ MonoBehaviour:
     boostXpower: 0
     spell: 0
     damageDealtBySpell: 0
+    ward: 0
   - id: 0
     cardName: 
     cost: 0
@@ -3836,6 +3849,7 @@ MonoBehaviour:
     boostXpower: 0
     spell: 0
     damageDealtBySpell: 0
+    ward: 0
   - id: 0
     cardName: 
     cost: 0
@@ -3850,6 +3864,7 @@ MonoBehaviour:
     boostXpower: 0
     spell: 0
     damageDealtBySpell: 0
+    ward: 0
   - id: 0
     cardName: 
     cost: 0
@@ -3864,6 +3879,7 @@ MonoBehaviour:
     boostXpower: 0
     spell: 0
     damageDealtBySpell: 0
+    ward: 0
   - id: 0
     cardName: 
     cost: 0
@@ -3878,6 +3894,7 @@ MonoBehaviour:
     boostXpower: 0
     spell: 0
     damageDealtBySpell: 0
+    ward: 0
   - id: 0
     cardName: 
     cost: 0
@@ -3892,6 +3909,7 @@ MonoBehaviour:
     boostXpower: 0
     spell: 0
     damageDealtBySpell: 0
+    ward: 0
   - id: 0
     cardName: 
     cost: 0
@@ -3906,6 +3924,7 @@ MonoBehaviour:
     boostXpower: 0
     spell: 0
     damageDealtBySpell: 0
+    ward: 0
   - id: 0
     cardName: 
     cost: 0
@@ -3920,6 +3939,7 @@ MonoBehaviour:
     boostXpower: 0
     spell: 0
     damageDealtBySpell: 0
+    ward: 0
   - id: 0
     cardName: 
     cost: 0
@@ -3934,6 +3954,7 @@ MonoBehaviour:
     boostXpower: 0
     spell: 0
     damageDealtBySpell: 0
+    ward: 0
   - id: 0
     cardName: 
     cost: 0
@@ -3948,6 +3969,7 @@ MonoBehaviour:
     boostXpower: 0
     spell: 0
     damageDealtBySpell: 0
+    ward: 0
   - id: 0
     cardName: 
     cost: 0
@@ -3962,6 +3984,7 @@ MonoBehaviour:
     boostXpower: 0
     spell: 0
     damageDealtBySpell: 0
+    ward: 0
   - id: 0
     cardName: 
     cost: 0
@@ -3976,6 +3999,7 @@ MonoBehaviour:
     boostXpower: 0
     spell: 0
     damageDealtBySpell: 0
+    ward: 0
   - id: 0
     cardName: 
     cost: 0
@@ -3990,6 +4014,7 @@ MonoBehaviour:
     boostXpower: 0
     spell: 0
     damageDealtBySpell: 0
+    ward: 0
   - id: 0
     cardName: 
     cost: 0
@@ -4004,6 +4029,7 @@ MonoBehaviour:
     boostXpower: 0
     spell: 0
     damageDealtBySpell: 0
+    ward: 0
   - id: 0
     cardName: 
     cost: 0
@@ -4018,6 +4044,7 @@ MonoBehaviour:
     boostXpower: 0
     spell: 0
     damageDealtBySpell: 0
+    ward: 0
   - id: 0
     cardName: 
     cost: 0
@@ -4032,6 +4059,7 @@ MonoBehaviour:
     boostXpower: 0
     spell: 0
     damageDealtBySpell: 0
+    ward: 0
   - id: 0
     cardName: 
     cost: 0
@@ -4046,6 +4074,7 @@ MonoBehaviour:
     boostXpower: 0
     spell: 0
     damageDealtBySpell: 0
+    ward: 0
   - id: 0
     cardName: 
     cost: 0
@@ -4060,6 +4089,7 @@ MonoBehaviour:
     boostXpower: 0
     spell: 0
     damageDealtBySpell: 0
+    ward: 0
   - id: 0
     cardName: 
     cost: 0
@@ -4074,6 +4104,7 @@ MonoBehaviour:
     boostXpower: 0
     spell: 0
     damageDealtBySpell: 0
+    ward: 0
   - id: 0
     cardName: 
     cost: 0
@@ -4088,6 +4119,7 @@ MonoBehaviour:
     boostXpower: 0
     spell: 0
     damageDealtBySpell: 0
+    ward: 0
   - id: 0
     cardName: 
     cost: 0
@@ -4102,6 +4134,7 @@ MonoBehaviour:
     boostXpower: 0
     spell: 0
     damageDealtBySpell: 0
+    ward: 0
   - id: 0
     cardName: 
     cost: 0
@@ -4116,6 +4149,7 @@ MonoBehaviour:
     boostXpower: 0
     spell: 0
     damageDealtBySpell: 0
+    ward: 0
   - id: 0
     cardName: 
     cost: 0
@@ -4130,6 +4164,7 @@ MonoBehaviour:
     boostXpower: 0
     spell: 0
     damageDealtBySpell: 0
+    ward: 0
   - id: 0
     cardName: 
     cost: 0
@@ -4144,6 +4179,7 @@ MonoBehaviour:
     boostXpower: 0
     spell: 0
     damageDealtBySpell: 0
+    ward: 0
   - id: 0
     cardName: 
     cost: 0
@@ -4158,6 +4194,7 @@ MonoBehaviour:
     boostXpower: 0
     spell: 0
     damageDealtBySpell: 0
+    ward: 0
   - id: 0
     cardName: 
     cost: 0
@@ -4172,6 +4209,7 @@ MonoBehaviour:
     boostXpower: 0
     spell: 0
     damageDealtBySpell: 0
+    ward: 0
   - id: 0
     cardName: 
     cost: 0
@@ -4186,6 +4224,7 @@ MonoBehaviour:
     boostXpower: 0
     spell: 0
     damageDealtBySpell: 0
+    ward: 0
   - id: 0
     cardName: 
     cost: 0
@@ -4200,6 +4239,7 @@ MonoBehaviour:
     boostXpower: 0
     spell: 0
     damageDealtBySpell: 0
+    ward: 0
   - id: 0
     cardName: 
     cost: 0
@@ -4214,6 +4254,7 @@ MonoBehaviour:
     boostXpower: 0
     spell: 0
     damageDealtBySpell: 0
+    ward: 0
   - id: 0
     cardName: 
     cost: 0
@@ -4228,6 +4269,7 @@ MonoBehaviour:
     boostXpower: 0
     spell: 0
     damageDealtBySpell: 0
+    ward: 0
   Hand: {fileID: 1805493393}
   Zone: {fileID: 1638073877}
   Graveyard: {fileID: 193027146}
@@ -17600,7 +17642,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 856, y: -229}
+  m_AnchoredPosition: {x: 874, y: -229}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1295947777
@@ -18957,7 +18999,6 @@ RectTransform:
   - {fileID: 874578047}
   - {fileID: 1638073878}
   - {fileID: 1818307723}
-  - {fileID: 1972913345}
   - {fileID: 1687638873}
   - {fileID: 1964289446}
   - {fileID: 1295947776}
@@ -19219,6 +19260,7 @@ MonoBehaviour:
     boostXpower: 0
     spell: 0
     damageDealtBySpell: 0
+    ward: 0
   x: 40
   cardInDeck1: {fileID: 880657472}
   cardInDeck2: {fileID: 870610817}
@@ -19930,7 +19972,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 835, y: 201}
+  m_AnchoredPosition: {x: 866, y: 201}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1964289447
@@ -19996,16 +20038,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1972913344}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.57575, y: 0.57575, z: 0.57575}
+  m_LocalScale: {x: 0.42136207, y: 0.42136207, z: 0.42136207}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1782722684}
+  m_Father: {fileID: 328848069}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 853.5, y: -72}
+  m_AnchoredPosition: {x: -0.73168945, y: -3.6592407}
   m_SizeDelta: {x: 402.64, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1972913346

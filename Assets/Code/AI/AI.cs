@@ -46,7 +46,7 @@ public class AI : MonoBehaviour
     public int howManyCards;
     public bool[] canAttack;
     public static bool AiEndPhase;
-   
+ 
 
 // public GameObject AICardBack;
 // Start is called before the first frame update

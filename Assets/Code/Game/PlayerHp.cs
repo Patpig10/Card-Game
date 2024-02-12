@@ -15,8 +15,8 @@ public class PlayerHp : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        maxHp = 25000;
-        staticHp = 25000;
+        maxHp = 500;
+        staticHp = 500;
     }
 
     // Update is called once per frame

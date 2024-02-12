@@ -23,6 +23,7 @@ public class Card
     public int boostXpower;
     public bool spell;
     public int damageDealtBySpell;
+    public bool ward;
     // Start is called before the first frame update
     public Card()
     {
@@ -30,7 +31,7 @@ public class Card
     }
 
     // Update is called once per frame
-    public Card(int ID, string CardName, int Cost, int Power, string CardDescription, Sprite ThisImage, string Color, int DrawXCards, int AddXmaxGil, int ReturnXcards, int HealXpower,int BoostXpower,bool Spell,int DamageDealtBySpell)
+    public Card(int ID, string CardName, int Cost, int Power, string CardDescription, Sprite ThisImage, string Color, int DrawXCards, int AddXmaxGil, int ReturnXcards, int HealXpower,int BoostXpower,bool Spell,int DamageDealtBySpell, bool Ward)
     {
         id = ID;
         cardName = CardName;
@@ -47,5 +48,6 @@ public class Card
         boostXpower = BoostXpower;
         spell = Spell;
         damageDealtBySpell = DamageDealtBySpell;
+        ward = Ward;
     }
 }

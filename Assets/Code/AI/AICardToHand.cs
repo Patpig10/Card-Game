@@ -55,6 +55,7 @@ public class AICardToHand : MonoBehaviour
     public GameObject AiZone;
     public bool canAttack;
     public bool summoningSickness;
+    public  bool ward;
     // Start is called before the first frame update
     void Start()
     {
@@ -105,6 +106,7 @@ public class AICardToHand : MonoBehaviour
         returnXcards = thisCardList[0].returnXcards;
 
         healXpower = thisCardList[0].healXpower;
+        ward = thisCardList[0].ward;
         //boostXpower = thisCardList[0].boostXpower;
 
         if (thisCardList[0].color == "White")
