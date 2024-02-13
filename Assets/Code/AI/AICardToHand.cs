@@ -56,6 +56,9 @@ public class AICardToHand : MonoBehaviour
     public bool canAttack;
     public bool summoningSickness;
     public  bool ward;
+    public bool directAttack;
+    public GameObject PlayerZone;
+    public GameObject wardguard;
     // Start is called before the first frame update
     void Start()
     {
@@ -74,6 +77,7 @@ public class AICardToHand : MonoBehaviour
         Graveyard = GameObject.Find("EnemyGraveyard");
         StartCoroutine(AfterVoidStart());
         AiZone = GameObject.Find("EnemyZone");
+        PlayerZone = GameObject.Find("Zone");
         canHeal = true;
         summoned = false;
         summoningSickness = true;
@@ -173,6 +177,26 @@ public class AICardToHand : MonoBehaviour
         {
             summoningSickness = false;
         }
+        if(ward == true)
+        {
+            wardguard.SetActive(true);
+        }
+        else
+        {
+            wardguard.SetActive(false);
+        }
+        /*foreach (Transform child in PlayerZone.transform)
+        {
+            ThisCard childAICard = child.GetComponent<ThisCard>();
+            if (childAICard.ward == true)
+            {
+                directAttack = false;
+            }
+            else
+            {
+                directAttack = true;
+            }
+        }*/
     }
     public void Heal()
     {

@@ -14,7 +14,7 @@ public class Card
     public int drawXcards;
     public int addXmaxGil;
     public Sprite thisImage;
-
+    
     public string color;
 
     public int returnXcards;

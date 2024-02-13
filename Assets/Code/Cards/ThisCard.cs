@@ -79,6 +79,7 @@ public class ThisCard : MonoBehaviour
     public bool stopDealDamage;
     public bool ward;
     public bool directattack;
+    public GameObject wardguard;
     // Start is called before the first frame update
     void Start()
     {
@@ -184,6 +185,14 @@ public class ThisCard : MonoBehaviour
             if (!summoned && this.transform.parent == battleZone.transform)
             {
                 Summon();
+            }
+            if(ward == true && summoned == true)
+            {
+                wardguard.SetActive(true);
+            }
+            else
+            {
+                wardguard.SetActive(false);
             }
         }
 
