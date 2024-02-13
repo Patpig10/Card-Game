@@ -39,7 +39,7 @@ public class PlayerDeck : MonoBehaviour
         // Initialize the deck with random cards
         for (int i = 0; i < deckSize; i++)
         {
-            x = Random.Range(1, 5);//Remember to change whenever you add a new card
+            x = Random.Range(1, 8);//Remember to change whenever you add a new card
             deck.Add(CardDataBase.cardList[x]);
         }
 
