@@ -177,7 +177,7 @@ public class AICardToHand : MonoBehaviour
         {
             summoningSickness = false;
         }
-        if(ward == true)
+        if(ward == true && summoned == true)
         {
             wardguard.SetActive(true);
         }

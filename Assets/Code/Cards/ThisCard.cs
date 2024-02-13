@@ -63,11 +63,11 @@ public class ThisCard : MonoBehaviour
     public int actualpower;
     public int returnXcards;
     public bool useReturn;
-
+    public int resurrectXcards;
     public static bool UcanReturn;
     public int healXpower;
     public bool canHeal;
-
+    public static bool useRevive;
     public int boostXpower;
     public bool canBoost;
 
@@ -103,6 +103,8 @@ public class ThisCard : MonoBehaviour
         canBoost = true;
         directattack = true;
         EnemyZone = GameObject.Find("EnemyZone");
+        Graveyard = GameObject.Find("MyGraveyard");
+
 
     }
 
@@ -131,6 +133,7 @@ public class ThisCard : MonoBehaviour
         spell = thisCardList[0].spell;
         damageDealtBySpell = thisCardList[0].damageDealtBySpell;
         ward = thisCardList[0].ward;
+        resurrectXcards = thisCardList[0].resurrectXcards;
         // Check for color condition using the color property of the Card class
         if (thisCardList[0].color == "White")
         {
@@ -238,7 +241,7 @@ public class ThisCard : MonoBehaviour
             Attack();
         }
 
-        if(canBeSummon == true || UcanReturn == true && beInGraveyard == true) 
+        if(canBeSummon == true || UcanReturn == true && beInGraveyard == true || useRevive == true && beInGraveyard == true) 
         { 
             summonBorder.SetActive(true);
         
@@ -248,8 +251,19 @@ public class ThisCard : MonoBehaviour
         { 
             summonBorder.SetActive(false);
         }
+       /* if (canBeSummon == true || useRevive == true && beInGraveyard == true)
+        {
+            summonBorder.SetActive(true);
+            Debug.Log("revive border test.");
 
-        if(actualpower <= 0 && spell == false)
+
+        }
+        else
+        {
+            summonBorder.SetActive(false);
+        }*/
+
+        if (actualpower <= 0 && spell == false)
         {
             Destroy();
             canBeDestroyed = true;
@@ -259,9 +273,16 @@ public class ThisCard : MonoBehaviour
             Return(returnXcards);
             useReturn = true;
         }
-        if(TurnSystem.isYourTurn == false)
+
+        if (resurrectXcards > 0 && summoned == true && useRevive == false && TurnSystem.isYourTurn == true)
         {
-            UcanReturn = false;
+            Revive(resurrectXcards);
+            useRevive = true;
+        }
+        if (TurnSystem.isYourTurn == false)
+        {
+            useRevive = false;
+            useReturn = false;
         }
         
         if(canHeal == true && summoned == true)
@@ -424,6 +445,21 @@ public class ThisCard : MonoBehaviour
         }
     }
 
+    public void Revive(int x)
+    {
+        for (int i = 0; i <= x; i++)
+        {
+            ReviveCard();
+        }
+    }
+
+    public void ReviveCard()
+    {
+        Debug.Log("Revive card test.");
+        useRevive = true;
+        actualpower += power;
+
+    }
     public void Return(int x)
     {
         for(int i = 0; i <= x; i++)
@@ -446,19 +482,54 @@ public class ThisCard : MonoBehaviour
             beInGraveyard = false;
             summoningSickness = true;
         }
+        else if (beInGraveyard == true && useRevive == true && Graveyard.transform.childCount > 0)
+        {
+
+            this.transform.SetParent(battleZone.transform);
+            useRevive = false;
+            beInGraveyard = false;
+            summoningSickness = true;
+
+        }
+        /* else if (beInGraveyard == true && useRevive == true && Graveyard.transform.childCount == 0)
+         {
+             this.transform.SetParent(Hand.transform);
+             UcanReturn = false;
+             beInGraveyard = false;
+             summoningSickness = true;
+         }*/
+
     }
 
+   /* public void ReviveThis()
+    {
+        if (beInGraveyard == true && useRevive == true && Graveyard.transform.childCount > 0)
+        {
+            Debug.Log("Reviving card");
+            this.transform.SetParent(Hand.transform);
+            useRevive = false;
+            beInGraveyard = false;
+            summoningSickness = true;
+        }
+        else
+        {
+            Debug.Log("Revive conditions not met");
+            Debug.Log("beInGraveyard: " + beInGraveyard);
+            Debug.Log("useRevive: " + useRevive);
+            Debug.Log("Graveyard child count: " + Graveyard.transform.childCount);
+        }
+    }*/
     public void Heal()
     {
         PlayerHp.staticHp += healXpower;
     }
 
-    public void AttackBoost()
+    /*public void AttackBoost()
     {
         power += boostXpower; // Update power first
         actualpower = power - hurted; // Update actualpower after modifying power
         UpdateUI();
-    }
+    }*/
     public void dealxDamage(int x)
     {
         if (Target != null)
