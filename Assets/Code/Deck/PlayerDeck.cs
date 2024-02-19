@@ -37,12 +37,22 @@ public class PlayerDeck : MonoBehaviour
         deckSize = 40;
 
         // Initialize the deck with random cards
-        for (int i = 0; i < deckSize; i++)
-        {
-            x = Random.Range(1, 8);//Remember to change whenever you add a new card
-            deck.Add(CardDataBase.cardList[x]);
-        }
+        /* for (int i = 0; i < deckSize; i++)
+         {
+             x = Random.Range(1, 8);//Remember to change whenever you add a new card
+             deck.Add(CardDataBase.cardList[x]);
+         }*/
 
+        for (int i = 1; i <= 8; i++)
+        {
+            int cardId = PlayerPrefs.GetInt("deck" + i, 0);
+            Debug.Log("CardID " + i + ": " + cardId);
+            if (cardId > 0)
+            {
+                deck.Add(CardDataBase.cardList[cardId]);
+            }
+        }
+        Shuffle();
         // Get reference to ThisCard script
         thisCardScript = GetComponentInChildren<ThisCard>(); // Change this line
 
@@ -60,7 +70,7 @@ public class PlayerDeck : MonoBehaviour
         }
 
 
-        staticDeck = deck;
+        staticDeck = new List<Card>(deck);
         if (deckSize < 30)
         {
             cardInDeck1.SetActive(false);
@@ -137,10 +147,10 @@ public class PlayerDeck : MonoBehaviour
     }
     public void Shuffle()
     {
-        for (int i = 0; i < deckSize; i++)
+        for (int i = 0; i < deck.Count; i++)
         {
             container[0] = deck[i];
-            int randomIndex = Random.Range(i, deckSize);
+            int randomIndex = Random.Range(i, deck.Count); // Use deck.Count instead of deckSize
             deck[i] = deck[randomIndex];
             deck[randomIndex] = container[0];
         }
@@ -149,6 +159,7 @@ public class PlayerDeck : MonoBehaviour
 
         StartCoroutine(Example());
     }
+
 
     IEnumerator Draw(int x)
     {

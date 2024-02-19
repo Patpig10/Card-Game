@@ -482,7 +482,7 @@ public class ThisCard : MonoBehaviour
             beInGraveyard = false;
             summoningSickness = true;
         }
-        else if (beInGraveyard == true && useRevive == true && Graveyard.transform.childCount > 0)
+        else if (beInGraveyard == true && useRevive == true && Graveyard.transform.childCount > 0 && spell == false)
         {
 
             this.transform.SetParent(battleZone.transform);
