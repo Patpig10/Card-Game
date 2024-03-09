@@ -35,44 +35,53 @@ public class DeckCreator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void CreateDeck()
     {
-        for (int i = 0; i < numberOfCardsInDatabase; i++)
-        {
-            sum += cardsWithThisId[i];
-        }
-
-        Debug.Log("Current sum: " + sum);  // Add this line
-
-        if (sum == 40) // 10 cards in deck
+        try
         {
             for (int i = 0; i < numberOfCardsInDatabase; i++)
             {
-                PlayerPrefs.SetInt("deck" + i, cardsWithThisId[i]);
+                sum += cardsWithThisId[i];
             }
+
+            Debug.Log("Current sum: " + sum);
+
+            if (sum == 40) // 10 cards in deck
+            {
+                for (int i = 0; i < numberOfCardsInDatabase; i++)
+                {
+                    PlayerPrefs.SetInt("deck" + i, cardsWithThisId[i]);
+                }
+
+                PlayerPrefs.SetInt("deckSize", 40); // Store the deck size in PlayerPrefs
+            }
+
+            // Reset variables after creating the deck
+            sum = 0;
+            numberOfDifferentCards = 0;
+
+            // Retrieve the deck from PlayerPrefs after storing it
+            for (int i = 0; i < numberOfCardsInDatabase; i++)
+            {
+                savedDeck[i] = PlayerPrefs.GetInt("deck" + i, 0);
+
+                // Update cardsWithThisId based on savedDeck
+                cardsWithThisId[i] = savedDeck[i];
+            }
+
+            // Log the values to ensure they are correct
+            Debug.Log("Created deck: " + string.Join(", ", cardsWithThisId));
+
+            // Optionally, reset the PlayerPrefs to ensure a clean start (useful for testing)
+            // PlayerPrefs.DeleteAll();
         }
-
-        // Reset variables after creating the deck
-        sum = 0;
-        numberOfDifferentCards = 0;
-
-        // Retrieve the deck from PlayerPrefs after storing it
-        for (int i = 0; i < numberOfCardsInDatabase; i++)
+        catch (PlayerPrefsException e)
         {
-            savedDeck[i] = PlayerPrefs.GetInt("deck" + i, 0);
-
-            // Update cardsWithThisId based on savedDeck
-            cardsWithThisId[i] = savedDeck[i];
+            Debug.LogError("PlayerPrefs error: " + e.Message);
         }
-
-        // Log the values to ensure they are correct
-        Debug.Log("Created deck: " + string.Join(", ", cardsWithThisId));
-
-        // Optionally, reset the PlayerPrefs to ensure a clean start (useful for testing)
-        // PlayerPrefs.DeleteAll();
     }
 
 
@@ -87,22 +96,22 @@ public class DeckCreator : MonoBehaviour
 
     public void Card1()
     {
-      dragged = Collection.x;
+        dragged = Collection.x;
     }
 
     public void Card2()
     {
-        dragged = Collection.x+1;
+        dragged = Collection.x + 1;
     }
 
     public void Card3()
     {
-        dragged = Collection.x+2;
+        dragged = Collection.x + 2;
     }
 
     public void Card4()
     {
-        dragged = Collection.x+3;
+        dragged = Collection.x + 3;
     }
 
     public void Drop()
@@ -150,10 +159,10 @@ public class DeckCreator : MonoBehaviour
     }
     public void CalculateDrop()
     {
-       lastAdded = 0;
+        lastAdded = 0;
         int i = dragged;
 
-        if (cardsWithThisId[i] >0 && alreadyCreated[i] == false)
+        if (cardsWithThisId[i] > 0 && alreadyCreated[i] == false)
         {
             lastAdded = i;
             Instantiate(prefab, new Vector3(0, 0, 0), Quaternion.identity);
@@ -161,7 +170,7 @@ public class DeckCreator : MonoBehaviour
 
             quantity[i] = 1;
         }
-       else if (cardsWithThisId[i] > 0 && alreadyCreated[i] == true)
+        else if (cardsWithThisId[i] > 0 && alreadyCreated[i] == true)
         {
             quantity[i]++;
         }

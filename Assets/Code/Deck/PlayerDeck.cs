@@ -36,33 +36,38 @@ public class PlayerDeck : MonoBehaviour
         x = 0;
         deckSize = 40;
 
-        // Initialize the deck with random cards
-        /* for (int i = 0; i < deckSize; i++)
-         {
-             x = Random.Range(1, 8);//Remember to change whenever you add a new card
-             deck.Add(CardDataBase.cardList[x]);
-         }*/
+        // Clear the deck before initializing
+        deck.Clear();
 
+        // Initialize the deck with cards from PlayerPrefs
         for (int i = 1; i <= 8; i++)
         {
             int cardId = PlayerPrefs.GetInt("deck" + i, 0);
             Debug.Log("CardID " + i + ": " + cardId);
+
             if (cardId > 0)
             {
+                // Add the card from CardDataBase using the retrieved cardId
                 deck.Add(CardDataBase.cardList[cardId]);
             }
+            // If no cardId in PlayerPrefs, do not add any random cards
         }
+
         Shuffle();
+
         // Get reference to ThisCard script
-        thisCardScript = GetComponentInChildren<ThisCard>(); // Change this line
+        thisCardScript = GetComponentInChildren<ThisCard>();
 
         StartCoroutine(StartGame());
     }
 
+
+
+
     // Update is called once per frame
     void Update()
     {
-        if(deckSize <= 0)
+        if (deckSize <= 0)
         {
             LoseTextGameObject.SetActive(true);
             LoseText.text = "Deck Out, You Lose";
@@ -70,6 +75,7 @@ public class PlayerDeck : MonoBehaviour
         }
 
 
+        staticDeck = deck;
         staticDeck = new List<Card>(deck);
         if (deckSize < 30)
         {
@@ -147,13 +153,15 @@ public class PlayerDeck : MonoBehaviour
     }
     public void Shuffle()
     {
-        for (int i = 0; i < deck.Count; i++)
-        {
-            container[0] = deck[i];
-            int randomIndex = Random.Range(i, deck.Count); // Use deck.Count instead of deckSize
-            deck[i] = deck[randomIndex];
-            deck[randomIndex] = container[0];
-        }
+      //  for (int i = 0; i < deckSize; i++)
+            for (int i = 0; i < deck.Count; i++)
+            {
+                container[0] = deck[i];
+               // int randomIndex = Random.Range(i, deckSize);
+                int randomIndex = Random.Range(i, deck.Count); // Use deck.Count instead of deckSize
+                deck[i] = deck[randomIndex];
+                deck[randomIndex] = container[0];
+            }
 
         Instantiate(CardBack, transform.position, transform.rotation);
 
