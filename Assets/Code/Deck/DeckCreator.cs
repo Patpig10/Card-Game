@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 
 public class DeckCreator : MonoBehaviour
 {
-
     public int[] cardsWithThisId;
     public bool mouseOverDeck;
     public int dragged;
@@ -12,30 +12,33 @@ public class DeckCreator : MonoBehaviour
     public int numberOfCardsInDatabase;
     public int sum;
     public int numberOfDifferentCards;
-    public int[] savedDeck;
     public GameObject prefab;
     public bool[] alreadyCreated;
     public static int lastAdded;
     public int[] quantity;
     private int cardsDroppedCount = 0;
 
+    private string filePath;
+
     // Start is called before the first frame update
     void Start()
     {
-        sum = 0;
-        numberOfCardsInDatabase = 8;  // Assuming there are 4 cards initially
+        numberOfCardsInDatabase = 8;
 
         // Populate the cardsWithThisId array
         for (int i = 0; i < numberOfCardsInDatabase; i++)
         {
-            cardsWithThisId[i] = Collection.x + i;  // Adjust this based on your logic
+            cardsWithThisId[i] = Collection.x + i;
         }
+
+        filePath = Application.persistentDataPath + "/deck.json";
+        LoadDeck();
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        // Add any necessary update logic here
     }
 
     public void CreateDeck()
@@ -63,24 +66,41 @@ public class DeckCreator : MonoBehaviour
             sum = 0;
             numberOfDifferentCards = 0;
 
+            // Save deck as JSON
+            SaveDeck();
+
             // Retrieve the deck from PlayerPrefs after storing it
-            for (int i = 0; i < numberOfCardsInDatabase; i++)
-            {
-                savedDeck[i] = PlayerPrefs.GetInt("deck" + i, 0);
-
-                // Update cardsWithThisId based on savedDeck
-                cardsWithThisId[i] = savedDeck[i];
-            }
-
-            // Log the values to ensure they are correct
-            Debug.Log("Created deck: " + string.Join(", ", cardsWithThisId));
-
-            // Optionally, reset the PlayerPrefs to ensure a clean start (useful for testing)
-            // PlayerPrefs.DeleteAll();
+            LoadDeck();
         }
         catch (PlayerPrefsException e)
         {
             Debug.LogError("PlayerPrefs error: " + e.Message);
+        }
+    }
+
+    void SaveDeck()
+    {
+        DeckData deckData = new DeckData();
+        deckData.cardsWithThisId = cardsWithThisId;
+
+        string json = JsonUtility.ToJson(deckData);
+        File.WriteAllText(filePath, json);
+
+        Debug.Log("Deck saved as JSON.");
+    }
+
+    void LoadDeck()
+    {
+        if (File.Exists(filePath))
+        {
+            string json = File.ReadAllText(filePath);
+            DeckData deckData = JsonUtility.FromJson<DeckData>(json);
+
+            if (deckData != null)
+            {
+                cardsWithThisId = deckData.cardsWithThisId;
+                Debug.Log("Deck loaded from JSON.");
+            }
         }
     }
 
@@ -89,6 +109,7 @@ public class DeckCreator : MonoBehaviour
     {
         mouseOverDeck = true;
     }
+
     public void ExitDeck()
     {
         mouseOverDeck = false;
@@ -139,12 +160,12 @@ public class DeckCreator : MonoBehaviour
         }
     }
 
-
     bool AllCardsDropped()
     {
         // Assuming you have 40 cards to drop, check if all have been dropped
         return cardsDroppedCount >= 40;
     }
+
     public void ClearDeck()
     {
         // Reset necessary variables and arrays
@@ -157,6 +178,7 @@ public class DeckCreator : MonoBehaviour
 
         // Implement additional cleanup if needed
     }
+
     public void CalculateDrop()
     {
         lastAdded = 0;
@@ -175,4 +197,10 @@ public class DeckCreator : MonoBehaviour
             quantity[i]++;
         }
     }
+}
+
+[System.Serializable]
+public class DeckData
+{
+    public int[] cardsWithThisId;
 }

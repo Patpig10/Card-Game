@@ -24,7 +24,7 @@ public class PlayerPrefViewer : MonoBehaviour
         Debug.Log("Deck Size: " + deckSize);
 
         // Display deck data
-        for (int i = 0; i < 8; i++)
+        for (int i = 0; i < 9; i++)
         {
             int cardId = PlayerPrefs.GetInt("deck" + i, 0);
             Debug.Log("CardID " + i + ": " + cardId);

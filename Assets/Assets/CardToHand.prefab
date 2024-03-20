@@ -759,7 +759,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisID: 0
-  id: 0
+  id: 1
   cardName: 
   cost: 0
   power: 0
@@ -796,6 +796,7 @@ MonoBehaviour:
   actualpower: 0
   returnXcards: 0
   useReturn: 0
+  resurrectXcards: 0
   healXpower: 0
   canHeal: 0
   boostXpower: 0

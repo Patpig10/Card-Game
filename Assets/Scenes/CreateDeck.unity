@@ -2272,7 +2272,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97ea48bb942ce1245bd4343b4c5e5ba7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deckCreator: {fileID: 1127059962}
 --- !u!4 &608875101
 Transform:
   m_ObjectHideFlags: 0
@@ -4177,7 +4176,6 @@ MonoBehaviour:
   numberOfCardsInDatabase: 0
   sum: 40
   numberOfDifferentCards: 0
-  savedDeck: 000000000000000000000000000000000000000000000000000000000000000000000000
   prefab: {fileID: 7372713021939921165, guid: bac2484713a6ba94abb5178e43587f64, type: 3}
   alreadyCreated: 000000000000000000
   quantity: 000000000000000000000000000000000000000000000000000000000000000000000000

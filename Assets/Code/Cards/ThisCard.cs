@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class ThisCard : MonoBehaviour
 {
     private List<Card> thisCardList = new List<Card>();
+    public List<Card> deck = new List<Card>();
+
     public int thisID;
 
     public int id;
@@ -84,8 +86,12 @@ public class ThisCard : MonoBehaviour
     void Start()
     {
         CardBackScript = GetComponent<CardBack>();
-        thisCardList.Add(CardDataBase.cardList[Random.Range(1, CardDataBase.cardList.Count)]);
-        thatImage.sprite = thisCardList[0].thisImage;
+        if (CardDataBase.cardList.Count > 0)
+        {
+            // Add the last card from cardList to deck
+            deck.Add(CardDataBase.cardList[CardDataBase.cardList.Count - 1]);
+            thatImage.sprite = deck[0].thisImage;
+        }
 
         //UpdateUI();
         canBeSummon = false;
@@ -116,38 +122,40 @@ public class ThisCard : MonoBehaviour
         {
             cardBack = false;
         }
+        if (deck.Count > 0)
+        {
+            id = deck[0].id;
+            cardName = deck[0].cardName;
+            cost = deck[0].cost;
+            power = deck[0].power;
+            actualpower = power - hurted;
+            cardDescription = deck[0].cardDescription;
+            thisSprite = deck[0].thisImage;
 
-        id = thisCardList[0].id;
-        cardName = thisCardList[0].cardName;
-        cost = thisCardList[0].cost;
-        power = thisCardList[0].power;
-        actualpower = power - hurted;
-        cardDescription = thisCardList[0].cardDescription;
-        thisSprite = thisCardList[0].thisImage;
-
-        drawXcards = thisCardList[0].drawXcards;
-        addXmaxGil = thisCardList[0].addXmaxGil;
-        returnXcards = thisCardList[0].returnXcards;
-        healXpower = thisCardList[0].healXpower;
-        boostXpower = thisCardList[0].boostXpower;
-        spell = thisCardList[0].spell;
-        damageDealtBySpell = thisCardList[0].damageDealtBySpell;
-        ward = thisCardList[0].ward;
-        resurrectXcards = thisCardList[0].resurrectXcards;
+            drawXcards = deck[0].drawXcards;
+            addXmaxGil = deck[0].addXmaxGil;
+            returnXcards = deck[0].returnXcards;
+            healXpower = deck[0].healXpower;
+            boostXpower = deck[0].boostXpower;
+            spell = deck[0].spell;
+            damageDealtBySpell = deck[0].damageDealtBySpell;
+            ward = deck[0].ward;
+            resurrectXcards = deck[0].resurrectXcards;
+        }
         // Check for color condition using the color property of the Card class
-        if (thisCardList[0].color == "White")
+        if (deck[0].color == "White")
         {
             frame.color = new Color32(255, 255, 255, 255);  // Set the color to white
         }
-        else if (thisCardList[0].color == "Blue")
+        else if (deck[0].color == "Blue")
         {
             frame.color = new Color32(26, 109, 236, 255);  // Set the color to white
         }
-        else if (thisCardList[0].color == "Green")
+        else if (deck[0].color == "Green")
         {
             frame.color = new Color32(122, 236, 26, 255);  // Set the color to white
         }
-        else if (thisCardList[0].color == "Black")
+        else if (deck[0].color == "Black")
         {
             frame.color = new Color32(51, 32, 32, 255);  // Set the color to white
         }
@@ -157,7 +165,7 @@ public class ThisCard : MonoBehaviour
         if (this.tag == "Clone")
         {
           
-            thisCardList[0] = PlayerDeck.staticDeck[PlayerDeck.deckSize - 1];
+            deck[0] = PlayerDeck.staticDeck[PlayerDeck.deckSize - 1];
 
             PlayerDeck.deckSize--;
             cardBack = false;

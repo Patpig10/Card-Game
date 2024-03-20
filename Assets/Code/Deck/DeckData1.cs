@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "DeckData", menuName = "ScriptableObjects/DeckData", order = 1)]
-public class DeckData : ScriptableObject
+public class DeckData1 : ScriptableObject
 {
     public int[] cardsWithThisId;
     public bool[] alreadyCreated;
