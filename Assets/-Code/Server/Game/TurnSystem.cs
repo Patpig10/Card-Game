@@ -15,7 +15,7 @@ using Game.Shared;
 namespace Game.Server
 {
     /// <summary>
-    /// What is the sole responsibility of this class?
+    /// High-level control over turn-based gameplay
     /// </summary>
     public class TurnSystem : MonoBehaviour
     {
