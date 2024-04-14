@@ -407,10 +407,10 @@ namespace Game.Server
             UpdateUI_PowerText();
 
             // Check for color condition using the color property of the Card class
-            if( _cardAsset.Color=="White" ) frame.color = new Color32(255,255,255,255);// Set the color to white
-            else if( _cardAsset.Color=="Blue" ) frame.color = new Color32(26,109,236,255);// Set the color to white
-            else if( _cardAsset.Color=="Green" ) frame.color = new Color32(122,236,26,255);// Set the color to white
-            else if( _cardAsset.Color=="Black" ) frame.color = new Color32(51,32,32,255);// Set the color to white
+            if( _cardAsset.Tint=="White" ) frame.color = new Color32(255,255,255,255);// Set the color to white
+            else if( _cardAsset.Tint=="Blue" ) frame.color = new Color32(26,109,236,255);// Set the color to white
+            else if( _cardAsset.Tint=="Green" ) frame.color = new Color32(122,236,26,255);// Set the color to white
+            else if( _cardAsset.Tint=="Black" ) frame.color = new Color32(51,32,32,255);// Set the color to white
         }
         void UpdateUI_PowerText ()
         {

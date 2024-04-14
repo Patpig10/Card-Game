@@ -42,8 +42,8 @@ namespace Game.Shared
         public string CardDescription => cardDescription;
         public int DrawXcards => drawXcards;
         public int AddXmaxGil => addXmaxGil;
-        public Sprite Image => thisImage;
         public string Color => color;
+        public string Tint => color;
         public int ReturnXcards => returnXcards;
         public int HealXpower => healXpower;
         public int BoostXpower => boostXpower;

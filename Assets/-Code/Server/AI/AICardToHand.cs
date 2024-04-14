@@ -143,10 +143,10 @@ namespace Game.Server
             descriptionText.text = _assignedCardAsset.CardDescription;
             thatImage.sprite = _assignedCardAsset.Image;
 
-            if( _assignedCardAsset.Color=="White" ) frame.color = new Color32(255,255,255,255);// Set the color to white
-            else if( _assignedCardAsset.Color=="Blue" ) frame.color = new Color32(26,109,236,255);// Set the color to white
-            else if( _assignedCardAsset.Color=="Green" ) frame.color = new Color32(122,236,26,255);// Set the color to white
-            else if( _assignedCardAsset.Color=="Black" ) frame.color = new Color32(51,32,32,255);// Set the color to white
+            if( _assignedCardAsset.Tint=="White" ) frame.color = new Color32(255,255,255,255);// Set the color to white
+            else if( _assignedCardAsset.Tint=="Blue" ) frame.color = new Color32(26,109,236,255);// Set the color to white
+            else if( _assignedCardAsset.Tint=="Green" ) frame.color = new Color32(122,236,26,255);// Set the color to white
+            else if( _assignedCardAsset.Tint=="Black" ) frame.color = new Color32(51,32,32,255);// Set the color to white
         }
 
     }
