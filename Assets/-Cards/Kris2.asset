@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efdc22bf324e1904494dd6ee759ba84a, type: 3}
+  m_Name: Kris2
+  m_EditorClassIdentifier: 
+  guid: 63e067e1-146f-446d-92a1-0044728de6f1
+  id: 8
+  cardName: Kris2
+  cost: 2
+  power: 400
+  cardDescription: Draw 2
+  drawXcards: 2
+  addXmaxGil: 0
+  thisImage: {fileID: 21300000, guid: 733721f25aac95b44b91428b5cef0a00, type: 3}
+  color: Blue
+  returnXcards: 0
+  healXpower: 0
+  boostXpower: 0
+  spell: 1
+  damageDealtBySpell: 0
+  ward: 0
+  resurrectXcards: 0

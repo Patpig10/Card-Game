@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d946957832d7ad84689c2f457d562dea, type: 3}
+  m_Name: player
+  m_EditorClassIdentifier: 
+  _userAccountCards: {fileID: 11400000, guid: 2258fb6d57805de43aa9b50ef8803b49, type: 2}
+  _cardsInHand: {fileID: 11400000, guid: ffaf42dbb308c024bb22594afeee20b4, type: 2}
+  _cardsInDeck: {fileID: 11400000, guid: 7d3187b36c5482b41ba259f9964391ab, type: 2}
+  _cardsInGraveyard: {fileID: 11400000, guid: 101b54b796ad8e74b91c960e9d06cd24, type: 2}

@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Core Gamplay
+  m_EditorClassIdentifier: 
+  m_GroupName: Core Gamplay
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 73a597bba39323043b7aa33ac76c0feb
+  m_SerializeEntries:
+  - m_GUID: a0c00474fb2795747a148fe727926a8b
+    m_Address: opponent.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f75a4af549fae584e9fbf39bf4ad434b
+    m_Address: player.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8dbf95ab5d6e95b4b95aaa061d52d8d6
+    m_Address: default-opponent-deck.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: eb73cff1f50f7ca489177a507b35fd2e
+    m_Address: default-player-deck.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4fdae1f93a1e50149b21deb76104399c
+    m_Address: -Prefabs
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 8bc11f540bcb69c4cb60014dd3aff43e, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 180eaa9fb17eafa4b9840bce372aa46d, type: 2}
+    - {fileID: 11400000, guid: fd6a2522bc0896741855c8556d4cf95d, type: 2}
