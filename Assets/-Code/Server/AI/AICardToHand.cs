@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
+using UnityEngine.ResourceManagement.AsyncOperations;
+using UnityEngine.AddressableAssets;
 using TMPro;
 using UnityEngine.UI;
 using NaughtyAttributes;
@@ -37,6 +39,7 @@ namespace Game.Server
 
         TurnSystem _turnSystem;
         CardAsset _assignedCardAsset;
+        AsyncOperationHandle<Sprite> _mainImageAsyncHandle;
         public int actualpower => _assignedCardAsset.Power - damaged;
         Transform _hand;
         Transform _aiZone;
@@ -122,11 +125,23 @@ namespace Game.Server
             }*/
         }
 
+        void OnDestroy ()
+        {
+            if( _mainImageAsyncHandle.IsValid() ) Addressables.Release( _mainImageAsyncHandle );
+        }
+
         public void InitializeInstance ( TurnSystem turnSystem , CardAsset cardAsset )
         {
             _turnSystem = turnSystem;
             _assignedCardAsset = cardAsset;
             this.tag = "Clone";
+
+            // load card sprite asynchronically (delayed but better performance)
+            if( _mainImageAsyncHandle.IsValid() ) Addressables.Release( _mainImageAsyncHandle );
+            _mainImageAsyncHandle = Addressables.LoadAssetAsync<Sprite>( _assignedCardAsset.MainImage );
+            _mainImageAsyncHandle.Completed += (op) => {
+                thatImage.sprite = op.Result;
+            };
 
             UpdateUI();
         }
@@ -141,7 +156,6 @@ namespace Game.Server
             costText.text = _assignedCardAsset.Cost.ToString();
             powerText.text = actualpower.ToString();
             descriptionText.text = _assignedCardAsset.CardDescription;
-            thatImage.sprite = _assignedCardAsset.Image;
 
             if( _assignedCardAsset.Tint=="White" ) frame.color = new Color32(255,255,255,255);// Set the color to white
             else if( _assignedCardAsset.Tint=="Blue" ) frame.color = new Color32(26,109,236,255);// Set the color to white

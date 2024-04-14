@@ -24,7 +24,7 @@ namespace Game.Shared
         [SerializeField] string cardDescription;
         [SerializeField] int drawXcards;
         [SerializeField] int addXmaxGil;
-        [SerializeField] Sprite thisImage;
+        [SerializeField] AssetReferenceSprite _mainImage;
         [SerializeField] string color;
         [SerializeField] int returnXcards;
         [SerializeField] int healXpower;
@@ -41,7 +41,7 @@ namespace Game.Shared
         public string CardDescription => cardDescription;
         public int DrawXcards => drawXcards;
         public int AddXmaxGil => addXmaxGil;
-        public string Color => color;
+        public AssetReferenceSprite MainImage => _mainImage;
         public string Tint => color;
         public int ReturnXcards => returnXcards;
         public int HealXpower => healXpower;

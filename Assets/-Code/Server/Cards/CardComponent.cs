@@ -3,10 +3,12 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Assertions;
+using UnityEngine.ResourceManagement.AsyncOperations;
+using UnityEngine.AddressableAssets;
 using TMPro;
 using NaughtyAttributes;
-using Game.Shared;
 
+using Game.Shared;
 using Draggable = Game.Client.Draggable;// get rid of this dependency (Server shall never access Client's code)
 
 namespace Game.Server
@@ -53,6 +55,7 @@ namespace Game.Server
         int actualpower => _cardAsset.Power - _damaged;
         
         CardAsset _cardAsset;
+        AsyncOperationHandle<Sprite> _mainImageAsyncHandle;
         Transform _enemyZone;
         Transform _graveyard;
         GameObject _targetGO;
@@ -60,6 +63,8 @@ namespace Game.Server
         GameObject _hand;
         GameObject _battleZone;
         CardBackComponent _cardBackComp;
+        EState _state = EState.BEFORE_START;
+        float _stateChangeTime;
 
         void Awake ()
         {
@@ -84,6 +89,11 @@ namespace Game.Server
             _graveyard = GameObject.Find("MyGraveyard").transform;
         }
 
+        void OnDestroy ()
+        {
+            if( _mainImageAsyncHandle.IsValid() ) Addressables.Release( _mainImageAsyncHandle );
+        }
+
         void FixedUpdate ()
         {
             OnStateTick(_state, Time.time - _stateChangeTime);
@@ -106,6 +116,14 @@ namespace Game.Server
                 if( PlayerAsset.Player.CardsInDeck.DrawCardFromTheTop(out var drawnCard) )
                 {
                     _cardAsset = drawnCard;
+
+                    // load card sprite asynchronically (delayed but better performance)
+                    if( _mainImageAsyncHandle.IsValid() ) Addressables.Release( _mainImageAsyncHandle );
+                    _mainImageAsyncHandle = Addressables.LoadAssetAsync<Sprite>( _cardAsset.MainImage );
+                    _mainImageAsyncHandle.Completed += (op) => {
+                        thatImage.sprite = op.Result;
+                    };
+                    
                     _cardBack = false;
                     this.tag = "Untagged";
                 }
@@ -248,19 +266,6 @@ namespace Game.Server
             _directattack = !wardCardPresent;
         }
 
-        public enum EState : byte
-        {
-            BEFORE_START = 0,
-            START,
-            SUMMONED,
-            A,
-            B,
-            C,
-        }
-
-        EState _state = EState.BEFORE_START;
-        float _stateChangeTime;
-
         /// <summary>Call this to change state.</summary>
         /// <remarks>Do not modify value _state outside this.</summaremarksry>
         void ChangeState ( EState nextState )
@@ -374,8 +379,16 @@ namespace Game.Server
         public void InitializeInstance ( CardAsset cardAsset , TurnSystem turnSystem , PlayerDeckComponent playerDeckComponent )
         {
             _turnSystem = turnSystem;
-            _cardAsset = cardAsset;
             _parentDeck = playerDeckComponent;
+            _cardAsset = cardAsset;
+
+            // load card sprite asynchronically (delayed but better performance)
+            if( _mainImageAsyncHandle.IsValid() ) Addressables.Release( _mainImageAsyncHandle );
+            _mainImageAsyncHandle = Addressables.LoadAssetAsync<Sprite>( _cardAsset.MainImage );
+            _mainImageAsyncHandle.Completed += (op) => {
+                thatImage.sprite = op.Result;
+            };
+
             UpdateUI();
         }
 
@@ -403,7 +416,6 @@ namespace Game.Server
             nameText.text = _cardAsset.CardName;
             costText.text = _cardAsset.Cost.ToString();
             descriptionText.text = _cardAsset.CardDescription;
-            thatImage.sprite = _cardAsset.Image;
             UpdateUI_PowerText();
 
             // Check for color condition using the color property of the Card class
@@ -583,6 +595,16 @@ namespace Game.Server
                     }
                 }
             }
+        }
+
+        public enum EState : byte
+        {
+            BEFORE_START = 0,
+            START,
+            SUMMONED,
+            A,
+            B,
+            C,
         }
     
     }

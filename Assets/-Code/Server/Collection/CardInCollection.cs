@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.ResourceManagement.AsyncOperations;
+using UnityEngine.AddressableAssets;
 using TMPro;
 
 using Game.Shared;
@@ -23,6 +25,12 @@ namespace Game.Server
         //[SerializeField] GameObject frame;
 
         CardAsset _cardAsset;
+        AsyncOperationHandle<Sprite> _mainImageAsyncHandle;
+
+        void OnDestroy ()
+        {
+            if( _mainImageAsyncHandle.IsValid() ) Addressables.Release( _mainImageAsyncHandle );
+        }
 
         void UpdateUI ()
         {
@@ -30,7 +38,18 @@ namespace Game.Server
             costText.text = _cardAsset.Cost.ToString();
             powerText.text = _cardAsset.Power.ToString();
             descriptionText.text = _cardAsset.CardDescription;
-            thatImage.sprite = _cardAsset.Image;
+
+            // load card sprite asynchronically (delayed but better performance)
+            if( _cardAsset.MainImage.IsDone )
+            {
+                thatImage.sprite = _cardAsset.MainImage.LoadAssetAsync().WaitForCompletion();
+            }
+            else
+            {
+                _cardAsset.MainImage.LoadAssetAsync().Completed += (op) => {
+                    thatImage.sprite = op.Result;
+                };
+            }
 
             if( beGrey==true ) frame.color = new Color32(255,0,0,255);
             else
@@ -45,6 +64,14 @@ namespace Game.Server
         public void AssignCard ( CardAsset cardAsset )
         {
             _cardAsset = cardAsset;
+
+            // load card sprite asynchronically (delayed but better performance)
+            if( _mainImageAsyncHandle.IsValid() ) Addressables.Release( _mainImageAsyncHandle );
+            _mainImageAsyncHandle = Addressables.LoadAssetAsync<Sprite>( _cardAsset.MainImage );
+            _mainImageAsyncHandle.Completed += (op) => {
+                thatImage.sprite = op.Result;
+            };
+
             UpdateUI();
         }
 

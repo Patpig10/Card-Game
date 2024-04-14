@@ -20,6 +20,12 @@ MonoBehaviour:
   drawXcards: 0
   addXmaxGil: 0
   thisImage: {fileID: 21300000, guid: 5e07ad7c83716fd41a7d173123166cf5, type: 3}
+  _mainImage:
+    m_AssetGUID: 5e07ad7c83716fd41a7d173123166cf5
+    m_SubObjectName: 2
+    m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    m_EditorAssetChanged: 1
   color: White
   returnXcards: 0
   healXpower: 0
