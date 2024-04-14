@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efdc22bf324e1904494dd6ee759ba84a, type: 3}
   m_Name: Holy Light
   m_EditorClassIdentifier: 
-  guid: c56ec295-1be1-432f-8aef-d5512fe6ad31
-  id: 5
+  cardUniqueID: c56ec295-1be1-432f-8aef-d5512fe6ad31
   cardName: Holy Light
   cost: 1
   power: 0

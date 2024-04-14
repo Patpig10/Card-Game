@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efdc22bf324e1904494dd6ee759ba84a, type: 3}
   m_Name: Ezeh
   m_EditorClassIdentifier: Assembly-CSharp:Game.Shared:CardAsset
-  guid: a6e89e63-3382-48db-a41b-5f651f90327d
-  id: 1
+  cardUniqueID: a6e89e63-3382-48db-a41b-5f651f90327d
   cardName: Ezeh
   cost: 2
   power: 30

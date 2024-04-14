@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efdc22bf324e1904494dd6ee759ba84a, type: 3}
   m_Name: Kris2
   m_EditorClassIdentifier: 
-  guid: 63e067e1-146f-446d-92a1-0044728de6f1
-  id: 8
+  cardUniqueID: 63e067e1-146f-446d-92a1-0044728de6f1
   cardName: Kris2
   cost: 2
   power: 400

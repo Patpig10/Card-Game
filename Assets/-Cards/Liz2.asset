@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efdc22bf324e1904494dd6ee759ba84a, type: 3}
   m_Name: Liz2
   m_EditorClassIdentifier: 
-  guid: f9079f9f-7f2b-432a-8c4c-a87a9c3fdf5e
-  id: 7
+  cardUniqueID: f9079f9f-7f2b-432a-8c4c-a87a9c3fdf5e
   cardName: Liz2
   cost: 3
   power: 70

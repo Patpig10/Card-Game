@@ -17,8 +17,7 @@ namespace Game.Shared
     public class CardAsset : ScriptableObject
     {
 
-        [SerializeField][FormerlySerializedAs("guid")] string cardUniqueID;
-        [SerializeField][System.Obsolete("Get rid of me")] int id;
+        [SerializeField] string cardUniqueID;
         [SerializeField] string cardName;
         [SerializeField] int cost;
         [SerializeField] int power;

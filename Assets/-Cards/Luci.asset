@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efdc22bf324e1904494dd6ee759ba84a, type: 3}
   m_Name: Luci
   m_EditorClassIdentifier: 
-  guid: 25d7f5b8-68ad-4099-be60-58968a24d51b
-  id: 2
+  cardUniqueID: 25d7f5b8-68ad-4099-be60-58968a24d51b
   cardName: Luci
   cost: 1
   power: 50
