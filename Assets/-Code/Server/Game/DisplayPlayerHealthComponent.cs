@@ -17,14 +17,29 @@ namespace Game.Server
 
         void Awake ()
         {
-            const float refreshTime = 0.2f;
-            InvokeRepeating( nameof(UpdateUI) , refreshTime , refreshTime );
+            var player = PlayerAsset.Player;
+            UpdateUI( player );
+            player.OnResetToDefault += OnResetToDefault;
+            player.OnDamaged += OnDamaged;
+            player.OnHealed += OnHealed;
         }
 
-        void UpdateUI ()
+        void OnDestroy ()
         {
-            float hp = Mathf.Clamp( PlayerAsset.Player.Health , 0 , PlayerAsset.Player.HealthMax );
-            Health.fillAmount = hp / PlayerAsset.Player.HealthMax;
+            var player = PlayerAsset.Player;
+            player.OnResetToDefault -= OnResetToDefault;
+            player.OnDamaged -= OnDamaged;
+            player.OnHealed -= OnHealed;
+        }
+
+        void OnResetToDefault ( PlayerAsset player ) => UpdateUI(player);
+        void OnDamaged ( PlayerAsset player , float value ) => UpdateUI(player);
+        void OnHealed ( PlayerAsset player , float value ) => UpdateUI(player);
+
+        void UpdateUI ( PlayerAsset player )
+        {
+            float hp = Mathf.Clamp( player.Health , 0 , player.HealthMax );
+            Health.fillAmount = hp / player.HealthMax;
             hpText.text = $"{hp}HP";
         }
     }

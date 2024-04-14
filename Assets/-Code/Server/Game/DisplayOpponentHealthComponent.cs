@@ -18,22 +18,22 @@ namespace Game.Server
         {
             var opponent = PlayerAsset.Opponent;
             UpdateUI( opponent );
-            opponent.OnResetToDefault += OnOpponentResetToDefault;
-            opponent.OnDamaged += OnOpponentDamaged;
-            opponent.OnHealed += OnOpponentHealed;
+            opponent.OnResetToDefault += OnResetToDefault;
+            opponent.OnDamaged += OnDamaged;
+            opponent.OnHealed += OnHealed;
         }
 
         void OnDestroy ()
         {
             var opponent = PlayerAsset.Opponent;
-            opponent.OnResetToDefault -= OnOpponentResetToDefault;
-            opponent.OnDamaged -= OnOpponentDamaged;
-            opponent.OnHealed -= OnOpponentHealed;
+            opponent.OnResetToDefault -= OnResetToDefault;
+            opponent.OnDamaged -= OnDamaged;
+            opponent.OnHealed -= OnHealed;
         }
 
-        void OnOpponentResetToDefault ( PlayerAsset player ) => UpdateUI(player);
-        void OnOpponentDamaged ( PlayerAsset player , float value ) => UpdateUI(player);
-        void OnOpponentHealed ( PlayerAsset player , float value ) => UpdateUI(player);
+        void OnResetToDefault ( PlayerAsset player ) => UpdateUI(player);
+        void OnDamaged ( PlayerAsset player , float value ) => UpdateUI(player);
+        void OnHealed ( PlayerAsset player , float value ) => UpdateUI(player);
 
         void UpdateUI ( PlayerAsset player )
         {
