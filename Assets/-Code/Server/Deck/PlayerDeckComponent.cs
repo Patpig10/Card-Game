@@ -18,15 +18,12 @@ namespace Game.Server
     /// </summary>
     public class PlayerDeckComponent : MonoBehaviour
     {
-        [SerializeField][Required] GameObject cardInDeck1;
-        [SerializeField][Required] GameObject cardInDeck2;
-        [SerializeField][Required] GameObject cardInDeck3;
-        [SerializeField][Required] GameObject cardInDeck4;
-        [SerializeField][Required] GameObject CardBack;
-        [SerializeField][Required] GameObject CardToHand;
-        [SerializeField][Required] GameObject Deck;
-        [SerializeField][Required] GameObject Hand;
-        [SerializeField][Required] TextMeshProUGUI _loseText;
+        [SerializeField] GameObject cardInDeck1;
+        [SerializeField] GameObject cardInDeck2;
+        [SerializeField] GameObject cardInDeck3;
+        [SerializeField] GameObject cardInDeck4;
+        [SerializeField] GameObject CardBack;
+        [SerializeField] GameObject CardToHand;
         [SerializeField] TurnSystem _turnSystem;
 
         void Awake ()
