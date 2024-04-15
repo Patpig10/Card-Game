@@ -21,8 +21,6 @@ namespace Game.Server
         [SerializeField] GameObject cardInDeck4;
         [SerializeField][FormerlySerializedAs("CardToHand")] GameObject _cardToHandPrefab;
         [SerializeField][FormerlySerializedAs("AICardBack")] GameObject _aiCardBackPrefab;
-        //[SerializeField] GameObject AICardBack;
-        [SerializeField] AICardToHand aiCardToHand;
         [SerializeField] TurnSystem _turnSystem;
 
         [ShowNativeProperty] public EState phase => _state;
@@ -44,7 +42,7 @@ namespace Game.Server
             _hand = GameObject.Find("EnemyHand").transform;
             _zone = GameObject.Find("EnemyZone").transform;
             _graveyard = GameObject.Find("EnemyGraveyard").transform;
-            OnNumberOfCardsInHandChanged();
+            OnNumberOfCardsInDeckChanged();
         }
 
         void OnDestroy ()
@@ -212,7 +210,7 @@ namespace Game.Server
                 var comp = go.GetComponent<AICardToHand>();
                 comp.InitializeInstance( _turnSystem , cardAsset );
 
-                OnNumberOfCardsInHandChanged();
+                OnNumberOfCardsInDeckChanged();
             }
 
             yield return delay;
@@ -245,7 +243,7 @@ namespace Game.Server
                 var comp = go.GetComponent<AICardToHand>();
                 comp.InitializeInstance( _turnSystem , cardAsset );
 
-                OnNumberOfCardsInHandChanged();
+                OnNumberOfCardsInDeckChanged();
             }
         }
 
@@ -260,9 +258,9 @@ namespace Game.Server
         }
         public void Shuffle () => Shuffle((uint)Random.Range(1,int.MaxValue));
 
-        void OnNumberOfCardsInHandChanged ()
+        void OnNumberOfCardsInDeckChanged ()
         {
-            int deckSize = PlayerAsset.Opponent.CardsInHand.Length;
+            int deckSize = PlayerAsset.Opponent.CardsInDeck.Length;
             cardInDeck1.SetActive(deckSize>=30);
             cardInDeck2.SetActive(deckSize>=20);
             cardInDeck3.SetActive(deckSize>=2);

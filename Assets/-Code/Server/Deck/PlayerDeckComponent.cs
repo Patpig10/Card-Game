@@ -38,7 +38,7 @@ namespace Game.Server
 
         void Start ()
         {
-            OnNumberOfCardsInHandChanged();
+            OnNumberOfCardsInDeckChanged();
         }
 
         void OnDestroy ()
@@ -93,7 +93,7 @@ namespace Game.Server
                 var cardComp = go.GetComponent<CardComponent>();
                 cardComp.InitializeInstance( drawnCard , _turnSystem , this );
 
-                OnNumberOfCardsInHandChanged();
+                OnNumberOfCardsInDeckChanged();
             }
             else Debug.LogWarning("No more cards to draw from the loaded deck.",this);
         }
@@ -125,9 +125,9 @@ namespace Game.Server
             }
         }
 
-        void OnNumberOfCardsInHandChanged ()
+        void OnNumberOfCardsInDeckChanged ()
         {
-            int deckSize = PlayerAsset.Player.CardsInHand.Length;
+            int deckSize = PlayerAsset.Player.CardsInDeck.Length;
             cardInDeck1.SetActive(deckSize>=30);
             cardInDeck2.SetActive(deckSize>=20);
             cardInDeck3.SetActive(deckSize>=2);

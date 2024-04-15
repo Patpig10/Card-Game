@@ -19,8 +19,8 @@ namespace Game.Shared
         [SerializeField] DeckAsset _userAccountCards;
         public DeckAsset UserAccountCards => _userAccountCards;
 
-        [SerializeField] DeckAsset _cardsInHand;
-        public DeckAsset CardsInHand => _cardsInHand;
+        // [SerializeField] DeckAsset _cardsInHand;
+        // public DeckAsset CardsInHand => _cardsInHand;
 
         [SerializeField] DeckAsset _cardsInDeck;
         public DeckAsset CardsInDeck => _cardsInDeck;
@@ -55,7 +55,7 @@ namespace Game.Shared
             if( clearDeck )
             {
                 _userAccountCards.RemoveAllCards();
-                _cardsInHand.RemoveAllCards();
+                // _cardsInHand.RemoveAllCards();
                 _cardsInDeck.RemoveAllCards();
                 _cardsInGraveyard.RemoveAllCards();
             }
