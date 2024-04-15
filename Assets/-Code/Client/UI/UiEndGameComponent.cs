@@ -37,14 +37,15 @@ namespace Game.Client
 
         void OnPlayerWin ( TurnSystem turnSystem )
         {
-            textObject.SetActive( true );
             victoryText.text = "Victory";
+            textObject.SetActive( true );
         }
 
         void OnPlayerDefeat ( TurnSystem turnSystem )
         {
+            if( PlayerAsset.Player.CardsInDeck.Length==0 ) victoryText.text = "Deck Out, You Lose";
+            else victoryText.text = "Defeat";
             textObject.SetActive( true );
-            victoryText.text = "Defeat";
         }
 
     }

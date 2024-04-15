@@ -129,12 +129,6 @@ namespace Game.Server
             cardInDeck2.SetActive(deckSize>=20);
             cardInDeck3.SetActive(deckSize>=2);
             cardInDeck4.SetActive(deckSize>=1);
-
-            if( deckSize==0 )
-            {
-                _loseText.text = "Deck Out, You Lose";
-                _loseText.gameObject.SetActive( true );
-            }
         }
 
     }
