@@ -25,8 +25,8 @@ namespace Game.Shared
         [SerializeField] DeckAsset _cardsInDeck;
         public DeckAsset CardsInDeck => _cardsInDeck;
 
-        [SerializeField] DeckAsset _cardsInGraveyard;
-        public DeckAsset CardsInGraveyard => _cardsInGraveyard;
+        // [SerializeField] DeckAsset _cardsInGraveyard;
+        // public DeckAsset CardsInGraveyard => _cardsInGraveyard;
 
         [ShowNativeProperty] public float Health { get; private set; }
         [ShowNativeProperty] public float HealthMax { get; private set; }
@@ -57,7 +57,7 @@ namespace Game.Shared
                 _userAccountCards.RemoveAllCards();
                 // _cardsInHand.RemoveAllCards();
                 _cardsInDeck.RemoveAllCards();
-                _cardsInGraveyard.RemoveAllCards();
+                // _cardsInGraveyard.RemoveAllCards();
             }
 
             OnResetToDefault(this);

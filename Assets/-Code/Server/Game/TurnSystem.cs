@@ -67,13 +67,13 @@ namespace Game.Server
             var player = PlayerAsset.Player;
             player.CardsInDeck.RemoveAllCards();
             // player.CardsInHand.RemoveAllCards();
-            player.CardsInGraveyard.RemoveAllCards();
+            // player.CardsInGraveyard.RemoveAllCards();
 
             // clear runtime-only sets of opponent cards:
             var opponent = PlayerAsset.Opponent;
             opponent.CardsInDeck.RemoveAllCards();
             // opponent.CardsInHand.RemoveAllCards();
-            opponent.CardsInGraveyard.RemoveAllCards();
+            // opponent.CardsInGraveyard.RemoveAllCards();
             #endif
         }
 
