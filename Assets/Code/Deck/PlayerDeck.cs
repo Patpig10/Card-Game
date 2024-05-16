@@ -32,6 +32,8 @@ public class PlayerDeck : MonoBehaviour
 
     public GameObject Hand;
 
+    public AudioSource audioSource;
+    public AudioClip shuffle, draw;
 
     public TMP_Text LoseText;
     public GameObject LoseTextGameObject;
@@ -132,6 +134,8 @@ public class PlayerDeck : MonoBehaviour
             deck[i] = deck[randomIndex];
             deck[randomIndex] = temp;
         }
+        audioSource.PlayOneShot(shuffle, 1f);
+
     }
     IEnumerator Example()
     {
@@ -218,6 +222,7 @@ public class PlayerDeck : MonoBehaviour
         for (int i = 0; i < x; i++)
         {
             yield return new WaitForSeconds(1);
+            audioSource.PlayOneShot(draw, 1f);
 
             if (deck.Count > 0)
             {
