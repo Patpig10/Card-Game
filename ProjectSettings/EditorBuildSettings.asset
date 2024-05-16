@@ -11,4 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Card.unity
     guid: 862d2ad28b3ae294492f1650c52a22f2
+  - enabled: 1
+    path: Assets/Scenes/Collection.unity
+    guid: 5764deebf44cc4a449b5f26d850c179a
+  - enabled: 1
+    path: Assets/Scenes/CreateDeck.unity
+    guid: dbe22476167fe734d87bb54e2e6ecb4d
+  - enabled: 1
+    path: Assets/Scenes/menu.unity
+    guid: af5df62bd09d6e14fa5d94cf5413f6c8
   m_configObjects: {}
