@@ -758,7 +758,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7e897f38a6842845bd0268a694dc041, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thisID: 0
+  thisCard:
+  - id: 0
+    cardName: 
+    cost: 0
+    power: 0
+    cardDescription: 
+    drawXcards: 0
+    addXmaxGil: 0
+    thisImage: {fileID: 0}
+    color: 
+    returnXcards: 0
+    healXpower: 0
+    boostXpower: 0
+    spell: 0
+    damageDealtBySpell: 0
+    ward: 0
+    resurrectXcards: 0
+  thisId: 1
   id: 1
   cardName: 
   cost: 0

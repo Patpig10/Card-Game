@@ -361,7 +361,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6753190923686136948
 RectTransform:
   m_ObjectHideFlags: 0
@@ -397,5 +397,5 @@ MonoBehaviour:
   Panel: {fileID: 0}
   nameText: {fileID: 8702494605629224892}
   id: 0
-  quantityOf: 0
+  quanityOf: 0
   Creator: {fileID: 0}

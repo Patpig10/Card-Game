@@ -16,6 +16,7 @@ public class CardDataBase : MonoBehaviour
         cardList.Add(new Card(2, "Luci", 1, 50, "Cute dummy", Resources.Load < Sprite>("3"), "White", 0,0,0,0,0, false, 0, false,0));
         cardList.Add(new Card(3, "Liz", 3, 70, "Rpower boosrt 500, Draw 1", Resources.Load < Sprite>("4"), "White", 1, 0,0,0,500,false,0, false,0));
         cardList.Add(new Card(4, "Kris", 2, 400, "From Grave To hand, 2 Gil", Resources.Load < Sprite>("5"), "White", 0, 2,1,0,0, false, 0, false,0));
+
         //spells
         cardList.Add(new Card(5, "Holy Light", 1, 0, "Spell Card damage 3000", Resources.Load<Sprite>("Heal"), "Black", 0, 0, 0, 0, 0, true, 3000, false,0));
       cardList.Add(new Card(6, "Luci2", 1, 50, "revive", Resources.Load<Sprite>("3"), "Blue", 0, 0, 0, 0, 0, false, 0, false, 1));

@@ -1,14 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
-using System.IO;
+
 public class PlayerDeck : MonoBehaviour
 {
+
     public List<Card> deck = new List<Card>();
     public List<Card> container = new List<Card>();
     public static List<Card> staticDeck = new List<Card>();
-    private CustomDeckData deckData;
+
+
     public int x;
     public static int deckSize;
 
@@ -17,43 +21,71 @@ public class PlayerDeck : MonoBehaviour
     public GameObject cardInDeck3;
     public GameObject cardInDeck4;
 
-    public GameObject CardBack;
     public GameObject CardToHand;
+
+    public GameObject CardBack;
     public GameObject Deck;
 
     public GameObject[] Clones;
 
     public GameObject Hand;
 
-    // Reference to ThisCard script
-    public ThisCard thisCardScript;
 
-    public TextMeshProUGUI LoseText;
-
+    public TMP_Text LoseText;
     public GameObject LoseTextGameObject;
-    // Start is called before the first frame update
+
+    public GameObject concedeWindow;
+   // public string menu = "Menu";
+
+    //NEW
+  //  public AudioSource audioSource;
+   // public AudioClip shuffle, draw;
+    //NEW END
+
+    void Awake()
+    {
+        //Shuffle(); //comment
+    }
+
+    // Use this for initialization
     void Start()
     {
-        Debug.Log("Persistent Data Path: " + Application.persistentDataPath);
 
-        LoadDeckFromJSON(); // Load the deck from JSON
+        x = 0;
+        deckSize = 40;
 
-        thisCardScript = GetComponentInChildren<ThisCard>();
+        for (int i = 1; i <= 8; i++)
+        {
+            if (PlayerPrefs.GetInt("deck" + i, 0) > 0)
+            {
+                for (int j = 1; j <= PlayerPrefs.GetInt("deck" + i, 0); j++)
+                {
+                    deck[x] = CardDataBase.cardList[i];
+                    x++;
+                }
+            }
+        }
+
+        Shuffle();
+
+
         StartCoroutine(StartGame());
     }
 
     // Update is called once per frame
     void Update()
     {
+
+
         if (deckSize <= 0)
         {
             LoseTextGameObject.SetActive(true);
-            LoseText.text = "Deck Out, You Lose";
-
+            LoseText.text = "You Lose";
         }
 
 
         staticDeck = deck;
+
         if (deckSize < 30)
         {
             cardInDeck1.SetActive(false);
@@ -76,160 +108,118 @@ public class PlayerDeck : MonoBehaviour
             StartCoroutine(Draw(ThisCard.drawX));
             ThisCard.drawX = 0;
         }
-
         if (TurnSystem.startTurn == true)
         {
-            StartCoroutine(Draw(1));
+
+         
+                StartCoroutine(Draw(1));
+          
             TurnSystem.startTurn = false;
         }
+
+
     }
-    void LoadDeckFromJSON()
-    {
-        // Load the JSON file into a string
-        string jsonString = File.ReadAllText(Application.persistentDataPath + "/deck.json");
-
-        // Parse the JSON string into a CustomDeckData object
-        deckData = JsonUtility.FromJson<CustomDeckData>(jsonString);
-
-        
-            // Clear the existing deck
-            deck.Clear();
-
-            // Populate the deck based on the loaded data
-            for (int i = 0; i < deckData.cardsWithThisId.Length; i++)
-            {
-                int cardId = deckData.cardsWithThisId[i];
-
-                // Find the corresponding card in the database and add it to the deck
-                for (int j = 0; j < cardId; j++)
-                {
-                    // Create a new instance of the card based on its ID
-                    Card foundCard = CardDataBase.cardList.Find(card => card.id == i);
-
-                    if (foundCard != null)
-                    {
-                        deck.Add(foundCard);
-                    }
-                }
-            }
-
-            deckSize = deck.Count; // Set the deck size based on the loaded deck
-        
-    }
-
 
     IEnumerator Example()
     {
-        yield return new WaitForSeconds(1);
-        Clones = GameObject.FindGameObjectsWithTag("Deck");
+        //COMMENT
+        // yield return new WaitForSeconds(1);
+        // Clones = GameObject.FindGameObjectsWithTag("Clone");
 
-        foreach (GameObject Deck in Clones)
-        {
-            Destroy(Deck);
-        }
+        // foreach(GameObject Clone in Clones)
+        // {
+        // 	Destroy(Clone);
+        // }
+        //COMMENT END
+
+        //NEW
+        GameObject prefb = Instantiate(CardBack, transform.position, transform.rotation);
+        yield return new WaitForSeconds(1.5f);
+        Destroy(prefb);
+        //NEW END
     }
 
     IEnumerator StartGame()
     {
-        // Draw 4 initial cards
         for (int i = 0; i <= 4; i++)
         {
-            DrawCardToHand();
             yield return new WaitForSeconds(1);
-        }
-    }
-
-    public void DrawCardToHand()
-{
-    if (deck.Count > 0)
-    {
-        // List to hold the indices of non-zero quantities
-        List<int> validIndices = new List<int>();
-
-        // Find indices of non-zero quantities
-        for (int i = 0; i < deckData.cardsWithThisId.Length; i++)
-        {
-            if (deckData.cardsWithThisId[i] > 0)
-            {
-                validIndices.Add(i);
-            }
-        }
-
-        // If there are valid indices, select a random one
-        if (validIndices.Count > 0)
-        {
-            int randomIndex = Random.Range(0, validIndices.Count);
-            int selectedId = validIndices[randomIndex];
-
-            // Decrement the quantity in cardsWithThisId for the selected ID
-            deckData.cardsWithThisId[selectedId]--;
-
-            // Get the drawn card
-            Card drawnCard = deck.Find(card => card.id == selectedId);
-
-            // Set the ID on the ThisCard script before instantiating
-            if (thisCardScript != null && drawnCard != null)
-            {
-                thisCardScript.id = selectedId; // Assign the selected ID
-            }
-            else
-            {
-                Debug.LogError("thisCardScript or drawnCard is null");
-                return;
-            }
-
-            // Instantiate the CardToHand object
+            //NEW
+          //  audioSource.PlayOneShot(draw, 1f);
+            //NEW
             Instantiate(CardToHand, transform.position, transform.rotation);
-
-            // Remove the drawn card from the deck
-            deck.Remove(drawnCard);
-            deckSize--;
-
-            // Check if the quantity for the selected ID becomes zero and update the deck data structure
-            if (deckData.cardsWithThisId[selectedId] == 0)
-            {
-                deck.RemoveAll(card => card.id == selectedId);
-            }
-        }
-        else
-        {
-            Debug.LogWarning("No more cards to draw from the loaded deck.");
         }
     }
-    else
-    {
-        Debug.LogWarning("No more cards to draw from the loaded deck.");
-    }
-}
+
+
 
 
     public void Shuffle()
     {
+
+
         for (int i = 0; i < deckSize; i++)
         {
             container[0] = deck[i];
             int randomIndex = Random.Range(i, deckSize);
             deck[i] = deck[randomIndex];
             deck[randomIndex] = container[0];
+
         }
 
-        Instantiate(CardBack, transform.position, transform.rotation);
+        //NEW 
+        //audioSource.PlayOneShot(shuffle, 1f);
 
         StartCoroutine(Example());
+        //NEW END
+
+
+        //Instantiate(CardBack, transform.position, transform.rotation);// comment
+
+        //StartCoroutine(Example());// comment
+
+
     }
+
 
     IEnumerator Draw(int x)
     {
         for (int i = 0; i < x; i++)
         {
             yield return new WaitForSeconds(1);
-
-            DrawCardToHand();
+            //NEW
+        //    audioSource.PlayOneShot(draw, 1f);
+            //NEW END
+            Instantiate(CardToHand, transform.position, transform.rotation);
         }
     }
+
+   /* public void OpenWindow()
+    {
+        concedeWindow.SetActive(true);
+    }
+
+    public void CloseWindow()
+    {
+        concedeWindow.SetActive(false);
+    }
+
+    public void ConcedeDefeat()
+    {
+        StartCoroutine(EndGame());
+    }*/
+
+    IEnumerator EndGame()
+    {
+        LoseTextGameObject.SetActive(true);
+        LoseText.text = "You Lose";
+       // concedeWindow.SetActive(false);
+
+        yield return new WaitForSeconds(2.5f);
+
+      //  SceneManager.LoadScene(menu);
+    }
+
+
 }
-[System.Serializable]
-public class CustomDeckData
-{
-    public int[] cardsWithThisId;
-}
+

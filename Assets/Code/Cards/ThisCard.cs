@@ -2,13 +2,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
+using System.Collections;
 
 public class ThisCard : MonoBehaviour
 {
-    private List<Card> thisCardList = new List<Card>();
-    public List<Card> deck = new List<Card>();
+    public List<Card> thisCard = new List<Card>();
 
-    public int thisID;
+    public int thisId;
 
     public int id;
     public string cardName;
@@ -30,6 +31,7 @@ public class ThisCard : MonoBehaviour
     CardBack CardBackScript;
 
     public GameObject Hand;
+
 
     public int numberOfCardsInDeck;
 
@@ -82,18 +84,18 @@ public class ThisCard : MonoBehaviour
     public bool ward;
     public bool directattack;
     public GameObject wardguard;
+    public static bool staticCardBack;
+
     // Start is called before the first frame update
     void Start()
     {
-        CardBackScript = GetComponent<CardBack>();
-        if (CardDataBase.cardList.Count > 0)
-        {
-            // Add the last card from cardList to deck
-            deck.Add(CardDataBase.cardList[CardDataBase.cardList.Count - 1]);
-            thatImage.sprite = deck[0].thisImage;
-        }
+        Debug.Log("Initial thisId: " + thisId); // Check initial thisId value
+       
 
-        //UpdateUI();
+        thisCard[0] = CardDataBase.cardList[thisId];
+        numberOfCardsInDeck = PlayerDeck.deckSize;
+
+        UpdateUI();
         canBeSummon = false;
         summoned = false;
 
@@ -102,18 +104,21 @@ public class ThisCard : MonoBehaviour
         canAttack = false;
         summoningSickness = true;
         Enemy = GameObject.Find("Enemy HP");
+
         targeting = false;
         targetingEnemy = false;
+
         beInGraveyard = false;
         canHeal = true;
         canBoost = true;
         directattack = true;
         EnemyZone = GameObject.Find("EnemyZone");
         Graveyard = GameObject.Find("MyGraveyard");
+        Hand = GameObject.Find("Hand");
 
 
     }
-
+   
     // Update is called once per frame
     void Update()
     {
@@ -122,51 +127,53 @@ public class ThisCard : MonoBehaviour
         {
             cardBack = false;
         }
-        if (deck.Count > 0)
-        {
-            id = deck[0].id;
-            cardName = deck[0].cardName;
-            cost = deck[0].cost;
-            power = deck[0].power;
-            actualpower = power - hurted;
-            cardDescription = deck[0].cardDescription;
-            thisSprite = deck[0].thisImage;
 
-            drawXcards = deck[0].drawXcards;
-            addXmaxGil = deck[0].addXmaxGil;
-            returnXcards = deck[0].returnXcards;
-            healXpower = deck[0].healXpower;
-            boostXpower = deck[0].boostXpower;
-            spell = deck[0].spell;
-            damageDealtBySpell = deck[0].damageDealtBySpell;
-            ward = deck[0].ward;
-            resurrectXcards = deck[0].resurrectXcards;
-        }
+
+        cardName = thisCard[0].cardName;
+        cost = thisCard[0].cost;
+        power = thisCard[0].power;
+        cardDescription = thisCard[0].cardDescription;
+        thisSprite = thisCard[0].thisImage;
+        actualpower = power - hurted;
+
+
+        drawXcards = thisCard[0].drawXcards;
+        addXmaxGil = thisCard[0].addXmaxGil;
+            returnXcards = thisCard[0].returnXcards;
+            healXpower = thisCard[0].healXpower;
+            boostXpower = thisCard[0].boostXpower;
+            spell = thisCard[0].spell;
+            damageDealtBySpell = thisCard[0].damageDealtBySpell;
+            ward = thisCard[0].ward;
+            resurrectXcards = thisCard[0].resurrectXcards;
+        
         // Check for color condition using the color property of the Card class
-        if (deck[0].color == "White")
+        if (thisCard[0].color == "White")
         {
             frame.color = new Color32(255, 255, 255, 255);  // Set the color to white
         }
-        else if (deck[0].color == "Blue")
+        else if (thisCard[0].color == "Blue")
         {
             frame.color = new Color32(26, 109, 236, 255);  // Set the color to white
         }
-        else if (deck[0].color == "Green")
+        else if (thisCard[0].color == "Green")
         {
             frame.color = new Color32(122, 236, 26, 255);  // Set the color to white
         }
-        else if (deck[0].color == "Black")
+        else if (thisCard[0].color == "Black")
         {
             frame.color = new Color32(51, 32, 32, 255);  // Set the color to white
         }
-        CardBackScript.UpdateCard(cardBack);
+
+        staticCardBack = cardBack;
+
         UpdateUI();
 
         if (this.tag == "Clone")
         {
           
-            deck[0] = PlayerDeck.staticDeck[PlayerDeck.deckSize - 1];
-
+            thisCard[0] = PlayerDeck.staticDeck[numberOfCardsInDeck - 1];
+            numberOfCardsInDeck -= 1;
             PlayerDeck.deckSize--;
             cardBack = false;
             this.tag = "Untagged";
@@ -363,7 +370,7 @@ public class ThisCard : MonoBehaviour
     }
     void UpdateUI()
     {
-
+        id = thisCard[0].id;
         nameText.text = cardName;
         costText.text = cost.ToString();
         powerText.text = actualpower.ToString();

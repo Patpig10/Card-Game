@@ -19170,7 +19170,647 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2ca0f4c9b83e1c46bcfbec5e5b72f18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deck: []
+  deck:
+  - id: 0
+    cardName: 
+    cost: 0
+    power: 0
+    cardDescription: 
+    drawXcards: 0
+    addXmaxGil: 0
+    thisImage: {fileID: 0}
+    color: 
+    returnXcards: 0
+    healXpower: 0
+    boostXpower: 0
+    spell: 0
+    damageDealtBySpell: 0
+    ward: 0
+    resurrectXcards: 0
+  - id: 0
+    cardName: 
+    cost: 0
+    power: 0
+    cardDescription: 
+    drawXcards: 0
+    addXmaxGil: 0
+    thisImage: {fileID: 0}
+    color: 
+    returnXcards: 0
+    healXpower: 0
+    boostXpower: 0
+    spell: 0
+    damageDealtBySpell: 0
+    ward: 0
+    resurrectXcards: 0
+  - id: 0
+    cardName: 
+    cost: 0
+    power: 0
+    cardDescription: 
+    drawXcards: 0
+    addXmaxGil: 0
+    thisImage: {fileID: 0}
+    color: 
+    returnXcards: 0
+    healXpower: 0
+    boostXpower: 0
+    spell: 0
+    damageDealtBySpell: 0
+    ward: 0
+    resurrectXcards: 0
+  - id: 0
+    cardName: 
+    cost: 0
+    power: 0
+    cardDescription: 
+    drawXcards: 0
+    addXmaxGil: 0
+    thisImage: {fileID: 0}
+    color: 
+    returnXcards: 0
+    healXpower: 0
+    boostXpower: 0
+    spell: 0
+    damageDealtBySpell: 0
+    ward: 0
+    resurrectXcards: 0
+  - id: 0
+    cardName: 
+    cost: 0
+    power: 0
+    cardDescription: 
+    drawXcards: 0
+    addXmaxGil: 0
+    thisImage: {fileID: 0}
+    color: 
+    returnXcards: 0
+    healXpower: 0
+    boostXpower: 0
+    spell: 0
+    damageDealtBySpell: 0
+    ward: 0
+    resurrectXcards: 0
+  - id: 0
+    cardName: 
+    cost: 0
+    power: 0
+    cardDescription: 
+    drawXcards: 0
+    addXmaxGil: 0
+    thisImage: {fileID: 0}
+    color: 
+    returnXcards: 0
+    healXpower: 0
+    boostXpower: 0
+    spell: 0
+    damageDealtBySpell: 0
+    ward: 0
+    resurrectXcards: 0
+  - id: 0
+    cardName: 
+    cost: 0
+    power: 0
+    cardDescription: 
+    drawXcards: 0
+    addXmaxGil: 0
+    thisImage: {fileID: 0}
+    color: 
+    returnXcards: 0
+    healXpower: 0
+    boostXpower: 0
+    spell: 0
+    damageDealtBySpell: 0
+    ward: 0
+    resurrectXcards: 0
+  - id: 0
+    cardName: 
+    cost: 0
+    power: 0
+    cardDescription: 
+    drawXcards: 0
+    addXmaxGil: 0
+    thisImage: {fileID: 0}
+    color: 
+    returnXcards: 0
+    healXpower: 0
+    boostXpower: 0
+    spell: 0
+    damageDealtBySpell: 0
+    ward: 0
+    resurrectXcards: 0
+  - id: 0
+    cardName: 
+    cost: 0
+    power: 0
+    cardDescription: 
+    drawXcards: 0
+    addXmaxGil: 0
+    thisImage: {fileID: 0}
+    color: 
+    returnXcards: 0
+    healXpower: 0
+    boostXpower: 0
+    spell: 0
+    damageDealtBySpell: 0
+    ward: 0
+    resurrectXcards: 0
+  - id: 0
+    cardName: 
+    cost: 0
+    power: 0
+    cardDescription: 
+    drawXcards: 0
+    addXmaxGil: 0
+    thisImage: {fileID: 0}
+    color: 
+    returnXcards: 0
+    healXpower: 0
+    boostXpower: 0
+    spell: 0
+    damageDealtBySpell: 0
+    ward: 0
+    resurrectXcards: 0
+  - id: 0
+    cardName: 
+    cost: 0
+    power: 0
+    cardDescription: 
+    drawXcards: 0
+    addXmaxGil: 0
+    thisImage: {fileID: 0}
+    color: 
+    returnXcards: 0
+    healXpower: 0
+    boostXpower: 0
+    spell: 0
+    damageDealtBySpell: 0
+    ward: 0
+    resurrectXcards: 0
+  - id: 0
+    cardName: 
+    cost: 0
+    power: 0
+    cardDescription: 
+    drawXcards: 0
+    addXmaxGil: 0
+    thisImage: {fileID: 0}
+    color: 
+    returnXcards: 0
+    healXpower: 0
+    boostXpower: 0
+    spell: 0
+    damageDealtBySpell: 0
+    ward: 0
+    resurrectXcards: 0
+  - id: 0
+    cardName: 
+    cost: 0
+    power: 0
+    cardDescription: 
+    drawXcards: 0
+    addXmaxGil: 0
+    thisImage: {fileID: 0}
+    color: 
+    returnXcards: 0
+    healXpower: 0
+    boostXpower: 0
+    spell: 0
+    damageDealtBySpell: 0
+    ward: 0
+    resurrectXcards: 0
+  - id: 0
+    cardName: 
+    cost: 0
+    power: 0
+    cardDescription: 
+    drawXcards: 0
+    addXmaxGil: 0
+    thisImage: {fileID: 0}
+    color: 
+    returnXcards: 0
+    healXpower: 0
+    boostXpower: 0
+    spell: 0
+    damageDealtBySpell: 0
+    ward: 0
+    resurrectXcards: 0
+  - id: 0
+    cardName: 
+    cost: 0
+    power: 0
+    cardDescription: 
+    drawXcards: 0
+    addXmaxGil: 0
+    thisImage: {fileID: 0}
+    color: 
+    returnXcards: 0
+    healXpower: 0
+    boostXpower: 0
+    spell: 0
+    damageDealtBySpell: 0
+    ward: 0
+    resurrectXcards: 0
+  - id: 0
+    cardName: 
+    cost: 0
+    power: 0
+    cardDescription: 
+    drawXcards: 0
+    addXmaxGil: 0
+    thisImage: {fileID: 0}
+    color: 
+    returnXcards: 0
+    healXpower: 0
+    boostXpower: 0
+    spell: 0
+    damageDealtBySpell: 0
+    ward: 0
+    resurrectXcards: 0
+  - id: 0
+    cardName: 
+    cost: 0
+    power: 0
+    cardDescription: 
+    drawXcards: 0
+    addXmaxGil: 0
+    thisImage: {fileID: 0}
+    color: 
+    returnXcards: 0
+    healXpower: 0
+    boostXpower: 0
+    spell: 0
+    damageDealtBySpell: 0
+    ward: 0
+    resurrectXcards: 0
+  - id: 0
+    cardName: 
+    cost: 0
+    power: 0
+    cardDescription: 
+    drawXcards: 0
+    addXmaxGil: 0
+    thisImage: {fileID: 0}
+    color: 
+    returnXcards: 0
+    healXpower: 0
+    boostXpower: 0
+    spell: 0
+    damageDealtBySpell: 0
+    ward: 0
+    resurrectXcards: 0
+  - id: 0
+    cardName: 
+    cost: 0
+    power: 0
+    cardDescription: 
+    drawXcards: 0
+    addXmaxGil: 0
+    thisImage: {fileID: 0}
+    color: 
+    returnXcards: 0
+    healXpower: 0
+    boostXpower: 0
+    spell: 0
+    damageDealtBySpell: 0
+    ward: 0
+    resurrectXcards: 0
+  - id: 0
+    cardName: 
+    cost: 0
+    power: 0
+    cardDescription: 
+    drawXcards: 0
+    addXmaxGil: 0
+    thisImage: {fileID: 0}
+    color: 
+    returnXcards: 0
+    healXpower: 0
+    boostXpower: 0
+    spell: 0
+    damageDealtBySpell: 0
+    ward: 0
+    resurrectXcards: 0
+  - id: 0
+    cardName: 
+    cost: 0
+    power: 0
+    cardDescription: 
+    drawXcards: 0
+    addXmaxGil: 0
+    thisImage: {fileID: 0}
+    color: 
+    returnXcards: 0
+    healXpower: 0
+    boostXpower: 0
+    spell: 0
+    damageDealtBySpell: 0
+    ward: 0
+    resurrectXcards: 0
+  - id: 0
+    cardName: 
+    cost: 0
+    power: 0
+    cardDescription: 
+    drawXcards: 0
+    addXmaxGil: 0
+    thisImage: {fileID: 0}
+    color: 
+    returnXcards: 0
+    healXpower: 0
+    boostXpower: 0
+    spell: 0
+    damageDealtBySpell: 0
+    ward: 0
+    resurrectXcards: 0
+  - id: 0
+    cardName: 
+    cost: 0
+    power: 0
+    cardDescription: 
+    drawXcards: 0
+    addXmaxGil: 0
+    thisImage: {fileID: 0}
+    color: 
+    returnXcards: 0
+    healXpower: 0
+    boostXpower: 0
+    spell: 0
+    damageDealtBySpell: 0
+    ward: 0
+    resurrectXcards: 0
+  - id: 0
+    cardName: 
+    cost: 0
+    power: 0
+    cardDescription: 
+    drawXcards: 0
+    addXmaxGil: 0
+    thisImage: {fileID: 0}
+    color: 
+    returnXcards: 0
+    healXpower: 0
+    boostXpower: 0
+    spell: 0
+    damageDealtBySpell: 0
+    ward: 0
+    resurrectXcards: 0
+  - id: 0
+    cardName: 
+    cost: 0
+    power: 0
+    cardDescription: 
+    drawXcards: 0
+    addXmaxGil: 0
+    thisImage: {fileID: 0}
+    color: 
+    returnXcards: 0
+    healXpower: 0
+    boostXpower: 0
+    spell: 0
+    damageDealtBySpell: 0
+    ward: 0
+    resurrectXcards: 0
+  - id: 0
+    cardName: 
+    cost: 0
+    power: 0
+    cardDescription: 
+    drawXcards: 0
+    addXmaxGil: 0
+    thisImage: {fileID: 0}
+    color: 
+    returnXcards: 0
+    healXpower: 0
+    boostXpower: 0
+    spell: 0
+    damageDealtBySpell: 0
+    ward: 0
+    resurrectXcards: 0
+  - id: 0
+    cardName: 
+    cost: 0
+    power: 0
+    cardDescription: 
+    drawXcards: 0
+    addXmaxGil: 0
+    thisImage: {fileID: 0}
+    color: 
+    returnXcards: 0
+    healXpower: 0
+    boostXpower: 0
+    spell: 0
+    damageDealtBySpell: 0
+    ward: 0
+    resurrectXcards: 0
+  - id: 0
+    cardName: 
+    cost: 0
+    power: 0
+    cardDescription: 
+    drawXcards: 0
+    addXmaxGil: 0
+    thisImage: {fileID: 0}
+    color: 
+    returnXcards: 0
+    healXpower: 0
+    boostXpower: 0
+    spell: 0
+    damageDealtBySpell: 0
+    ward: 0
+    resurrectXcards: 0
+  - id: 0
+    cardName: 
+    cost: 0
+    power: 0
+    cardDescription: 
+    drawXcards: 0
+    addXmaxGil: 0
+    thisImage: {fileID: 0}
+    color: 
+    returnXcards: 0
+    healXpower: 0
+    boostXpower: 0
+    spell: 0
+    damageDealtBySpell: 0
+    ward: 0
+    resurrectXcards: 0
+  - id: 0
+    cardName: 
+    cost: 0
+    power: 0
+    cardDescription: 
+    drawXcards: 0
+    addXmaxGil: 0
+    thisImage: {fileID: 0}
+    color: 
+    returnXcards: 0
+    healXpower: 0
+    boostXpower: 0
+    spell: 0
+    damageDealtBySpell: 0
+    ward: 0
+    resurrectXcards: 0
+  - id: 0
+    cardName: 
+    cost: 0
+    power: 0
+    cardDescription: 
+    drawXcards: 0
+    addXmaxGil: 0
+    thisImage: {fileID: 0}
+    color: 
+    returnXcards: 0
+    healXpower: 0
+    boostXpower: 0
+    spell: 0
+    damageDealtBySpell: 0
+    ward: 0
+    resurrectXcards: 0
+  - id: 0
+    cardName: 
+    cost: 0
+    power: 0
+    cardDescription: 
+    drawXcards: 0
+    addXmaxGil: 0
+    thisImage: {fileID: 0}
+    color: 
+    returnXcards: 0
+    healXpower: 0
+    boostXpower: 0
+    spell: 0
+    damageDealtBySpell: 0
+    ward: 0
+    resurrectXcards: 0
+  - id: 0
+    cardName: 
+    cost: 0
+    power: 0
+    cardDescription: 
+    drawXcards: 0
+    addXmaxGil: 0
+    thisImage: {fileID: 0}
+    color: 
+    returnXcards: 0
+    healXpower: 0
+    boostXpower: 0
+    spell: 0
+    damageDealtBySpell: 0
+    ward: 0
+    resurrectXcards: 0
+  - id: 0
+    cardName: 
+    cost: 0
+    power: 0
+    cardDescription: 
+    drawXcards: 0
+    addXmaxGil: 0
+    thisImage: {fileID: 0}
+    color: 
+    returnXcards: 0
+    healXpower: 0
+    boostXpower: 0
+    spell: 0
+    damageDealtBySpell: 0
+    ward: 0
+    resurrectXcards: 0
+  - id: 0
+    cardName: 
+    cost: 0
+    power: 0
+    cardDescription: 
+    drawXcards: 0
+    addXmaxGil: 0
+    thisImage: {fileID: 0}
+    color: 
+    returnXcards: 0
+    healXpower: 0
+    boostXpower: 0
+    spell: 0
+    damageDealtBySpell: 0
+    ward: 0
+    resurrectXcards: 0
+  - id: 0
+    cardName: 
+    cost: 0
+    power: 0
+    cardDescription: 
+    drawXcards: 0
+    addXmaxGil: 0
+    thisImage: {fileID: 0}
+    color: 
+    returnXcards: 0
+    healXpower: 0
+    boostXpower: 0
+    spell: 0
+    damageDealtBySpell: 0
+    ward: 0
+    resurrectXcards: 0
+  - id: 0
+    cardName: 
+    cost: 0
+    power: 0
+    cardDescription: 
+    drawXcards: 0
+    addXmaxGil: 0
+    thisImage: {fileID: 0}
+    color: 
+    returnXcards: 0
+    healXpower: 0
+    boostXpower: 0
+    spell: 0
+    damageDealtBySpell: 0
+    ward: 0
+    resurrectXcards: 0
+  - id: 0
+    cardName: 
+    cost: 0
+    power: 0
+    cardDescription: 
+    drawXcards: 0
+    addXmaxGil: 0
+    thisImage: {fileID: 0}
+    color: 
+    returnXcards: 0
+    healXpower: 0
+    boostXpower: 0
+    spell: 0
+    damageDealtBySpell: 0
+    ward: 0
+    resurrectXcards: 0
+  - id: 0
+    cardName: 
+    cost: 0
+    power: 0
+    cardDescription: 
+    drawXcards: 0
+    addXmaxGil: 0
+    thisImage: {fileID: 0}
+    color: 
+    returnXcards: 0
+    healXpower: 0
+    boostXpower: 0
+    spell: 0
+    damageDealtBySpell: 0
+    ward: 0
+    resurrectXcards: 0
+  - id: 0
+    cardName: 
+    cost: 0
+    power: 0
+    cardDescription: 
+    drawXcards: 0
+    addXmaxGil: 0
+    thisImage: {fileID: 0}
+    color: 
+    returnXcards: 0
+    healXpower: 0
+    boostXpower: 0
+    spell: 0
+    damageDealtBySpell: 0
+    ward: 0
+    resurrectXcards: 0
   container:
   - id: 0
     cardName: 
@@ -19188,683 +19828,19 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
-  - id: 0
-    cardName: 
-    cost: 0
-    power: 0
-    cardDescription: 
-    drawXcards: 0
-    addXmaxGil: 0
-    thisImage: {fileID: 0}
-    color: 
-    returnXcards: 0
-    healXpower: 0
-    boostXpower: 0
-    spell: 0
-    damageDealtBySpell: 0
-    ward: 0
-    resurrectXcards: 0
-  - id: 0
-    cardName: 
-    cost: 0
-    power: 0
-    cardDescription: 
-    drawXcards: 0
-    addXmaxGil: 0
-    thisImage: {fileID: 0}
-    color: 
-    returnXcards: 0
-    healXpower: 0
-    boostXpower: 0
-    spell: 0
-    damageDealtBySpell: 0
-    ward: 0
-    resurrectXcards: 0
-  - id: 0
-    cardName: 
-    cost: 0
-    power: 0
-    cardDescription: 
-    drawXcards: 0
-    addXmaxGil: 0
-    thisImage: {fileID: 0}
-    color: 
-    returnXcards: 0
-    healXpower: 0
-    boostXpower: 0
-    spell: 0
-    damageDealtBySpell: 0
-    ward: 0
-    resurrectXcards: 0
-  - id: 0
-    cardName: 
-    cost: 0
-    power: 0
-    cardDescription: 
-    drawXcards: 0
-    addXmaxGil: 0
-    thisImage: {fileID: 0}
-    color: 
-    returnXcards: 0
-    healXpower: 0
-    boostXpower: 0
-    spell: 0
-    damageDealtBySpell: 0
-    ward: 0
-    resurrectXcards: 0
-  - id: 0
-    cardName: 
-    cost: 0
-    power: 0
-    cardDescription: 
-    drawXcards: 0
-    addXmaxGil: 0
-    thisImage: {fileID: 0}
-    color: 
-    returnXcards: 0
-    healXpower: 0
-    boostXpower: 0
-    spell: 0
-    damageDealtBySpell: 0
-    ward: 0
-    resurrectXcards: 0
-  - id: 0
-    cardName: 
-    cost: 0
-    power: 0
-    cardDescription: 
-    drawXcards: 0
-    addXmaxGil: 0
-    thisImage: {fileID: 0}
-    color: 
-    returnXcards: 0
-    healXpower: 0
-    boostXpower: 0
-    spell: 0
-    damageDealtBySpell: 0
-    ward: 0
-    resurrectXcards: 0
-  - id: 0
-    cardName: 
-    cost: 0
-    power: 0
-    cardDescription: 
-    drawXcards: 0
-    addXmaxGil: 0
-    thisImage: {fileID: 0}
-    color: 
-    returnXcards: 0
-    healXpower: 0
-    boostXpower: 0
-    spell: 0
-    damageDealtBySpell: 0
-    ward: 0
-    resurrectXcards: 0
-  - id: 0
-    cardName: 
-    cost: 0
-    power: 0
-    cardDescription: 
-    drawXcards: 0
-    addXmaxGil: 0
-    thisImage: {fileID: 0}
-    color: 
-    returnXcards: 0
-    healXpower: 0
-    boostXpower: 0
-    spell: 0
-    damageDealtBySpell: 0
-    ward: 0
-    resurrectXcards: 0
-  - id: 0
-    cardName: 
-    cost: 0
-    power: 0
-    cardDescription: 
-    drawXcards: 0
-    addXmaxGil: 0
-    thisImage: {fileID: 0}
-    color: 
-    returnXcards: 0
-    healXpower: 0
-    boostXpower: 0
-    spell: 0
-    damageDealtBySpell: 0
-    ward: 0
-    resurrectXcards: 0
-  - id: 0
-    cardName: 
-    cost: 0
-    power: 0
-    cardDescription: 
-    drawXcards: 0
-    addXmaxGil: 0
-    thisImage: {fileID: 0}
-    color: 
-    returnXcards: 0
-    healXpower: 0
-    boostXpower: 0
-    spell: 0
-    damageDealtBySpell: 0
-    ward: 0
-    resurrectXcards: 0
-  - id: 0
-    cardName: 
-    cost: 0
-    power: 0
-    cardDescription: 
-    drawXcards: 0
-    addXmaxGil: 0
-    thisImage: {fileID: 0}
-    color: 
-    returnXcards: 0
-    healXpower: 0
-    boostXpower: 0
-    spell: 0
-    damageDealtBySpell: 0
-    ward: 0
-    resurrectXcards: 0
-  - id: 0
-    cardName: 
-    cost: 0
-    power: 0
-    cardDescription: 
-    drawXcards: 0
-    addXmaxGil: 0
-    thisImage: {fileID: 0}
-    color: 
-    returnXcards: 0
-    healXpower: 0
-    boostXpower: 0
-    spell: 0
-    damageDealtBySpell: 0
-    ward: 0
-    resurrectXcards: 0
-  - id: 0
-    cardName: 
-    cost: 0
-    power: 0
-    cardDescription: 
-    drawXcards: 0
-    addXmaxGil: 0
-    thisImage: {fileID: 0}
-    color: 
-    returnXcards: 0
-    healXpower: 0
-    boostXpower: 0
-    spell: 0
-    damageDealtBySpell: 0
-    ward: 0
-    resurrectXcards: 0
-  - id: 0
-    cardName: 
-    cost: 0
-    power: 0
-    cardDescription: 
-    drawXcards: 0
-    addXmaxGil: 0
-    thisImage: {fileID: 0}
-    color: 
-    returnXcards: 0
-    healXpower: 0
-    boostXpower: 0
-    spell: 0
-    damageDealtBySpell: 0
-    ward: 0
-    resurrectXcards: 0
-  - id: 0
-    cardName: 
-    cost: 0
-    power: 0
-    cardDescription: 
-    drawXcards: 0
-    addXmaxGil: 0
-    thisImage: {fileID: 0}
-    color: 
-    returnXcards: 0
-    healXpower: 0
-    boostXpower: 0
-    spell: 0
-    damageDealtBySpell: 0
-    ward: 0
-    resurrectXcards: 0
-  - id: 0
-    cardName: 
-    cost: 0
-    power: 0
-    cardDescription: 
-    drawXcards: 0
-    addXmaxGil: 0
-    thisImage: {fileID: 0}
-    color: 
-    returnXcards: 0
-    healXpower: 0
-    boostXpower: 0
-    spell: 0
-    damageDealtBySpell: 0
-    ward: 0
-    resurrectXcards: 0
-  - id: 0
-    cardName: 
-    cost: 0
-    power: 0
-    cardDescription: 
-    drawXcards: 0
-    addXmaxGil: 0
-    thisImage: {fileID: 0}
-    color: 
-    returnXcards: 0
-    healXpower: 0
-    boostXpower: 0
-    spell: 0
-    damageDealtBySpell: 0
-    ward: 0
-    resurrectXcards: 0
-  - id: 0
-    cardName: 
-    cost: 0
-    power: 0
-    cardDescription: 
-    drawXcards: 0
-    addXmaxGil: 0
-    thisImage: {fileID: 0}
-    color: 
-    returnXcards: 0
-    healXpower: 0
-    boostXpower: 0
-    spell: 0
-    damageDealtBySpell: 0
-    ward: 0
-    resurrectXcards: 0
-  - id: 0
-    cardName: 
-    cost: 0
-    power: 0
-    cardDescription: 
-    drawXcards: 0
-    addXmaxGil: 0
-    thisImage: {fileID: 0}
-    color: 
-    returnXcards: 0
-    healXpower: 0
-    boostXpower: 0
-    spell: 0
-    damageDealtBySpell: 0
-    ward: 0
-    resurrectXcards: 0
-  - id: 0
-    cardName: 
-    cost: 0
-    power: 0
-    cardDescription: 
-    drawXcards: 0
-    addXmaxGil: 0
-    thisImage: {fileID: 0}
-    color: 
-    returnXcards: 0
-    healXpower: 0
-    boostXpower: 0
-    spell: 0
-    damageDealtBySpell: 0
-    ward: 0
-    resurrectXcards: 0
-  - id: 0
-    cardName: 
-    cost: 0
-    power: 0
-    cardDescription: 
-    drawXcards: 0
-    addXmaxGil: 0
-    thisImage: {fileID: 0}
-    color: 
-    returnXcards: 0
-    healXpower: 0
-    boostXpower: 0
-    spell: 0
-    damageDealtBySpell: 0
-    ward: 0
-    resurrectXcards: 0
-  - id: 0
-    cardName: 
-    cost: 0
-    power: 0
-    cardDescription: 
-    drawXcards: 0
-    addXmaxGil: 0
-    thisImage: {fileID: 0}
-    color: 
-    returnXcards: 0
-    healXpower: 0
-    boostXpower: 0
-    spell: 0
-    damageDealtBySpell: 0
-    ward: 0
-    resurrectXcards: 0
-  - id: 0
-    cardName: 
-    cost: 0
-    power: 0
-    cardDescription: 
-    drawXcards: 0
-    addXmaxGil: 0
-    thisImage: {fileID: 0}
-    color: 
-    returnXcards: 0
-    healXpower: 0
-    boostXpower: 0
-    spell: 0
-    damageDealtBySpell: 0
-    ward: 0
-    resurrectXcards: 0
-  - id: 0
-    cardName: 
-    cost: 0
-    power: 0
-    cardDescription: 
-    drawXcards: 0
-    addXmaxGil: 0
-    thisImage: {fileID: 0}
-    color: 
-    returnXcards: 0
-    healXpower: 0
-    boostXpower: 0
-    spell: 0
-    damageDealtBySpell: 0
-    ward: 0
-    resurrectXcards: 0
-  - id: 0
-    cardName: 
-    cost: 0
-    power: 0
-    cardDescription: 
-    drawXcards: 0
-    addXmaxGil: 0
-    thisImage: {fileID: 0}
-    color: 
-    returnXcards: 0
-    healXpower: 0
-    boostXpower: 0
-    spell: 0
-    damageDealtBySpell: 0
-    ward: 0
-    resurrectXcards: 0
-  - id: 0
-    cardName: 
-    cost: 0
-    power: 0
-    cardDescription: 
-    drawXcards: 0
-    addXmaxGil: 0
-    thisImage: {fileID: 0}
-    color: 
-    returnXcards: 0
-    healXpower: 0
-    boostXpower: 0
-    spell: 0
-    damageDealtBySpell: 0
-    ward: 0
-    resurrectXcards: 0
-  - id: 0
-    cardName: 
-    cost: 0
-    power: 0
-    cardDescription: 
-    drawXcards: 0
-    addXmaxGil: 0
-    thisImage: {fileID: 0}
-    color: 
-    returnXcards: 0
-    healXpower: 0
-    boostXpower: 0
-    spell: 0
-    damageDealtBySpell: 0
-    ward: 0
-    resurrectXcards: 0
-  - id: 0
-    cardName: 
-    cost: 0
-    power: 0
-    cardDescription: 
-    drawXcards: 0
-    addXmaxGil: 0
-    thisImage: {fileID: 0}
-    color: 
-    returnXcards: 0
-    healXpower: 0
-    boostXpower: 0
-    spell: 0
-    damageDealtBySpell: 0
-    ward: 0
-    resurrectXcards: 0
-  - id: 0
-    cardName: 
-    cost: 0
-    power: 0
-    cardDescription: 
-    drawXcards: 0
-    addXmaxGil: 0
-    thisImage: {fileID: 0}
-    color: 
-    returnXcards: 0
-    healXpower: 0
-    boostXpower: 0
-    spell: 0
-    damageDealtBySpell: 0
-    ward: 0
-    resurrectXcards: 0
-  - id: 0
-    cardName: 
-    cost: 0
-    power: 0
-    cardDescription: 
-    drawXcards: 0
-    addXmaxGil: 0
-    thisImage: {fileID: 0}
-    color: 
-    returnXcards: 0
-    healXpower: 0
-    boostXpower: 0
-    spell: 0
-    damageDealtBySpell: 0
-    ward: 0
-    resurrectXcards: 0
-  - id: 0
-    cardName: 
-    cost: 0
-    power: 0
-    cardDescription: 
-    drawXcards: 0
-    addXmaxGil: 0
-    thisImage: {fileID: 0}
-    color: 
-    returnXcards: 0
-    healXpower: 0
-    boostXpower: 0
-    spell: 0
-    damageDealtBySpell: 0
-    ward: 0
-    resurrectXcards: 0
-  - id: 0
-    cardName: 
-    cost: 0
-    power: 0
-    cardDescription: 
-    drawXcards: 0
-    addXmaxGil: 0
-    thisImage: {fileID: 0}
-    color: 
-    returnXcards: 0
-    healXpower: 0
-    boostXpower: 0
-    spell: 0
-    damageDealtBySpell: 0
-    ward: 0
-    resurrectXcards: 0
-  - id: 0
-    cardName: 
-    cost: 0
-    power: 0
-    cardDescription: 
-    drawXcards: 0
-    addXmaxGil: 0
-    thisImage: {fileID: 0}
-    color: 
-    returnXcards: 0
-    healXpower: 0
-    boostXpower: 0
-    spell: 0
-    damageDealtBySpell: 0
-    ward: 0
-    resurrectXcards: 0
-  - id: 0
-    cardName: 
-    cost: 0
-    power: 0
-    cardDescription: 
-    drawXcards: 0
-    addXmaxGil: 0
-    thisImage: {fileID: 0}
-    color: 
-    returnXcards: 0
-    healXpower: 0
-    boostXpower: 0
-    spell: 0
-    damageDealtBySpell: 0
-    ward: 0
-    resurrectXcards: 0
-  - id: 0
-    cardName: 
-    cost: 0
-    power: 0
-    cardDescription: 
-    drawXcards: 0
-    addXmaxGil: 0
-    thisImage: {fileID: 0}
-    color: 
-    returnXcards: 0
-    healXpower: 0
-    boostXpower: 0
-    spell: 0
-    damageDealtBySpell: 0
-    ward: 0
-    resurrectXcards: 0
-  - id: 0
-    cardName: 
-    cost: 0
-    power: 0
-    cardDescription: 
-    drawXcards: 0
-    addXmaxGil: 0
-    thisImage: {fileID: 0}
-    color: 
-    returnXcards: 0
-    healXpower: 0
-    boostXpower: 0
-    spell: 0
-    damageDealtBySpell: 0
-    ward: 0
-    resurrectXcards: 0
-  - id: 0
-    cardName: 
-    cost: 0
-    power: 0
-    cardDescription: 
-    drawXcards: 0
-    addXmaxGil: 0
-    thisImage: {fileID: 0}
-    color: 
-    returnXcards: 0
-    healXpower: 0
-    boostXpower: 0
-    spell: 0
-    damageDealtBySpell: 0
-    ward: 0
-    resurrectXcards: 0
-  - id: 0
-    cardName: 
-    cost: 0
-    power: 0
-    cardDescription: 
-    drawXcards: 0
-    addXmaxGil: 0
-    thisImage: {fileID: 0}
-    color: 
-    returnXcards: 0
-    healXpower: 0
-    boostXpower: 0
-    spell: 0
-    damageDealtBySpell: 0
-    ward: 0
-    resurrectXcards: 0
-  - id: 0
-    cardName: 
-    cost: 0
-    power: 0
-    cardDescription: 
-    drawXcards: 0
-    addXmaxGil: 0
-    thisImage: {fileID: 0}
-    color: 
-    returnXcards: 0
-    healXpower: 0
-    boostXpower: 0
-    spell: 0
-    damageDealtBySpell: 0
-    ward: 0
-    resurrectXcards: 0
-  x: 40
+  x: 0
   cardInDeck1: {fileID: 880657472}
   cardInDeck2: {fileID: 870610817}
   cardInDeck3: {fileID: 2087185183}
   cardInDeck4: {fileID: 1790698924}
-  CardBack: {fileID: 5782265181162736036, guid: 3e792e454a6d3594f90d33fa4b1a3a59, type: 3}
   CardToHand: {fileID: 1596230988835689104, guid: f21f5e5127e16c542a93ab8a34f2fe4b, type: 3}
+  CardBack: {fileID: 5782265181162736036, guid: 3e792e454a6d3594f90d33fa4b1a3a59, type: 3}
   Deck: {fileID: 1801785265}
-  Clones:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  Clones: []
   Hand: {fileID: 1796361801}
-  thisCardScript: {fileID: 4282684686408332263, guid: f21f5e5127e16c542a93ab8a34f2fe4b, type: 3}
-  LoseText: {fileID: 0}
+  LoseText: {fileID: 1459243748}
   LoseTextGameObject: {fileID: 1459243746}
+  concedeWindow: {fileID: 0}
 --- !u!1 &1805493393
 GameObject:
   m_ObjectHideFlags: 0

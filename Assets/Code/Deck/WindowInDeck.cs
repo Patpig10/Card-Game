@@ -3,20 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-
 public class WindowInDeck : MonoBehaviour
 {
+
     public GameObject Panel;
-    public TextMeshProUGUI nameText;
+    public TMP_Text nameText;
+
     public int id;
-    public int quantityOf;
+
+    public int quanityOf;
+
     public GameObject Creator;
 
-   // Start is called before the first frame update
+    // Use this for initialization
     void Start()
     {
-        Panel = GameObject.Find("DeckList");
-        Creator = GameObject.Find("Collection");
+
+        Panel = GameObject.Find("Panel");
+        Creator = GameObject.Find("Collection UI Panel");
         transform.SetParent(Panel.transform);
         transform.localScale = new Vector3(1, 1, 1);
 
@@ -26,8 +30,8 @@ public class WindowInDeck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        quantityOf = Creator.GetComponent<DeckCreator>().quantity[id];
-        nameText.text = CardDataBase.cardList[id].cardName + " x" + quantityOf;
-        
+
+        quanityOf = Creator.GetComponent<DeckCreator>().quanity[id];
+        nameText.text = CardDataBase.cardList[id].cardName + " X " + quanityOf;
     }
 }
