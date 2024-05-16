@@ -19,8 +19,8 @@ public class WindowInDeck : MonoBehaviour
     void Start()
     {
 
-        Panel = GameObject.Find("Panel");
-        Creator = GameObject.Find("Collection UI Panel");
+        Panel = GameObject.Find("DeckList");
+        Creator = GameObject.Find("Collection");
         transform.SetParent(Panel.transform);
         transform.localScale = new Vector3(1, 1, 1);
 

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
+using Unity.VisualScripting;
 
 public class PlayerDeck : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class PlayerDeck : MonoBehaviour
 
 
     public int x;
-    public static int deckSize;
+    public static int deckSize = 40;
 
     public GameObject cardInDeck1;
     public GameObject cardInDeck2;
@@ -22,6 +23,7 @@ public class PlayerDeck : MonoBehaviour
     public GameObject cardInDeck4;
 
     public GameObject CardToHand;
+    private int currentDeckIndex = 0;
 
     public GameObject CardBack;
     public GameObject Deck;
@@ -51,24 +53,8 @@ public class PlayerDeck : MonoBehaviour
     void Start()
     {
 
-        x = 0;
-        deckSize = 40;
-
-        for (int i = 1; i <= 8; i++)
-        {
-            if (PlayerPrefs.GetInt("deck" + i, 0) > 0)
-            {
-                for (int j = 1; j <= PlayerPrefs.GetInt("deck" + i, 0); j++)
-                {
-                    deck[x] = CardDataBase.cardList[i];
-                    x++;
-                }
-            }
-        }
-
-        Shuffle();
-
-
+        InitializeDeck();
+        ShuffleDeck();
         StartCoroutine(StartGame());
     }
 
@@ -120,6 +106,33 @@ public class PlayerDeck : MonoBehaviour
 
     }
 
+    void InitializeDeck()
+    {
+        // Build the deck based on player preferences (example)
+        for (int i = 1; i <= 8; i++)
+        {
+            int cardCount = PlayerPrefs.GetInt("deck" + i, 0);
+            if (cardCount > 0)
+            {
+                for (int j = 0; j < cardCount; j++)
+                {
+                    deck.Add(CardDataBase.cardList[i]);
+                }
+            }
+        }
+    }
+
+    void ShuffleDeck()
+    {
+        // Shuffle the deck using Fisher-Yates algorithm
+        for (int i = 0; i < deck.Count; i++)
+        {
+            Card temp = deck[i];
+            int randomIndex = Random.Range(i, deck.Count);
+            deck[i] = deck[randomIndex];
+            deck[randomIndex] = temp;
+        }
+    }
     IEnumerator Example()
     {
         //COMMENT
@@ -141,13 +154,14 @@ public class PlayerDeck : MonoBehaviour
 
     IEnumerator StartGame()
     {
-        for (int i = 0; i <= 4; i++)
+        // Draw initial cards at the start of the game
+        const int initialCardsToDraw = 4;
+        yield return new WaitForSeconds(1f);
+
+        for (int i = 0; i < initialCardsToDraw; i++)
         {
-            yield return new WaitForSeconds(1);
-            //NEW
-          //  audioSource.PlayOneShot(draw, 1f);
-            //NEW
-            Instantiate(CardToHand, transform.position, transform.rotation);
+            DrawCardToHand();
+            yield return new WaitForSeconds(0.5f);
         }
     }
 
@@ -180,34 +194,61 @@ public class PlayerDeck : MonoBehaviour
 
 
     }
+    void DrawCardToHand()
+    {
+        if (deck.Count > 0)
+        {
+            // Get the top card from the deck
+            Card drawnCard = deck[0];
+            deck.RemoveAt(0); // Remove the drawn card from the deck
 
+            // Instantiate the CardToHand prefab and set its thisId
+            GameObject cardInHand = Instantiate(CardToHand, transform.position, Quaternion.identity);
+            ThisCard thisCardComponent = cardInHand.GetComponent<ThisCard>();
+            if (thisCardComponent != null)
+            {
+                thisCardComponent.thisId = drawnCard.id;
+                thisCardComponent.UpdateUI(); // Update UI with card information
+            }
+        }
+    }
 
     IEnumerator Draw(int x)
     {
         for (int i = 0; i < x; i++)
         {
             yield return new WaitForSeconds(1);
-            //NEW
-        //    audioSource.PlayOneShot(draw, 1f);
-            //NEW END
-            Instantiate(CardToHand, transform.position, transform.rotation);
+
+            if (deck.Count > 0)
+            {
+                Card drawnCard = deck[0]; // Get the top card from the deck
+                deck.RemoveAt(0); // Remove the drawn card from the deck
+
+                GameObject cardInHand = Instantiate(CardToHand, transform.position, transform.rotation);
+                ThisCard thisCardComponent = cardInHand.GetComponent<ThisCard>();
+                if (thisCardComponent != null)
+                {
+                    thisCardComponent.thisId = drawnCard.id; // Assign the thisId based on the drawn card's id
+                    thisCardComponent.UpdateUI(); // Update UI with card information
+                }
+            }
         }
     }
 
-   /* public void OpenWindow()
-    {
-        concedeWindow.SetActive(true);
-    }
+    /* public void OpenWindow()
+     {
+         concedeWindow.SetActive(true);
+     }
 
-    public void CloseWindow()
-    {
-        concedeWindow.SetActive(false);
-    }
+     public void CloseWindow()
+     {
+         concedeWindow.SetActive(false);
+     }
 
-    public void ConcedeDefeat()
-    {
-        StartCoroutine(EndGame());
-    }*/
+     public void ConcedeDefeat()
+     {
+         StartCoroutine(EndGame());
+     }*/
 
     IEnumerator EndGame()
     {
@@ -220,6 +261,7 @@ public class PlayerDeck : MonoBehaviour
       //  SceneManager.LoadScene(menu);
     }
 
+   
 
 }
 

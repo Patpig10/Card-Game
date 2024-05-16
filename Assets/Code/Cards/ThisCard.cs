@@ -128,6 +128,7 @@ public class ThisCard : MonoBehaviour
             cardBack = false;
         }
 
+        id = thisId;
 
         cardName = thisCard[0].cardName;
         cost = thisCard[0].cost;
@@ -368,9 +369,8 @@ public class ThisCard : MonoBehaviour
     {
         TurnSystem.maxGil += x;
     }
-    void UpdateUI()
+   public void UpdateUI()
     {
-        id = thisCard[0].id;
         nameText.text = cardName;
         costText.text = cost.ToString();
         powerText.text = actualpower.ToString();
@@ -459,6 +459,7 @@ public class ThisCard : MonoBehaviour
             hurted = 0;
         }
     }
+
 
     public void Revive(int x)
     {
