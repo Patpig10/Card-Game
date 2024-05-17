@@ -5,11 +5,12 @@ using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
     public string play;
-    public string options;
+    //public string options;
     public string collection;
     public string deck;
     public string shop;
     public string menu;
+    public GameObject options;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +29,11 @@ public class Menu : MonoBehaviour
    
     public void loadOptions()
     {
-        SceneManager.LoadScene(options);
+        options.SetActive(true);
+    }
+    public void closeOptions()
+    {
+        options.SetActive(false);
     }
     public void loadCollection()
     {
@@ -45,6 +50,19 @@ public class Menu : MonoBehaviour
     public void loadMenu()
     {
         SceneManager.LoadScene(menu);
+    }
+
+    public void Quit()
+    {
+        // If we are running in a standalone build of the game
+
+        Application.Quit();
+
+
+
+        // UnityEditor.EditorApplication.isPlaying = false;
+        UnityEditor.EditorApplication.isPlaying = false;
+
     }
 
 }
