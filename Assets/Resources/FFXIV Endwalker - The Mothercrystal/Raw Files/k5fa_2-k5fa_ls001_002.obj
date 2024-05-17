@@ -1,0 +1,78 @@
+mtllib bg_ex4_03_kld_k5_fld_k5fa_material_k5fa_a1_mtl01a.tex.mtl
+v 99.84424 -48.65625 100.1558
+vn 0 1 0
+vt 0 -1
+v 100.1558 -48.65625 100.1558
+vn 0 1 0
+vt 1 -1
+v 99.84424 -48.65625 99.84424
+vn 0 1 0
+vt 0 0
+g bg/ex4/03_kld_k5/fld/k5fa/bgparts/k5fa_a0_rng01.mdl_1_0
+usemtl bg_ex4_03_kld_k5_fld_k5fa_material_k5fa_a1_mtl01a.tex
+f 1/1/1 2/2/2 3/3/3
+mtllib bg_ex4_03_kld_k5_fld_k5fa_material_k5fa_a1_mtl01a.tex.mtl
+v 100 -13.02344 100.1814
+vn 0 1 0
+vt 0.5 -1
+v 100.1814 -13.02344 99.8186
+vn 0 1 0
+vt 1 0
+v 99.8186 -13.02344 99.8186
+vn 0 1 0
+vt 0 0
+g bg/ex4/03_kld_k5/fld/k5fa/bgparts/k5fa_a1_mah1b.mdl_2_0
+usemtl bg_ex4_03_kld_k5_fld_k5fa_material_k5fa_a1_mtl01a.tex
+f 4/4/4 5/5/5 6/6/6
+mtllib bg_ex4_03_kld_k5_fld_k5fa_material_k5fa_a1_mtl01a.tex.mtl
+v 100 -13.02344 100.1814
+vn 0 1 0
+vt 0.5 -1
+v 100.1814 -13.02344 99.8186
+vn 0 1 0
+vt 1 0
+v 99.8186 -13.02344 99.8186
+vn 0 1 0
+vt 0 0
+g bg/ex4/03_kld_k5/fld/k5fa/bgparts/k5fa_a3_stg1b.mdl_3_0
+usemtl bg_ex4_03_kld_k5_fld_k5fa_material_k5fa_a1_mtl01a.tex
+f 7/7/7 8/8/8 9/9/9
+mtllib bg_ex4_03_kld_k5_fld_k5fa_material_k5fa_a1_mtl01a.tex.mtl
+v 100 -13.02344 100.1814
+vn 0 1 0
+vt 0.5 -1
+v 100.1814 -13.02344 99.8186
+vn 0 1 0
+vt 1 0
+v 99.8186 -13.02344 99.8186
+vn 0 1 0
+vt 0 0
+g bg/ex4/03_kld_k5/fld/k5fa/bgparts/k5fa_a3_stg1a.mdl_4_0
+usemtl bg_ex4_03_kld_k5_fld_k5fa_material_k5fa_a1_mtl01a.tex
+f 10/10/10 11/11/11 12/12/12
+mtllib bg_ex4_03_kld_k5_fld_k5fa_material_k5fa_a1_mtl01a.tex.mtl
+v 100 -13.02344 100.1814
+vn 0 1 0
+vt 0.5 -1
+v 100.1814 -13.02344 99.8186
+vn 0 1 0
+vt 1 0
+v 99.8186 -13.02344 99.8186
+vn 0 1 0
+vt 0 0
+g bg/ex4/03_kld_k5/fld/k5fa/bgparts/k5fa_a1_stg1a.mdl_5_0
+usemtl bg_ex4_03_kld_k5_fld_k5fa_material_k5fa_a1_mtl01a.tex
+f 13/13/13 14/14/14 15/15/15
+mtllib bg_ex4_03_kld_k5_fld_k5fa_material_k5fa_a1_mtl01a.tex.mtl
+v 100 -13.02344 100.1814
+vn 0 1 0
+vt 0.5 -1
+v 100.1814 -13.02344 99.8186
+vn 0 1 0
+vt 1 0
+v 99.8186 -13.02344 99.8186
+vn 0 1 0
+vt 0 0
+g bg/ex4/03_kld_k5/fld/k5fa/bgparts/k5fa_a2_stg1a.mdl_6_0
+usemtl bg_ex4_03_kld_k5_fld_k5fa_material_k5fa_a1_mtl01a.tex
+f 16/16/16 17/17/17 18/18/18

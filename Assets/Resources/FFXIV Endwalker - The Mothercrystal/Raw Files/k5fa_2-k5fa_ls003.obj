@@ -1,0 +1,13 @@
+mtllib bg_ex4_03_kld_k5_fld_k5fa_material_k5fa_a1_mtl01a.tex.mtl
+v 100 -13.02344 100.1814
+vn 0 1 0
+vt 0.5 -1
+v 100.1814 -13.02344 99.8186
+vn 0 1 0
+vt 1 0
+v 99.8186 -13.02344 99.8186
+vn 0 1 0
+vt 0 0
+g bg/ex4/03_kld_k5/fld/k5fa/bgparts/k5fa_a1_stg1b.mdl_1_0
+usemtl bg_ex4_03_kld_k5_fld_k5fa_material_k5fa_a1_mtl01a.tex
+f 1/1/1 2/2/2 3/3/3

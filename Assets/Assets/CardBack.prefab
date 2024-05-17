@@ -435,6 +435,7 @@ GameObject:
   - component: {fileID: 2625762926929055621}
   - component: {fileID: 2396831901135782619}
   - component: {fileID: -5781638738838702586}
+  - component: {fileID: -8297676090553736393}
   m_Layer: 5
   m_Name: CardBack
   m_TagString: Deck
@@ -518,7 +519,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7e897f38a6842845bd0268a694dc041, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thisID: 1
+  thisCard: []
+  thisId: 0
   id: 0
   cardName: 
   cost: 0
@@ -556,12 +558,20 @@ MonoBehaviour:
   actualpower: 0
   returnXcards: 0
   useReturn: 0
+  resurrectXcards: 0
   healXpower: 0
   canHeal: 0
   boostXpower: 0
   canBoost: 0
   EnemyZone: {fileID: 0}
   aiCardToHand: {fileID: 0}
+  spell: 0
+  damageDealtBySpell: 0
+  dealDamage: 0
+  stopDealDamage: 0
+  ward: 0
+  directattack: 0
+  wardguard: {fileID: 0}
 --- !u!114 &2625762926929055621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -569,7 +579,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5782265181162736036}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe7295d9da24e6d45abff0536ee424f4, type: 3}
   m_Name: 
@@ -582,7 +592,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5782265181162736036}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a0d4666618504f74097c27e7472551ce, type: 3}
   m_Name: 
@@ -601,6 +611,21 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &-8297676090553736393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5782265181162736036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7cee30fa4329f34886c28b3cf9617b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  background: {fileID: 0}
+  x: 0
+  obj: {fileID: 5782265181162736036}
 --- !u!1 &5829195246729276515
 GameObject:
   m_ObjectHideFlags: 0
