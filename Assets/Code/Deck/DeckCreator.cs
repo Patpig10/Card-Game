@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class DeckCreator : MonoBehaviour
@@ -27,6 +28,8 @@ public class DeckCreator : MonoBehaviour
     public static int lastAdded;
 
     public int[] quanity;
+    public TextMeshProUGUI totalCardsText;  // Add a TextMeshProUGUI variable
+
 
     // Use this for initialization
     void Start()
@@ -63,6 +66,7 @@ public class DeckCreator : MonoBehaviour
         {
             savedDeck[i] = PlayerPrefs.GetInt("deck" + i, 0);
         }
+        UpdateTotalCardsText();
     }
 
     public void EnterDeck()
@@ -109,6 +113,7 @@ public class DeckCreator : MonoBehaviour
             coll.GetComponent<Collection>().HowManyCards[dragged]--;
 
             CalculateDrop();
+            UpdateTotalCardsText();
         }
     }
 
@@ -129,6 +134,18 @@ public class DeckCreator : MonoBehaviour
         {
             quanity[i]++;
         }
-    }
 
+       
+    }
+    void UpdateTotalCardsText()
+    {
+        sum = 0;
+        for (int i = 0; i <= numberOfCardsInDatabase; i++)
+        {
+           // sum += cardsWithThisId[i];
+        }
+        totalCardsText.text = "Total Cards in Deck: " + sum;
+    }
 }
+
+

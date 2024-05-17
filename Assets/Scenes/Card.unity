@@ -4238,10 +4238,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1801785266}
     m_Modifications:
+    - target: {fileID: -8297676090553736393, guid: 3e792e454a6d3594f90d33fa4b1a3a59, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2396831901135782619, guid: 3e792e454a6d3594f90d33fa4b1a3a59, type: 3}
       propertyPath: Deck
       value: 
       objectReference: {fileID: 1801785265}
+    - target: {fileID: 2396831901135782619, guid: 3e792e454a6d3594f90d33fa4b1a3a59, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5782265181162736036, guid: 3e792e454a6d3594f90d33fa4b1a3a59, type: 3}
       propertyPath: m_Name
       value: CardBack (1)
@@ -17132,10 +17140,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1801785266}
     m_Modifications:
+    - target: {fileID: -8297676090553736393, guid: 3e792e454a6d3594f90d33fa4b1a3a59, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2396831901135782619, guid: 3e792e454a6d3594f90d33fa4b1a3a59, type: 3}
       propertyPath: Deck
       value: 
       objectReference: {fileID: 1801785265}
+    - target: {fileID: 2396831901135782619, guid: 3e792e454a6d3594f90d33fa4b1a3a59, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5782265181162736036, guid: 3e792e454a6d3594f90d33fa4b1a3a59, type: 3}
       propertyPath: m_Name
       value: CardBack (3)
@@ -18011,10 +18027,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1801785266}
     m_Modifications:
+    - target: {fileID: -8297676090553736393, guid: 3e792e454a6d3594f90d33fa4b1a3a59, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2396831901135782619, guid: 3e792e454a6d3594f90d33fa4b1a3a59, type: 3}
       propertyPath: Deck
       value: 
       objectReference: {fileID: 1801785265}
+    - target: {fileID: 2396831901135782619, guid: 3e792e454a6d3594f90d33fa4b1a3a59, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5782265181162736036, guid: 3e792e454a6d3594f90d33fa4b1a3a59, type: 3}
       propertyPath: m_Name
       value: CardBack (2)
@@ -18773,10 +18797,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1801785266}
     m_Modifications:
+    - target: {fileID: -8297676090553736393, guid: 3e792e454a6d3594f90d33fa4b1a3a59, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2396831901135782619, guid: 3e792e454a6d3594f90d33fa4b1a3a59, type: 3}
       propertyPath: Deck
       value: 
       objectReference: {fileID: 1801785265}
+    - target: {fileID: 2396831901135782619, guid: 3e792e454a6d3594f90d33fa4b1a3a59, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5782265181162736036, guid: 3e792e454a6d3594f90d33fa4b1a3a59, type: 3}
       propertyPath: m_Name
       value: CardBack
