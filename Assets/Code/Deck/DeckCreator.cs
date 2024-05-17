@@ -30,7 +30,7 @@ public class DeckCreator : MonoBehaviour
     public int[] quanity;
     public TextMeshProUGUI totalCardsText;  // Add a TextMeshProUGUI variable
 
-
+    public int test;
     // Use this for initialization
     void Start()
     {
@@ -139,12 +139,13 @@ public class DeckCreator : MonoBehaviour
     }
     void UpdateTotalCardsText()
     {
-        sum = 0;
+        test = 0;
+
         for (int i = 0; i <= numberOfCardsInDatabase; i++)
         {
-           // sum += cardsWithThisId[i];
+          test += cardsWithThisId[i];
         }
-        totalCardsText.text = "Total Cards in Deck: " + sum;
+        totalCardsText.text = "Total Cards in Deck: " + test;
     }
 }
 
