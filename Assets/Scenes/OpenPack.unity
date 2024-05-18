@@ -1307,6 +1307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5342cae4ab1f624a973fc5547e6a894, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardPacks: []
   CardOne: {fileID: 1071277823}
   CardTwo: {fileID: 1579143681}
   CardThree: {fileID: 139635276}

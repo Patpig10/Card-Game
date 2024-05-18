@@ -7,6 +7,7 @@ using Unity.VisualScripting;
 
 public class Collection : MonoBehaviour
 {
+    public List<CardPack> cardPacks = new List<CardPack>();
 
     public GameObject CardOne;
     public GameObject CardTwo;
@@ -30,6 +31,8 @@ public class Collection : MonoBehaviour
     public TextMeshProUGUI CardThreeText;
     public TextMeshProUGUI CardFourText;
 
+    public int cardsInCollection;
+    public int numberOfCardsOnPage;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,7 +43,8 @@ public class Collection : MonoBehaviour
             HowManyCards[i] = PlayerPrefs.GetInt("x" + i,0);
         }
 
-
+        cardPacks.Add(new CardPack("Pack 1", new List<int> { 1, 4, 8, 5 }));
+        cardPacks.Add(new CardPack("Pack 2", new List<int> { 2, 4, 1, 6, 7 }));
 
         if (openPack == true)
         {
@@ -50,7 +54,8 @@ public class Collection : MonoBehaviour
             }
         }
 
-
+        cardsInCollection = 8; // 8 Cards in my database | 0 = none card | 1 - 8 = Cards
+        numberOfCardsOnPage = 4;
 
     }
 
@@ -100,11 +105,17 @@ public class Collection : MonoBehaviour
 
     public void Left()
     {
-        x -= 4;
+        if (x != 1)
+        {
+            x -= numberOfCardsOnPage;
+        }
     }
     public void Right()
     {
-        x += 4;
+        if (x != (cardsInCollection - numberOfCardsOnPage) + 1)
+        {
+            x += numberOfCardsOnPage;
+        }
     }
     public void Card1Minus()
     {
