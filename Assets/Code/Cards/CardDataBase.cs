@@ -23,4 +23,9 @@ public class CardDataBase : MonoBehaviour
        cardList.Add(new Card(7, "Liz2", 3, 70, "Heal spell", Resources.Load<Sprite>("Heal"), "Green", 0, 0, 0, 500, 0, true, 0, false, 0));
      cardList.Add(new Card(8, "Kris2", 2, 400, "Draw 2", Resources.Load<Sprite>("5"), "Blue", 2, 0, 0, 0, 0, true, 0, false,0));
     }
+
+    public static Card GetCardById(int id)
+    {
+        return cardList.Find(card => card.id == id);
+    }
 }

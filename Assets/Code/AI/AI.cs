@@ -46,12 +46,17 @@ public class AI : MonoBehaviour
     public int howManyCards;
     public bool[] canAttack;
     public static bool AiEndPhase;
- 
 
-// public GameObject AICardBack;
-// Start is called before the first frame update
-void Start()
+    public Deck enemyDeck; // Add a Deck object for the enemy
+
+    void Start()
     {
+
+        enemyDeck = new Deck
+        {
+            cardIDs = new List<int> { 3, 1, 5, 8, 9, 3, 1, 5, 8, 9, 3, 1, 5, 8, 9, 3, 1, 5, 8, 9, 3, 1, 5, 8, 9, 3, 1, 5, 8, 9, 3, 1, 5, 8, 9, 3, 1, 5, 8, 9 }
+        };
+
         StartCoroutine(WaitFiveSeconds());
         StartCoroutine(StartGame());
 
@@ -64,34 +69,24 @@ void Start()
 
         draw = true;
 
-        for (int i = 0; i < deckSize; i++)
+        // Initialize the deck with predefined cards from enemyDeck
+        foreach (int cardID in enemyDeck.cardIDs)
         {
-            x = Random.Range(1, 8);// Remember to change whenever you add a new card
-            deck.Add(CardDataBase.cardList[x]);
+            if (deck.Count < deckSize)
+            {
+                deck.Add(CardDataBase.GetCardById(cardID));
+            }
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         staticEnemyDeck = deck;
 
-        if (deckSize < 30)
-        {
-            cardInDeck1.SetActive(false);
-        }
-        if (deckSize < 20)
-        {
-            cardInDeck2.SetActive(false);
-        }
-        if (deckSize < 2)
-        {
-            cardInDeck3.SetActive(false);
-        }
-        if (deckSize < 1)
-        {
-            cardInDeck4.SetActive(false);
-        }
+        if (deckSize < 30) cardInDeck1.SetActive(false);
+        if (deckSize < 20) cardInDeck2.SetActive(false);
+        if (deckSize < 2) cardInDeck3.SetActive(false);
+        if (deckSize < 1) cardInDeck4.SetActive(false);
 
         if (AICardToHand.drawX > 0)
         {
@@ -125,7 +120,7 @@ void Start()
 
         if (TurnSystem.isYourTurn == false)
         {
-            AiCanSummon = new bool[howManyCards]; // Initialize the array size
+            AiCanSummon = new bool[howManyCards];
 
             for (int i = 0; i < AiCanSummon.Length; i++)
             {
@@ -148,7 +143,6 @@ void Start()
                 }
                 else
                 {
-                    // If the index is beyond the valid range, break out of the loop
                     break;
                 }
             }
@@ -188,7 +182,7 @@ void Start()
 
             if (index > 0)
             {
-                summonID = cardsID[Random.Range(0, index)]; // Pick a random ID from the available ones
+                summonID = cardsID[Random.Range(0, index)];
                 summonThisId = summonID;
 
                 foreach (Transform child in Hand.transform)
@@ -206,22 +200,22 @@ void Start()
             attackPhase = true;
         }
 
-        if(0 == 0)
+        if (0 == 0)
         {
             int k = 0;
-           int howManyCards2 = 0;
-           cardsInHand.Clear();
+            int howManyCards2 = 0;
+            cardsInHand.Clear();
 
             foreach (Transform child in Zone.transform)
             {
-               howManyCards2++;
+                howManyCards2++;
             }
             foreach (Transform child in Zone.transform)
             {
                 canAttack[k] = child.GetComponent<AICardToHand>().canAttack;
                 k++;
             }
-            for(int i = 0; i < 40; i++)
+            for (int i = 0; i < 40; i++)
             {
                 if (i >= howManyCards2)
                 {
@@ -235,7 +229,7 @@ void Start()
         {
             int l = 0;
             int howManyCards3 = 0;
-            cardsInZone.Clear();  // Clear the list before populating it
+            cardsInZone.Clear();
 
             foreach (Transform child in Zone.transform)
             {
@@ -258,7 +252,6 @@ void Start()
 
         if (attackPhase == true && endPhase == false)
         {
-           
             for (int i = 0; i < 40; i++)
             {
                 if (canAttack[i] == true)
@@ -270,13 +263,10 @@ void Start()
             endPhase = true;
         }
 
-        if(endPhase == true)
+        if (endPhase == true)
         {
             AiEndPhase = true;
-
-            
         }
-
     }
 
     public void Shuffle()
@@ -325,13 +315,12 @@ void Start()
     IEnumerator WaitFiveSeconds()
     {
         yield return new WaitForSeconds(5);
-        // AIcanPlay = true;
     }
 
     IEnumerator WaitForSummonPhase()
     {
         yield return new WaitForSeconds(5);
         summonPhase = true;
-       // drawPhase = false;
     }
 }
+

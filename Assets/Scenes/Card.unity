@@ -4430,6 +4430,8 @@ MonoBehaviour:
   summonThisId: 0
   howManyCards: 0
   canAttack: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  enemyDeck:
+    cardIDs: 
 --- !u!1 &880657472 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5782265181162736036, guid: 3e792e454a6d3594f90d33fa4b1a3a59, type: 3}
