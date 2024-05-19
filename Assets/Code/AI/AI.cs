@@ -54,7 +54,7 @@ public class AI : MonoBehaviour
 
         enemyDeck = new Deck
         {
-            cardIDs = new List<int> { 3, 1, 5, 8, 9, 3, 1, 5, 8, 9, 3, 1, 5, 8, 9, 3, 1, 5, 8, 9, 3, 1, 5, 8, 9, 3, 1, 5, 8, 9, 3, 1, 5, 8, 9, 3, 1, 5, 8, 9 }
+            cardIDs = new List<int> { 3, 1, 5, 8, 8, 3, 1, 5, 8, 8, 3, 1, 5, 8, 8, 3, 1, 5, 8, 8, 3, 1, 5, 8, 8, 3, 1, 5, 8, 8, 3, 1, 5, 8, 8, 3, 1, 5, 8, 8 }
         };
 
         StartCoroutine(WaitFiveSeconds());

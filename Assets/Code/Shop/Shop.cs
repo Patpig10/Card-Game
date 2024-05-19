@@ -12,6 +12,7 @@ public class Shop : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         soul = PlayerPrefs.GetInt("soul");
         soulText.text = "Soul: " + soul;
 
