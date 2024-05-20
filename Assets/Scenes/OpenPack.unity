@@ -134,17 +134,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &59906018 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3351612442714247523, guid: f21f5e5127e16c542a93ab8a34f2fe4b, type: 3}
-  m_PrefabInstance: {fileID: 2072666457}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &75848072
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -317,7 +306,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 139635276}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a15e27afedabf644a1d2a7a0f2afb6a, type: 3}
   m_Name: 
@@ -333,7 +322,7 @@ MonoBehaviour:
   powerText: {fileID: 46060913}
   descriptionText: {fileID: 996230338}
   thisSprite: {fileID: 0}
-  thatImage: {fileID: 381840509}
+  thatImage: {fileID: 0}
   frame: {fileID: 207181025}
   beGrey: 0
 --- !u!114 &147349377 stripped
@@ -361,17 +350,6 @@ MonoBehaviour:
 --- !u!114 &273723326 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2570355145603289597, guid: f21f5e5127e16c542a93ab8a34f2fe4b, type: 3}
-  m_PrefabInstance: {fileID: 2092895001}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &277666423 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3351612442714247523, guid: f21f5e5127e16c542a93ab8a34f2fe4b, type: 3}
   m_PrefabInstance: {fileID: 2092895001}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -499,17 +477,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 368727093}
   m_CullTransparentMesh: 1
---- !u!114 &381840509 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3351612442714247523, guid: f21f5e5127e16c542a93ab8a34f2fe4b, type: 3}
-  m_PrefabInstance: {fileID: 1563075845}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &385788362 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5149946799520189794, guid: f21f5e5127e16c542a93ab8a34f2fe4b, type: 3}
@@ -701,17 +668,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &701016288 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3351612442714247523, guid: f21f5e5127e16c542a93ab8a34f2fe4b, type: 3}
-  m_PrefabInstance: {fileID: 1911286364}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &755030676 stripped
@@ -1124,7 +1080,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1071277823}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a15e27afedabf644a1d2a7a0f2afb6a, type: 3}
   m_Name: 
@@ -1140,20 +1096,9 @@ MonoBehaviour:
   powerText: {fileID: 2092895002}
   descriptionText: {fileID: 2092895003}
   thisSprite: {fileID: 0}
-  thatImage: {fileID: 277666423}
+  thatImage: {fileID: 0}
   frame: {fileID: 273723326}
   beGrey: 0
---- !u!114 &1080733750 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3351612442714247523, guid: f21f5e5127e16c542a93ab8a34f2fe4b, type: 3}
-  m_PrefabInstance: {fileID: 75848072}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1148655922
 GameObject:
   m_ObjectHideFlags: 0
@@ -1323,6 +1268,8 @@ MonoBehaviour:
   CardTwoText: {fileID: 0}
   CardThreeText: {fileID: 0}
   CardFourText: {fileID: 0}
+  cardsInCollection: 0
+  numberOfCardsOnPage: 0
 --- !u!114 &1265405447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1465,7 +1412,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1306738776}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a15e27afedabf644a1d2a7a0f2afb6a, type: 3}
   m_Name: 
@@ -1481,7 +1428,7 @@ MonoBehaviour:
   powerText: {fileID: 628192678}
   descriptionText: {fileID: 1527910979}
   thisSprite: {fileID: 0}
-  thatImage: {fileID: 59906018}
+  thatImage: {fileID: 0}
   frame: {fileID: 1231786830}
   beGrey: 0
 --- !u!114 &1379410843 stripped
@@ -1781,7 +1728,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1579143681}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a15e27afedabf644a1d2a7a0f2afb6a, type: 3}
   m_Name: 
@@ -1797,7 +1744,7 @@ MonoBehaviour:
   powerText: {fileID: 1379410843}
   descriptionText: {fileID: 1425034163}
   thisSprite: {fileID: 0}
-  thatImage: {fileID: 1080733750}
+  thatImage: {fileID: 0}
   frame: {fileID: 1180241277}
   beGrey: 0
 --- !u!114 &1651624646 stripped
@@ -1976,7 +1923,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1904473013}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a15e27afedabf644a1d2a7a0f2afb6a, type: 3}
   m_Name: 
@@ -1992,7 +1939,7 @@ MonoBehaviour:
   powerText: {fileID: 848533600}
   descriptionText: {fileID: 1856490184}
   thisSprite: {fileID: 0}
-  thatImage: {fileID: 701016288}
+  thatImage: {fileID: 0}
   frame: {fileID: 1166241997}
   beGrey: 0
 --- !u!1001 &1911286364
