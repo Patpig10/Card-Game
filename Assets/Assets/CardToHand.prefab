@@ -712,7 +712,11 @@ GameObject:
   - component: {fileID: 3937216133663652869}
   - component: {fileID: 4687245544755241904}
   - component: {fileID: 613203057729938039}
-  - component: {fileID: 1749738864655194927}
+  - component: {fileID: 2750150173011363994}
+  - component: {fileID: 7566129338672349619}
+  - component: {fileID: 8030897989581229243}
+  - component: {fileID: 6336730151268824313}
+  - component: {fileID: 57753016242527309}
   m_Layer: 0
   m_Name: CardToHand
   m_TagString: Deck
@@ -774,7 +778,7 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 1
---- !u!114 &1749738864655194927
+--- !u!114 &2750150173011363994
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -783,11 +787,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 1596230988835689104}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a15e27afedabf644a1d2a7a0f2afb6a, type: 3}
+  m_Script: {fileID: 11500000, guid: d7e897f38a6842845bd0268a694dc041, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thisID: 0
-  id: 0
+  thisCard:
+  - id: 0
+    cardName: 
+    cost: 0
+    power: 0
+    cardDescription: 
+    drawXcards: 0
+    addXmaxGil: 0
+    thisImage: {fileID: 0}
+    color: 
+    returnXcards: 0
+    healXpower: 0
+    boostXpower: 0
+    spell: 0
+    damageDealtBySpell: 0
+    ward: 0
+    resurrectXcards: 0
+  thisId: 1
+  id: 1
   cardName: 
   cost: 0
   power: 0
@@ -798,8 +819,172 @@ MonoBehaviour:
   descriptionText: {fileID: 7866747866366888750}
   thisSprite: {fileID: 0}
   thatImage: {fileID: 4232812500050797682}
-  frame: {fileID: 2570355145603289597}
-  beGrey: 0
+  frame: {fileID: 5430674719514187062}
+  cardBack: 0
+  Hand: {fileID: 0}
+  numberOfCardsInDeck: 0
+  canBeSummon: 0
+  summoned: 0
+  battleZone: {fileID: 0}
+  drawXcards: 0
+  addXmaxGil: 0
+  attackBorder: {fileID: 605405945568998742}
+  Target: {fileID: 0}
+  Enemy: {fileID: 0}
+  summoningSickness: 0
+  cantAttack: 0
+  canAttack: 0
+  targeting: 0
+  targetingEnemy: 0
+  onlyThisCardAttack: 0
+  summonBorder: {fileID: 7128935184927841322}
+  canBeDestroyed: 0
+  Graveyard: {fileID: 0}
+  beInGraveyard: 0
+  hurted: 0
+  actualpower: 0
+  returnXcards: 0
+  useReturn: 0
+  resurrectXcards: 0
+  healXpower: 0
+  canHeal: 0
+  boostXpower: 0
+  canBoost: 0
+  EnemyZone: {fileID: 0}
+  aiCardToHand: {fileID: 0}
+  spell: 0
+  damageDealtBySpell: 0
+  dealDamage: 0
+  stopDealDamage: 0
+  ward: 0
+  directattack: 0
+  wardguard: {fileID: 2470573788552251015}
+--- !u!114 &7566129338672349619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596230988835689104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 909e7430a3b28d8409f0c3d2b380e0e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Hand: {fileID: 0}
+  It: {fileID: 1596230988835689104}
+--- !u!114 &8030897989581229243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596230988835689104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 14
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2750150173011363994}
+          m_TargetAssemblyTypeName: ThisCard, Assembly-CSharp
+          m_MethodName: StopAttack
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 2750150173011363994}
+          m_TargetAssemblyTypeName: ThisCard, Assembly-CSharp
+          m_MethodName: OneCardAttackStop
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 13
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2750150173011363994}
+          m_TargetAssemblyTypeName: ThisCard, Assembly-CSharp
+          m_MethodName: StartAttack
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 2750150173011363994}
+          m_TargetAssemblyTypeName: ThisCard, Assembly-CSharp
+          m_MethodName: OneCardAttack
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 12
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2750150173011363994}
+          m_TargetAssemblyTypeName: ThisCard, Assembly-CSharp
+          m_MethodName: ReturnThis
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &6336730151268824313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596230988835689104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5b83547b80fefd499fc1ebe23699ae9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentToReturnTo: {fileID: 0}
+  placeholderParent: {fileID: 0}
+--- !u!114 &57753016242527309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596230988835689104}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe7295d9da24e6d45abff0536ee424f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardBack: {fileID: 0}
 --- !u!1 &1637687875951501791
 GameObject:
   m_ObjectHideFlags: 0

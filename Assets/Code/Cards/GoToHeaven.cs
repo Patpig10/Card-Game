@@ -9,24 +9,35 @@ public class GoToHeaven : MonoBehaviour
     public GameObject background;
     public float x;
     public GameObject obj;
+    private Transform _transform;
+    private Transform _backgroundTransform;
+    public float speedMultiplier = 500f; // Adjusted speed multiplier for smoother animation
 
     // Start is called before the first frame update
     void Start()
     {
         x = 250;
         background = GameObject.Find("Background");
-        this.transform.SetParent(background.transform);
-        this.transform.localScale = new Vector3(1.5f, 1.5f, 1);
-        StartCoroutine(Die());
+
+        if (background != null)
+        {
+            _backgroundTransform = background.transform;
+            _transform = transform;
+
+            _transform.SetParent(_backgroundTransform);
+            _transform.localScale = new Vector3(1.5f, 1.5f, 1);
+            StartCoroutine(Die());
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        //NEW
-     //   if (SceneManager.GetActiveScene().name != "SampleScene")
-            //NEW END
-            this.transform.position = new Vector3(transform.position.x, x += 500 * Time.deltaTime, transform.position.z);
+        // Only move if the background is set
+        if (_backgroundTransform != null)
+        {
+            _transform.position = new Vector3(_transform.position.x, x += speedMultiplier * Time.deltaTime, _transform.position.z);
+        }
     }
 
     IEnumerator Die()

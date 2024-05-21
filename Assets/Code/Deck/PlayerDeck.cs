@@ -38,7 +38,7 @@ public class PlayerDeck : MonoBehaviour
     public TMP_Text LoseText;
     public GameObject LoseTextGameObject;
 
-    public GameObject concedeWindow;
+    //public GameObject concedeWindow;
    // public string menu = "Menu";
 
     //NEW
@@ -266,7 +266,18 @@ public class PlayerDeck : MonoBehaviour
       //  SceneManager.LoadScene(menu);
     }
 
-   
+    public void ConcedeDefeat()
+    {
+        StartCoroutine(Lose());
+    }
+
+    IEnumerator Lose()
+    {
+        LoseTextGameObject.SetActive(true);
+        LoseText.text = "You Lose";
+        yield return new WaitForSeconds(2.5f);
+        SceneManager.LoadScene("menu");
+    }
 
 }
 
