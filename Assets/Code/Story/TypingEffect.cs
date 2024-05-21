@@ -9,6 +9,7 @@ public class DialogueLine
     public string speaker; // The name of the speaker
     [TextArea(3, 10)]
     public string text; // The dialogue text
+   public int mood; // The mood of the speaker
 }
 
 public class TypingEffect : MonoBehaviour
@@ -23,7 +24,7 @@ public class TypingEffect : MonoBehaviour
     public Coroutine typingCoroutine;
     public bool isSkipping = false;
     public int currentLineIndex = 0;
-
+   public Puppet mood;
     void Start()
     {
         // Assuming you want to start typing the first line automatically
@@ -42,6 +43,7 @@ public class TypingEffect : MonoBehaviour
                 isSkipping = true;
             }
         }
+         mood.mood = dialogueLines[currentLineIndex].mood;
     }
 
     public void StartTyping(DialogueLine line)
