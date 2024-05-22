@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI; // For UI components
 using TMPro; // For TextMeshPro components
+
 [System.Serializable]
 public class DialogueLine
 {
     public string speaker; // The name of the speaker
     [TextArea(3, 10)]
     public string text; // The dialogue text
-   public int mood; // The mood of the speaker
+    public int mood; // The mood of the speaker
 }
 
 public class TypingEffect : MonoBehaviour
@@ -24,7 +25,8 @@ public class TypingEffect : MonoBehaviour
     public Coroutine typingCoroutine;
     public bool isSkipping = false;
     public int currentLineIndex = 0;
-   public Puppet mood;
+    public Puppet mood;
+
     void Start()
     {
         // Assuming you want to start typing the first line automatically
@@ -43,7 +45,11 @@ public class TypingEffect : MonoBehaviour
                 isSkipping = true;
             }
         }
-         mood.mood = dialogueLines[currentLineIndex].mood;
+
+        if (currentLineIndex < dialogueLines.Length)
+        {
+            mood.mood = dialogueLines[currentLineIndex].mood;
+        }
     }
 
     public void StartTyping(DialogueLine line)
