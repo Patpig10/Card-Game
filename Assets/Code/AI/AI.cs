@@ -54,7 +54,7 @@ public class AI : MonoBehaviour
 
         enemyDeck = new Deck
         {
-            cardIDs = new List<int> { 3, 1, 5, 8, 8, 3, 1, 5, 8, 8, 3, 1, 5, 8, 8, 3, 1, 5, 8, 8, 3, 1, 5, 8, 8, 3, 1, 5, 8, 8, 3, 1, 5, 8, 8, 3, 1, 5, 8, 8 }
+            cardIDs = new List<int> { 3, 1, 8, 8, 8, 3, 1, 8, 2, 8, 3, 1, 2, 2, 2, 3, 1, 8, 2, 8, 3, 1, 2, 8, 2, 3, 1, 8, 2, 2, 3, 1, 8, 8, 8, 3, 1, 2, 8, 8 }
         };
 
         StartCoroutine(WaitFiveSeconds());
@@ -93,6 +93,7 @@ public class AI : MonoBehaviour
             StartCoroutine(Draw(AICardToHand.drawX));
             AICardToHand.drawX = 0;
         }
+
 
         if (TurnSystem.startTurn == false && draw == false)
         {
@@ -267,6 +268,8 @@ public class AI : MonoBehaviour
         {
             AiEndPhase = true;
         }
+
+
     }
 
     public void Shuffle()
@@ -307,8 +310,26 @@ public class AI : MonoBehaviour
     {
         for (int i = 0; i < x; i++)
         {
-            yield return new WaitForSeconds(1);
-            Instantiate(CardToHand, transform.position, transform.rotation);
+            // Ensure there are enough cards in the deck to draw
+            if (deck.Count > 0)
+            {
+                // Wait for a second before drawing each card
+                yield return new WaitForSeconds(1);
+
+                // Get the top card from the deck
+                Card drawnCard = deck[0];
+
+                // Remove the card from the deck
+                deck.RemoveAt(0);
+
+                // Instantiate the card in the hand (replace CardToHand with the drawnCard if needed)
+                GameObject cardObject = Instantiate(CardToHand, transform.position, transform.rotation);
+
+                // Add the drawn card to the hand
+                cardsInHand.Add(drawnCard);
+
+               
+            }
         }
     }
 

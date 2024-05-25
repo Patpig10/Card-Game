@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEditor.Experimental.GraphView;
 
 public class AICardToHand : MonoBehaviour
 {
@@ -59,6 +60,12 @@ public class AICardToHand : MonoBehaviour
     public bool directAttack;
     public GameObject PlayerZone;
     public GameObject wardguard;
+
+    public bool isSummoned;
+    public GameObject battlefield;
+    public bool spell;
+    public int damageDealtBySpell;
+    public bool beInGraveyard;
     // Start is called before the first frame update
     void Start()
     {
@@ -81,7 +88,9 @@ public class AICardToHand : MonoBehaviour
         canHeal = true;
         summoned = false;
         summoningSickness = true;
+        beInGraveyard = false;
 
+        battlefield = GameObject.Find("EnemyZone");
     }
 
     // Update is called once per frame
@@ -102,9 +111,11 @@ public class AICardToHand : MonoBehaviour
         cost = thisCardList[0].cost;
         power = thisCardList[0].power;
         actualpower = power - hurted;
+
         cardDescription = thisCardList[0].cardDescription;
         thisSprite = thisCardList[0].thisImage;
-
+        spell = thisCardList[0].spell;
+        damageDealtBySpell = thisCardList[0].damageDealtBySpell;
         drawXcards = thisCardList[0].drawXcards;
         addXmaxGil = thisCardList[0].addXmaxGil;
         returnXcards = thisCardList[0].returnXcards;
@@ -149,10 +160,10 @@ public class AICardToHand : MonoBehaviour
             this.tag = "Clone";
         }
         UpdateUI();
-      if(hurted >= power && thisCardCanBeDestroyed == true)
+        if (actualpower <= 0 && spell == false)
         {
-           this.transform.SetParent(Graveyard.transform);
-            hurted = 0;
+            Destroy();
+            thisCardCanBeDestroyed = true;
         }
        
       if(this.transform.parent == Hand.transform)
@@ -184,6 +195,25 @@ public class AICardToHand : MonoBehaviour
         else
         {
             wardguard.SetActive(false);
+        }
+
+
+        if (this.transform.parent == battlefield.transform && isSummoned == false)
+        {
+
+            if(drawXcards > 0)
+            {
+                drawX = drawXcards;
+                isSummoned = true;
+            }
+
+        }
+
+        if (this.transform.parent == battlefield.transform && spell == true)
+        {
+            Debug.Log("Spell gone");
+            thisCardCanBeDestroyed = true;
+            Destroy();
         }
         /*foreach (Transform child in PlayerZone.transform)
         {
@@ -226,4 +256,20 @@ public class AICardToHand : MonoBehaviour
         descriptionText.text = cardDescription;
         thatImage.sprite = thisSprite;
     }
+
+    public void Destroy()
+    {
+        Graveyard = GameObject.Find("EnemyGraveyard");
+
+        if (thisCardCanBeDestroyed == true)
+        {
+            this.transform.SetParent(Graveyard.transform);
+            thisCardCanBeDestroyed = false;
+            summoned = false;
+            beInGraveyard = true;
+
+            hurted = 0;
+        }
+    }
+
 }

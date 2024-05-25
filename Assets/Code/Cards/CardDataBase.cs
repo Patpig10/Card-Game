@@ -21,7 +21,7 @@ public class CardDataBase : MonoBehaviour
         cardList.Add(new Card(5, "Holy Light", 1, 0, "Spell Card damage 3000", Resources.Load<Sprite>("Heal"), "Black", 0, 0, 0, 0, 0, true, 3000, false,0));
       cardList.Add(new Card(6, "Luci2", 1, 50, "revive", Resources.Load<Sprite>("3"), "Blue", 0, 0, 0, 0, 0, false, 0, false, 1));
        cardList.Add(new Card(7, "Liz2", 3, 70, "Heal spell", Resources.Load<Sprite>("Heal"), "Green", 0, 0, 0, 500, 0, true, 0, false, 0));
-     cardList.Add(new Card(8, "Kris2", 2, 400, "Draw 2", Resources.Load<Sprite>("5"), "Blue", 2, 0, 0, 0, 0, true, 0, false,0));
+     cardList.Add(new Card(8, "Kris2", 2, 0, "Draw 2", Resources.Load<Sprite>("5"), "Blue", 2, 0, 0, 0, 0, true, 0, false,0));
     }
 
     public static Card GetCardById(int id)

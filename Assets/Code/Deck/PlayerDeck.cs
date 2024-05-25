@@ -37,13 +37,13 @@ public class PlayerDeck : MonoBehaviour
 
     public TMP_Text LoseText;
     public GameObject LoseTextGameObject;
-
+    public CardsInHand CardsInHand;
     //public GameObject concedeWindow;
-   // public string menu = "Menu";
+    // public string menu = "Menu";
 
     //NEW
-  //  public AudioSource audioSource;
-   // public AudioClip shuffle, draw;
+    //  public AudioSource audioSource;
+    // public AudioClip shuffle, draw;
     //NEW END
 
     void Awake()
@@ -98,9 +98,16 @@ public class PlayerDeck : MonoBehaviour
         }
         if (TurnSystem.startTurn == true)
         {
-
-         
+            if(CardsInHand.howManyCards < 10)
+            {
                 StartCoroutine(Draw(1));
+            }
+            else
+            {
+
+            }
+         
+               // StartCoroutine(Draw(1));
           
             TurnSystem.startTurn = false;
         }
