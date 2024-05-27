@@ -86,6 +86,8 @@ public class ThisCard : MonoBehaviour
     public GameObject wardguard;
     public static bool staticCardBack;
 
+    private bool previousTurnState;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -116,17 +118,11 @@ public class ThisCard : MonoBehaviour
         Graveyard = GameObject.Find("MyGraveyard");
         Hand = GameObject.Find("Hand");
 
+        previousTurnState = TurnSystem.isYourTurn;
 
-    }
-   
-    // Update is called once per frame
-    void Update()
-    {
-        Hand = GameObject.Find("Hand");
-        if (this.transform.parent == Hand.transform)
-        {
-            cardBack = false;
-        }
+
+
+
 
         id = thisId;
 
@@ -140,13 +136,25 @@ public class ThisCard : MonoBehaviour
 
         drawXcards = thisCard[0].drawXcards;
         addXmaxGil = thisCard[0].addXmaxGil;
-            returnXcards = thisCard[0].returnXcards;
-            healXpower = thisCard[0].healXpower;
-            boostXpower = thisCard[0].boostXpower;
-            spell = thisCard[0].spell;
-            damageDealtBySpell = thisCard[0].damageDealtBySpell;
-            ward = thisCard[0].ward;
-            resurrectXcards = thisCard[0].resurrectXcards;
+        returnXcards = thisCard[0].returnXcards;
+        healXpower = thisCard[0].healXpower;
+        boostXpower = thisCard[0].boostXpower;
+        spell = thisCard[0].spell;
+        damageDealtBySpell = thisCard[0].damageDealtBySpell;
+        ward = thisCard[0].ward;
+        resurrectXcards = thisCard[0].resurrectXcards;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        Hand = GameObject.Find("Hand");
+        if (this.transform.parent == Hand.transform)
+        {
+            cardBack = false;
+        }
+
+       
         
         // Check for color condition using the color property of the Card class
         if (thisCard[0].color == "White")
@@ -355,6 +363,7 @@ public class ThisCard : MonoBehaviour
                 directattack = true;
             }
         }
+        previousTurnState = TurnSystem.isYourTurn;
 
     }
     public void Summon()
@@ -488,6 +497,8 @@ public class ThisCard : MonoBehaviour
         for (int i = 0; i <= x; i++)
         {
             Graveyard.GetComponent<Graveyard>().ReviveCard = x;
+            useRevive = false;
+            resurrectXcards = 0;
         }
     }
 
@@ -505,6 +516,8 @@ public class ThisCard : MonoBehaviour
         {
             ReturnCard();
             Graveyard.GetComponent<Graveyard>().returnCard = x;
+            useReturn = false;
+            returnXcards = 0;
 
         }
     }

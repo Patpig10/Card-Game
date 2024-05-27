@@ -308,4 +308,11 @@ public class Graveyard : MonoBehaviour
             ReviveCard--;
         }
     }
+    public void EndTurn()
+    {
+        UcanReturn = false;
+        useRevive = false;
+        returnCard = 0;
+        ReviveCard = 0;
+    }
 }
