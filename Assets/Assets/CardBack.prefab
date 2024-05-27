@@ -442,7 +442,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8934991355552615291
 RectTransform:
   m_ObjectHideFlags: 0
@@ -626,6 +626,7 @@ MonoBehaviour:
   background: {fileID: 0}
   x: 0
   obj: {fileID: 5782265181162736036}
+  speedMultiplier: 1000
 --- !u!1 &5829195246729276515
 GameObject:
   m_ObjectHideFlags: 0

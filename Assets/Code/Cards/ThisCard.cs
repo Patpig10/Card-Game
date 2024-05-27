@@ -257,7 +257,7 @@ public class ThisCard : MonoBehaviour
             Attack();
         }
 
-        if(canBeSummon == true || UcanReturn == true && beInGraveyard == true || useRevive == true && beInGraveyard == true) 
+        if(canBeSummon == true) 
         { 
             summonBorder.SetActive(true);
         
@@ -451,12 +451,34 @@ public class ThisCard : MonoBehaviour
 
         if(canBeDestroyed == true)
         {
-            this.transform.SetParent(Graveyard.transform);
-            canBeDestroyed = false;
-            summoned = false;
-            beInGraveyard = true;
+            /* this.transform.SetParent(Graveyard.transform);
+             canBeDestroyed = false;
+             summoned = false;
+             beInGraveyard = true;
 
-            hurted = 0;
+             hurted = 0;*/
+
+            for (int i = 0; i < 40; i++)
+            {
+                if (Graveyard.GetComponent<Graveyard>().graveyard[i].id == 0)
+                {
+                    Graveyard.GetComponent<Graveyard>().graveyard[i] = CardDataBase.cardList[id];
+
+                    Graveyard.GetComponent<Graveyard>().objectsInGraveyard[i] = this.gameObject;
+
+                    canBeDestroyed = false;
+                    summoned = false;
+                    beInGraveyard = true;
+
+                    hurted = 0;
+
+                    transform.SetParent(Graveyard.transform);
+
+                    transform.position = new Vector3(transform.position.x + 4000, transform.position.y, transform.position.z); // Hidden outside of canvas but not disabled
+
+                    break;
+                }
+            }
         }
     }
 
@@ -465,9 +487,10 @@ public class ThisCard : MonoBehaviour
     {
         for (int i = 0; i <= x; i++)
         {
-            ReviveCard();
+            Graveyard.GetComponent<Graveyard>().ReviveCard = x;
         }
     }
+
 
     public void ReviveCard()
     {
@@ -481,6 +504,8 @@ public class ThisCard : MonoBehaviour
         for(int i = 0; i <= x; i++)
         {
             ReturnCard();
+            Graveyard.GetComponent<Graveyard>().returnCard = x;
+
         }
     }
     
@@ -500,6 +525,7 @@ public class ThisCard : MonoBehaviour
         }
         else if (beInGraveyard == true && useRevive == true && Graveyard.transform.childCount > 0 && spell == false)
         {
+      
 
             this.transform.SetParent(battleZone.transform);
             useRevive = false;
@@ -507,13 +533,7 @@ public class ThisCard : MonoBehaviour
             summoningSickness = true;
 
         }
-        /* else if (beInGraveyard == true && useRevive == true && Graveyard.transform.childCount == 0)
-         {
-             this.transform.SetParent(Hand.transform);
-             UcanReturn = false;
-             beInGraveyard = false;
-             summoningSickness = true;
-         }*/
+        
 
     }
 
