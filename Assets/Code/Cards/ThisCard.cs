@@ -397,6 +397,9 @@ public class ThisCard : MonoBehaviour
                 EnemyHp.staticHp -= actualpower;
                 targeting = false;
                 cantAttack = true;
+
+
+                Arrow._Hide = true;
             }
         }
         else
@@ -420,6 +423,8 @@ public class ThisCard : MonoBehaviour
                     childAICard.hurted += actualpower;  // Adjusting hurted value by the power of the attacking card
                     hurted += childAICard.actualpower;
                     cantAttack = true;
+
+                    Arrow._Hide = true;
                 }
                /* else
                 {
@@ -443,6 +448,11 @@ public class ThisCard : MonoBehaviour
     public void StartAttack()
     {
         staticTargeting = true;
+        if(canAttack == true)
+        {
+            Arrow._Show = true;
+            Arrow.startPoint = transform.position;
+        }
     }
 
     public void StopAttack()
