@@ -21,7 +21,6 @@ public class Arrow : MonoBehaviour
     public static bool _Show;
     public static bool _Hide;
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -45,27 +44,31 @@ public class Arrow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        direction = Input.mousePosition;
+        distance = Vector3.Distance(startPoint, direction);
+        force = distance / 10;
+
         for (int i = 0; i < numberOfPoints; i++)
         {
             points[i].transform.position = Vector2.Lerp(startPoint, direction, i * 0.1f);
+        }
 
-            direction = Input.mousePosition;
+        if (_Show)
+        {
+            Show();
+            _Show = false;
+        }
 
-            distance = Vector3.Distance(startPoint, direction);
+        if (_Hide)
+        {
+            Hide();
+            _Hide = false;
+        }
 
-            force = distance / 10;
-
-            if (_Show == true)
-            {
-                Show();
-                _Show = false;
-            }
-
-            if (_Hide == true)
-            {
-                Hide();
-                _Hide = false;
-            }
+        // Check if the mouse button is released and _Show is true
+        if (Input.GetMouseButtonUp(0) && _Show)
+        {
+            DeleteAllPointsAndArrow();
         }
     }
 
@@ -82,6 +85,17 @@ public class Arrow : MonoBehaviour
         for (int i = 0; i < numberOfPoints; i++)
         {
             points[i].SetActive(false);
+        }
+    }
+
+    public void DeleteAllPointsAndArrow()
+    {
+        for (int i = 0; i < numberOfPoints; i++)
+        {
+            if (points[i] != null)
+            {
+                Destroy(points[i]);
+            }
         }
     }
 }

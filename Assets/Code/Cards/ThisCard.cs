@@ -439,6 +439,7 @@ public class ThisCard : MonoBehaviour
                 }*/
             }
         }
+
     }
 
 
@@ -446,6 +447,8 @@ public class ThisCard : MonoBehaviour
     public void UntargetEnemy()
     {
         staticTargetingEnemy = false;
+        Arrow._Hide = true;
+
     }
     public void TargetEnemy()
     {
@@ -465,6 +468,8 @@ public class ThisCard : MonoBehaviour
     public void StopAttack()
     {
         staticTargeting = false;
+        Arrow._Hide = true;
+      //  Arrow.startPoint = transform.position;
 
     }
     public void OneCardAttack()
