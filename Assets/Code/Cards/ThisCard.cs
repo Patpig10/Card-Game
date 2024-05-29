@@ -85,6 +85,7 @@ public class ThisCard : MonoBehaviour
     public bool directattack;
     public GameObject wardguard;
     public static bool staticCardBack;
+    public bool beGrey;
 
 
     // Start is called before the first frame update
@@ -155,24 +156,30 @@ public class ThisCard : MonoBehaviour
         damageDealtBySpell = thisCard[0].damageDealtBySpell;
         ward = thisCard[0].ward;
 
-        // Check for color condition using the color property of the Card class
-        if (thisCard[0].color == "White")
+        if (beGrey == true)
         {
-            frame.color = new Color32(255, 255, 255, 255);  // Set the color to white
+            frame.color = new Color(255, 0, 0, 255);
         }
-        else if (thisCard[0].color == "Blue")
+        else
         {
-            frame.color = new Color32(26, 109, 236, 255);  // Set the color to white
-        }
-        else if (thisCard[0].color == "Green")
-        {
-            frame.color = new Color32(122, 236, 26, 255);  // Set the color to white
-        }
-        else if (thisCard[0].color == "Black")
-        {
-            frame.color = new Color32(51, 32, 32, 255);  // Set the color to white
-        }
 
+            if (thisCard[0].color == "White")
+            {
+                frame.color = new Color32(255, 255, 255, 255);  // Set the color to white
+            }
+            else if (thisCard[0].color == "Blue")
+            {
+                frame.color = new Color32(26, 109, 236, 255);  // Set the color to white
+            }
+            else if (thisCard[0].color == "Green")
+            {
+                frame.color = new Color32(122, 236, 26, 255);  // Set the color to white
+            }
+            else if (thisCard[0].color == "Black")
+            {
+                frame.color = new Color32(51, 32, 32, 255);  // Set the color to white
+            }
+        }
         staticCardBack = cardBack;
 
         UpdateUI();
