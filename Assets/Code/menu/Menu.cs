@@ -10,6 +10,8 @@ public class Menu : MonoBehaviour
     public string deck;
     public string shop;
     public string menu;
+    public string Book;
+
     public GameObject options;
     // Start is called before the first frame update
     void Start()
@@ -52,6 +54,10 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene(menu);
     }
 
+    public void loadBook()
+    {
+        SceneManager.LoadScene(Book);
+    }
     public void Quit()
     {
         // If we are running in a standalone build of the game

@@ -334,11 +334,14 @@ public class ThisCard : MonoBehaviour
         {
             Debug.Log("spell test1.");
             attackBorder.SetActive(true);
+            Arrow._Show = true;
+            Arrow.startPoint = transform.position;
         }
         else if(dealDamage == false && this.transform.parent == battleZone.transform && spell == true)
         {
             Debug.Log("spell test2.");  
             attackBorder.SetActive(false);
+            Arrow._Hide = true;
         }
         if(dealDamage == true && this.transform.parent == battleZone.transform)
         {
@@ -356,6 +359,7 @@ public class ThisCard : MonoBehaviour
             Debug.Log("Spell gone");
             canBeDestroyed = true;
             Destroy();
+
         }
         foreach (Transform child in EnemyZone.transform)
         {
