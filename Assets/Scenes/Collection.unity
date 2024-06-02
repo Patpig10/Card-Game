@@ -2883,6 +2883,7 @@ MonoBehaviour:
   deck: CreateDeck
   shop: 
   menu: menu
+  Book: 
   options: {fileID: 0}
 --- !u!4 &924765286
 Transform:
@@ -4947,6 +4948,10 @@ PrefabInstance:
     - target: {fileID: 3937216133663652869, guid: f21f5e5127e16c542a93ab8a34f2fe4b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232812500050797682, guid: f21f5e5127e16c542a93ab8a34f2fe4b, type: 3}
+      propertyPath: m_Sprite
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7566129338672349619, guid: f21f5e5127e16c542a93ab8a34f2fe4b, type: 3}
       propertyPath: m_Enabled
