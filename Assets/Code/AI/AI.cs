@@ -259,7 +259,8 @@ public class AI : MonoBehaviour
             {
                 if (canAttack[i] == true)
                 {
-                    PlayerHp.staticHp -= cardsInZone[i].power;
+                    AttackPlayerCards();
+                   PlayerHp.staticHp -= cardsInZone[i].power;
                 }
             }
 
@@ -307,6 +308,49 @@ public class AI : MonoBehaviour
             Destroy(Deck);
         }
     }
+    /* void Attack()
+     {
+         // Iterate over AI's cards in the zone
+         foreach (var aiCardToHand in cardsInZone)
+         {
+             // Flag to track if the AI has attacked any player card
+             bool attackedPlayerCard = false;
+
+             // Iterate over the player's cards in the PlayerZone
+             foreach (Transform playerCardTransform in PlayerZone.transform)
+             {
+                 // Get the ThisCard component of the player's card
+                 var playerCard = playerCardTransform.GetComponent<ThisCard>();
+
+                 // Check if the player's card can be attacked
+                 if (playerCard.summoned)
+                 {
+                     // Reduce the player's card power by AI card's power
+                     playerCard.actualpower -= aiCardToHand.power;
+
+                     // If the player's card power drops to or below 0, remove it from the zone
+                     if (playerCard.actualpower <= 0)
+                     {
+                         // Destroy the player's card
+                         playerCard.Destroy();
+                     }
+
+                     // Mark that the AI has attacked a player card
+                     attackedPlayerCard = true;
+
+                     // Break out of the loop since the AI can attack only one player card per turn
+                     break;
+                 }
+             }
+
+             // If the AI didn't attack any player card, attack the player's health directly
+             if (!attackedPlayerCard)
+             {
+                 // Reduce the player's health by AI card's power
+                 PlayerHp.staticHp -= aiCardToHand.power;
+             }
+         }
+     }*/
 
     IEnumerator Draw(int x)
     {
@@ -330,7 +374,7 @@ public class AI : MonoBehaviour
                 // Add the drawn card to the hand
                 cardsInHand.Add(drawnCard);
 
-               
+
             }
         }
     }
@@ -345,5 +389,34 @@ public class AI : MonoBehaviour
         yield return new WaitForSeconds(5);
         summonPhase = true;
     }
+
+
+
+    void AttackPlayerCards()
+    {
+        foreach (Transform enemyCardTransform in Zone.transform)
+        {
+            AICardToHand aiCard = enemyCardTransform.GetComponent<AICardToHand>();
+
+            if (aiCard != null && aiCard.canAttack)
+            {
+                if (PlayerZone.transform.childCount > 0)
+                {
+                    Transform targetCardTransform = PlayerZone.transform.GetChild(0); // Simplified for example, better target selection logic can be added
+                    ThisCard targetCard = targetCardTransform.GetComponent<ThisCard>();
+
+                    if (targetCard != null)
+                    {
+                        aiCard.AttackCard(targetCard);
+                    }
+                }
+                else
+                {
+                    aiCard.AttackPlayerDirectly();
+                }
+            }
+        }
+    }
+
 }
 

@@ -135,8 +135,12 @@ public class ThisCard : MonoBehaviour
       //  power = thisCard[0].power;
 
         resurrectXcards = thisCard[0].resurrectXcards;
-       // power = thisCard[0].power;
+        // power = thisCard[0].power;
 
+
+
+        givelight = thisCard[0].givelight;
+        givedark = thisCard[0].givedark;
     }
 
     // Update is called once per frame
@@ -168,8 +172,7 @@ public class ThisCard : MonoBehaviour
         ward = thisCard[0].ward;
 
        
-        givelight = thisCard[0].givelight;
-        givedark = thisCard[0].givedark;
+
 
 
         if (beGrey == true)
@@ -229,12 +232,12 @@ public class ThisCard : MonoBehaviour
                 gameObject.GetComponent<Draggable>().enabled = false;
             }
 
-            if(summoned == true && this.transform.parent == battleZone.transform && givelight == true)
+            if(summoned == true && givelight == true)
             {
             
                 GiveLight(); 
                 givelight = false;
-                canAttack = false;
+               
 
             }
 
@@ -423,7 +426,8 @@ public class ThisCard : MonoBehaviour
             AICardToHand randomCard = randomCardTransform.GetComponent<AICardToHand>();  // Assuming AICardToHand has an int property 'light'
             if (randomCard != null)
             {
-                randomCard.lightStatus = 1;  // Or any other int value to indicate "light status"
+                randomCard.lightStatus++;  // Or any other int value to indicate "light status"
+                givelight = false;
             }
         }
 
@@ -439,7 +443,8 @@ public class ThisCard : MonoBehaviour
             AICardToHand randomCard = randomCardTransform.GetComponent<AICardToHand>();  // Assuming AICardToHand has an int property 'light'
             if (randomCard != null)
             {
-                randomCard.darkStatus = 1;  // Or any other int value to indicate "light status"
+                randomCard.darkStatus++;  // Or any other int value to indicate "light status"
+                givedark = false;
             }
         }
 

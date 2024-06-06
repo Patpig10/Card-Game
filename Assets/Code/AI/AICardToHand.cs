@@ -105,6 +105,9 @@ public class AICardToHand : MonoBehaviour
 
         lightstatus.SetActive(false);
         darkstatus.SetActive(false);
+
+        givelight = thisCardList[0].givelight;
+        givedark = thisCardList[0].givedark;
     }
 
     // Update is called once per frame
@@ -138,8 +141,7 @@ public class AICardToHand : MonoBehaviour
         ward = thisCardList[0].ward;
 
 
-        givelight = thisCardList[0].givelight;
-        givedark = thisCardList[0].givedark;
+      
         //boostXpower = thisCardList[0].boostXpower;
 
         if (thisCardList[0].color == "White")
@@ -278,6 +280,7 @@ public class AICardToHand : MonoBehaviour
             if (randomCard != null)
             {
                 randomCard.lightStatus = 1;  // Or any other int value to indicate "light status"
+                givelight = false;
             }
         }
 
@@ -327,5 +330,20 @@ public class AICardToHand : MonoBehaviour
             hurted = 0;
         }
     }
+
+
+    public void AttackCard(ThisCard targetCard)
+    {
+        targetCard.hurted += power;
+        hurted += targetCard.actualpower;
+        canAttack = false;
+    }
+
+    public void AttackPlayerDirectly()
+    {
+        EnemyHp.staticHp -= power;
+        canAttack = false;
+    }
+
 
 }
