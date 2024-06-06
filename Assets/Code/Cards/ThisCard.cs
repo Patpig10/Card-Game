@@ -167,8 +167,7 @@ public class ThisCard : MonoBehaviour
         damageDealtBySpell = thisCard[0].damageDealtBySpell;
         ward = thisCard[0].ward;
 
-        lightStatus = thisCard[0].lightStatus;
-        darkStatus = thisCard[0].darkStatus;
+       
         givelight = thisCard[0].givelight;
         givedark = thisCard[0].givedark;
 
@@ -429,6 +428,22 @@ public class ThisCard : MonoBehaviour
         }
 
     }
+
+    public void GiveDark()
+    {
+        // Logic to give light status to a random card in the enemy's zone
+        if (EnemyZone != null && EnemyZone.transform.childCount > 0)
+        {
+            int randomIndex = Random.Range(0, EnemyZone.transform.childCount);
+            Transform randomCardTransform = EnemyZone.transform.GetChild(randomIndex);
+            AICardToHand randomCard = randomCardTransform.GetComponent<AICardToHand>();  // Assuming AICardToHand has an int property 'light'
+            if (randomCard != null)
+            {
+                randomCard.darkStatus = 1;  // Or any other int value to indicate "light status"
+            }
+        }
+
+    }
     public void Summon()
     {
         TurnSystem.currentGil -= cost;
@@ -449,6 +464,8 @@ public class ThisCard : MonoBehaviour
         actualpower =power - hurted;
         descriptionText.text = cardDescription;
         thatImage.sprite = thisSprite;
+        darkText.text = darkStatus.ToString();
+        lightText.text = lightStatus.ToString();
     }
     public void Attack()
     {

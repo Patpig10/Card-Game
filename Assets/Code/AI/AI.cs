@@ -46,6 +46,7 @@ public class AI : MonoBehaviour
     public int howManyCards;
     public bool[] canAttack;
     public static bool AiEndPhase;
+    public GameObject PlayerZone;
 
     public Deck enemyDeck; // Add a Deck object for the enemy
 
@@ -63,6 +64,7 @@ public class AI : MonoBehaviour
         Hand = GameObject.Find("EnemyHand");
         Zone = GameObject.Find("EnemyZone");
         Graveyard = GameObject.Find("EnemyGraveyard");
+        PlayerZone = GameObject.Find("Zone");
 
         x = 0;
         deckSize = 40;

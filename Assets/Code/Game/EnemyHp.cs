@@ -14,8 +14,8 @@ public class EnemyHp : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        maxHp = 500;
-        staticHp = 500;
+        maxHp = 8000;
+        staticHp = 8000;
     }
 
     // Update is called once per frame

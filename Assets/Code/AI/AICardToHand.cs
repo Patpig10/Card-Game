@@ -137,8 +137,9 @@ public class AICardToHand : MonoBehaviour
         healXpower = thisCardList[0].healXpower;
         ward = thisCardList[0].ward;
 
-        lightStatus = thisCardList[0].lightStatus;
-        darkStatus = thisCardList[0].darkStatus;
+
+        givelight = thisCardList[0].givelight;
+        givedark = thisCardList[0].givedark;
         //boostXpower = thisCardList[0].boostXpower;
 
         if (thisCardList[0].color == "White")
@@ -308,6 +309,8 @@ public class AICardToHand : MonoBehaviour
         powerText.text = actualpower.ToString();
         descriptionText.text = cardDescription;
         thatImage.sprite = thisSprite;
+        darkText.text = darkStatus.ToString();
+        lightText.text = lightStatus.ToString();
     }
 
     public void Destroy()
