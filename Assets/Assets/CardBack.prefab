@@ -573,6 +573,14 @@ MonoBehaviour:
   directattack: 0
   wardguard: {fileID: 0}
   beGrey: 0
+  lightStatus: 0
+  darkStatus: 0
+  givelight: 0
+  givedark: 0
+  lightstatus: {fileID: 0}
+  darkstatus: {fileID: 0}
+  darkText: {fileID: 0}
+  lightText: {fileID: 0}
 --- !u!114 &2625762926929055621
 MonoBehaviour:
   m_ObjectHideFlags: 0

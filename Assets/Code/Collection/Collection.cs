@@ -54,7 +54,7 @@ public class Collection : MonoBehaviour
             }
         }
 
-        cardsInCollection = 8; // 8 Cards in my database | 0 = none card | 1 - 8 = Cards
+        cardsInCollection = 12; // 8 Cards in my database | 0 = none card | 1 - 8 = Cards
         numberOfCardsOnPage = 4;
 
     }

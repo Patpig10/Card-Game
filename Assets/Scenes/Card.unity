@@ -10341,6 +10341,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -10357,6 +10361,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -10373,6 +10381,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -10389,6 +10401,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -10405,6 +10421,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -10421,6 +10441,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -10437,6 +10461,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -10453,6 +10481,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -10469,6 +10501,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -10485,6 +10521,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -10501,6 +10541,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -10517,6 +10561,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -10533,6 +10581,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -10549,6 +10601,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -10565,6 +10621,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -10581,6 +10641,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -10597,6 +10661,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -10613,6 +10681,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -10629,6 +10701,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -10645,6 +10721,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -10661,6 +10741,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -10677,6 +10761,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -10693,6 +10781,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -10709,6 +10801,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -10725,6 +10821,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -10741,6 +10841,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -10757,6 +10861,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -10773,6 +10881,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -10789,6 +10901,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -10805,6 +10921,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -10821,6 +10941,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -10837,6 +10961,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -10853,6 +10981,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -10869,6 +11001,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -10885,6 +11021,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -10901,6 +11041,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -10917,6 +11061,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -10933,6 +11081,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -10949,6 +11101,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -10965,6 +11121,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   howManyCards: 0
   cardBack: {fileID: 5782265181162736036, guid: 3e792e454a6d3594f90d33fa4b1a3a59, type: 3}
   graveWindow: {fileID: 1277819752}
@@ -11646,6 +11806,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   cardsInHand: []
   cardsInZone:
   - id: 0
@@ -11664,6 +11828,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -11680,6 +11848,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -11696,6 +11868,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -11712,6 +11888,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -11728,6 +11908,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -11744,6 +11928,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -11760,6 +11948,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -11776,6 +11968,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -11792,6 +11988,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -11808,6 +12008,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -11824,6 +12028,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -11840,6 +12048,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -11856,6 +12068,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -11872,6 +12088,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -11888,6 +12108,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -11904,6 +12128,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -11920,6 +12148,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -11936,6 +12168,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -11952,6 +12188,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -11968,6 +12208,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -11984,6 +12228,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -12000,6 +12248,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -12016,6 +12268,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -12032,6 +12288,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -12048,6 +12308,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -12064,6 +12328,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -12080,6 +12348,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -12096,6 +12368,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -12112,6 +12388,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -12128,6 +12408,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -12144,6 +12428,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -12160,6 +12448,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -12176,6 +12468,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -12192,6 +12488,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -12208,6 +12508,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -12224,6 +12528,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -12240,6 +12548,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -12256,6 +12568,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -12272,6 +12588,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   - id: 0
     cardName: 
     cost: 0
@@ -12288,6 +12608,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   Hand: {fileID: 1805493393}
   Zone: {fileID: 1638073877}
   Graveyard: {fileID: 193027146}
@@ -36683,6 +37007,10 @@ MonoBehaviour:
     damageDealtBySpell: 0
     ward: 0
     resurrectXcards: 0
+    lightStatus: 0
+    darkStatus: 0
+    givelight: 0
+    givedark: 0
   x: 0
   cardInDeck1: {fileID: 880657472}
   cardInDeck2: {fileID: 870610817}
@@ -37131,6 +37459,7 @@ MonoBehaviour:
   deck: CreateDeck
   shop: Shop
   menu: menu
+  Book: 
   options: {fileID: 0}
 --- !u!114 &1896203282
 MonoBehaviour:

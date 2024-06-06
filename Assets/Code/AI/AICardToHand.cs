@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEditor.Experimental.GraphView;
+using System.Threading.Tasks;
 
 public class AICardToHand : MonoBehaviour
 {
@@ -66,6 +67,16 @@ public class AICardToHand : MonoBehaviour
     public bool spell;
     public int damageDealtBySpell;
     public bool beInGraveyard;
+
+    public int lightStatus;
+    public int darkStatus;
+    public bool givelight;
+    public bool givedark;
+
+    public GameObject lightstatus;
+    public GameObject darkstatus;
+    public TextMeshProUGUI darkText;
+    public TextMeshProUGUI lightText;
     // Start is called before the first frame update
     void Start()
     {
@@ -91,6 +102,9 @@ public class AICardToHand : MonoBehaviour
         beInGraveyard = false;
 
         battlefield = GameObject.Find("EnemyZone");
+
+        lightstatus.SetActive(false);
+        darkstatus.SetActive(false);
     }
 
     // Update is called once per frame
@@ -122,6 +136,9 @@ public class AICardToHand : MonoBehaviour
 
         healXpower = thisCardList[0].healXpower;
         ward = thisCardList[0].ward;
+
+        lightStatus = thisCardList[0].lightStatus;
+        darkStatus = thisCardList[0].darkStatus;
         //boostXpower = thisCardList[0].boostXpower;
 
         if (thisCardList[0].color == "White")
@@ -198,6 +215,18 @@ public class AICardToHand : MonoBehaviour
         }
 
 
+        if (lightStatus >= 1 && darkStatus == 0)
+        {
+            lightstatus.SetActive(true);
+        }
+
+        if (darkStatus >= 1 && lightStatus == 0)
+        {
+            darkstatus.SetActive(true);
+        }
+
+
+
         if (this.transform.parent == battlefield.transform && isSummoned == false)
         {
 
@@ -227,6 +256,30 @@ public class AICardToHand : MonoBehaviour
                 directAttack = true;
             }
         }*/
+
+
+
+        if (summoned == true && this.transform.parent == battlefield.transform && givelight == true)
+        {
+            givelight = false;
+            GiveLight();
+        }
+    }
+
+    public void GiveLight()
+    {
+        // Logic to give light status to a random card in the enemy's zone
+        if (PlayerZone != null && PlayerZone.transform.childCount > 0)
+        {
+            int randomIndex = Random.Range(0, PlayerZone.transform.childCount);
+            Transform randomCardTransform = PlayerZone.transform.GetChild(randomIndex);
+            ThisCard randomCard = randomCardTransform.GetComponent<ThisCard>();  // Assuming AICardToHand has an int property 'light'
+            if (randomCard != null)
+            {
+                randomCard.lightStatus = 1;  // Or any other int value to indicate "light status"
+            }
+        }
+
     }
     public void Heal()
     {

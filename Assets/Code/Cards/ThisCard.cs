@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Collections;
+using Unity.VisualScripting;
 
 public class ThisCard : MonoBehaviour
 {
@@ -86,7 +87,15 @@ public class ThisCard : MonoBehaviour
     public GameObject wardguard;
     public static bool staticCardBack;
     public bool beGrey;
+    public int lightStatus;
+    public int darkStatus;
+    public bool givelight;
+    public bool givedark;
 
+    public GameObject lightstatus;
+    public GameObject darkstatus;
+    public TextMeshProUGUI darkText;
+    public TextMeshProUGUI lightText;
 
     // Start is called before the first frame update
     void Start()
@@ -118,6 +127,8 @@ public class ThisCard : MonoBehaviour
         Graveyard = GameObject.Find("MyGraveyard");
         Hand = GameObject.Find("Hand");
 
+        lightstatus.SetActive(false);
+        darkstatus.SetActive(false);
 
         returnXcards = thisCard[0].returnXcards;
 
@@ -155,6 +166,12 @@ public class ThisCard : MonoBehaviour
         spell = thisCard[0].spell;
         damageDealtBySpell = thisCard[0].damageDealtBySpell;
         ward = thisCard[0].ward;
+
+        lightStatus = thisCard[0].lightStatus;
+        darkStatus = thisCard[0].darkStatus;
+        givelight = thisCard[0].givelight;
+        givedark = thisCard[0].givedark;
+
 
         if (beGrey == true)
         {
@@ -213,6 +230,16 @@ public class ThisCard : MonoBehaviour
                 gameObject.GetComponent<Draggable>().enabled = false;
             }
 
+            if(summoned == true && this.transform.parent == battleZone.transform && givelight == true)
+            {
+            
+                GiveLight(); 
+                givelight = false;
+                canAttack = false;
+
+            }
+
+
             battleZone = GameObject.Find("Zone");
 
             if (!summoned && this.transform.parent == battleZone.transform)
@@ -228,6 +255,17 @@ public class ThisCard : MonoBehaviour
                 wardguard.SetActive(false);
             }
         }
+
+        if(lightStatus >= 1 && darkStatus == 0)
+        {
+            lightstatus.SetActive(true);
+        }
+
+        if(darkStatus >= 1 && lightStatus == 0)
+        {
+            darkstatus.SetActive(true);
+        }
+
 
         if(canAttack == true && beInGraveyard == false )
         {
@@ -375,6 +413,22 @@ public class ThisCard : MonoBehaviour
         }
 
     }
+
+    public void GiveLight()
+    {
+        // Logic to give light status to a random card in the enemy's zone
+        if (EnemyZone != null && EnemyZone.transform.childCount > 0)
+        {
+            int randomIndex = Random.Range(0, EnemyZone.transform.childCount);
+            Transform randomCardTransform = EnemyZone.transform.GetChild(randomIndex);
+            AICardToHand randomCard = randomCardTransform.GetComponent<AICardToHand>();  // Assuming AICardToHand has an int property 'light'
+            if (randomCard != null)
+            {
+                randomCard.lightStatus = 1;  // Or any other int value to indicate "light status"
+            }
+        }
+
+    }
     public void Summon()
     {
         TurnSystem.currentGil -= cost;
@@ -447,7 +501,7 @@ public class ThisCard : MonoBehaviour
     }
 
 
-
+  
     public void UntargetEnemy()
     {
         staticTargetingEnemy = false;

@@ -118,7 +118,7 @@ public class PlayerDeck : MonoBehaviour
     void InitializeDeck()
     {
         // Build the deck based on player preferences (example)
-        for (int i = 1; i <= 8; i++)
+        for (int i = 1; i <= 13; i++)
         {
             int cardCount = PlayerPrefs.GetInt("deck" + i, 0);
             if (cardCount > 0)
