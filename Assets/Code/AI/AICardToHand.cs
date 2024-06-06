@@ -326,7 +326,10 @@ public class AICardToHand : MonoBehaviour
             thisCardCanBeDestroyed = false;
             summoned = false;
             beInGraveyard = true;
-
+            lightstatus.SetActive(false);
+            darkstatus.SetActive(false);
+            lightStatus = 0;
+            darkStatus = 0;
             hurted = 0;
         }
     }
