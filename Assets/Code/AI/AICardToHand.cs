@@ -77,6 +77,8 @@ public class AICardToHand : MonoBehaviour
     public GameObject darkstatus;
     public TextMeshProUGUI darkText;
     public TextMeshProUGUI lightText;
+
+    public bool canbestolen;
     // Start is called before the first frame update
     void Start()
     {
@@ -266,6 +268,12 @@ public class AICardToHand : MonoBehaviour
         {
             givelight = false;
             GiveLight();
+        }
+
+
+        if ((lightStatus >= 3))
+        {
+            canbestolen = true;
         }
     }
 

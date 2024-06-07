@@ -97,6 +97,10 @@ public class ThisCard : MonoBehaviour
     public TextMeshProUGUI darkText;
     public TextMeshProUGUI lightText;
 
+    public bool steal;
+
+    public bool canbestolen;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -141,6 +145,7 @@ public class ThisCard : MonoBehaviour
 
         givelight = thisCard[0].givelight;
         givedark = thisCard[0].givedark;
+        steal = thisCard[0].steal;
     }
 
     // Update is called once per frame
@@ -241,6 +246,21 @@ public class ThisCard : MonoBehaviour
 
             }
 
+            if (summoned == true && steal == true)
+            {
+
+                
+                Steal();
+                givelight = false;
+                steal = false;  
+
+
+            }
+
+            if ((lightStatus >= 3))
+            {
+                canbestolen = true;
+            }
 
             battleZone = GameObject.Find("Zone");
 
@@ -718,5 +738,52 @@ public class ThisCard : MonoBehaviour
             }
         }
         }
-    
+
+
+
+    public void Steal()
+    {
+        // Find the AI's zone
+        GameObject enemyZone = GameObject.Find("EnemyZone");
+
+        // Initialize variables to keep track of the chosen card
+        Transform cardToSteal = null;
+        int highestLightStatus = 0;
+
+        // Iterate through each card in the enemy zone
+        foreach (Transform card in enemyZone.transform)
+        {
+            // Get the light status of the current card
+            int lightStatus = card.GetComponent<AICardToHand>().lightStatus;
+
+            // Check if the light status meets the criteria and is higher than the current highest light status
+            if (lightStatus == 3)
+            {
+                // Update the chosen card and highest light status
+                cardToSteal = card;
+                highestLightStatus = lightStatus;
+
+                // Exit the loop if a card with 3 lightStatus is found
+                break;
+            }
+        }
+
+        // Check if a card to steal was found
+        if (cardToSteal != null)
+        {
+            // Move the chosen card to the player's battle zone
+            cardToSteal.SetParent(battleZone.transform);
+            cardToSteal.GetComponent<ThisCard>().summoned = true;
+
+            // Log the stolen card
+            Debug.Log("Stole card: " + cardToSteal.GetComponent<ThisCard>().cardName);
+        }
+        else
+        {
+            // Log if no card with 3 lightStatus is found
+            Debug.Log("No card with 3 lightStatus to steal.");
+        }
+    }
+
+
 }
