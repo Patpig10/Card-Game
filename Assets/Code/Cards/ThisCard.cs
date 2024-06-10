@@ -754,17 +754,15 @@ public class ThisCard : MonoBehaviour
         foreach (Transform card in enemyZone.transform)
         {
             // Get the light status of the current card
-            int lightStatus = card.GetComponent<AICardToHand>().lightStatus;
+            AICardToHand aiCard = card.GetComponent<AICardToHand>();
+            int lightStatus = aiCard.lightStatus;
 
             // Check if the light status meets the criteria and is higher than the current highest light status
-            if (lightStatus == 3)
+            if (lightStatus >= 3 && lightStatus > highestLightStatus)
             {
                 // Update the chosen card and highest light status
                 cardToSteal = card;
                 highestLightStatus = lightStatus;
-
-                // Exit the loop if a card with 3 lightStatus is found
-                break;
             }
         }
 
@@ -773,10 +771,9 @@ public class ThisCard : MonoBehaviour
         {
             // Move the chosen card to the player's battle zone
             cardToSteal.SetParent(battleZone.transform);
-            cardToSteal.GetComponent<ThisCard>().summoned = true;
 
             // Log the stolen card
-            Debug.Log("Stole card: " + cardToSteal.GetComponent<ThisCard>().cardName);
+            Debug.Log("Stole card: " + cardToSteal.name);
         }
         else
         {
@@ -784,6 +781,5 @@ public class ThisCard : MonoBehaviour
             Debug.Log("No card with 3 lightStatus to steal.");
         }
     }
-
 
 }

@@ -28,9 +28,9 @@ public class CardDataBase : MonoBehaviour
 
 
         //Monsters light
-       cardList.Add(new Card(9, "Alane", 1, 40, "Give 1 light", Resources.Load<Sprite>("2"), "White", 0, 0, 0, 0, 0, false, 0, false, 0, 1, 0, true, false, false));
-        cardList.Add(new Card(10, "Alice", 1, 40, "Give 1 light", Resources.Load<Sprite>("2"), "White", 0, 0, 0, 0, 0, false, 0, false, 0, 1, 0, true, false, false));
-        cardList.Add(new Card(11, "Sora", 1, 40, "Give 1 light", Resources.Load<Sprite>("2"), "White", 0, 0, 0, 0, 0, false, 0, false, 0, 1, 0, true, false, false));
+       cardList.Add(new Card(9, "Alane", 1, 40, "Give 1 light", Resources.Load<Sprite>("2"), "White", 0, 0, 0, 0, 0, false, 0, false, 0, 1, 0, true, false, true));
+        cardList.Add(new Card(10, "Alice", 1, 40, "Give 1 light", Resources.Load<Sprite>("2"), "White", 0, 0, 0, 0, 0, false, 0, false, 0, 1, 0, true, false, true));
+        cardList.Add(new Card(11, "Sora", 1, 40, "Give 1 light", Resources.Load<Sprite>("2"), "White", 0, 0, 0, 0, 0, false, 0, false, 0, 1, 0, true, false, true));
         cardList.Add(new Card(12, "Beta", 1, 40, "Give 1 light", Resources.Load<Sprite>("2"), "White", 0, 0, 0, 0, 0, false, 0, false, 0, 1, 0, true, false, true));
 
     }

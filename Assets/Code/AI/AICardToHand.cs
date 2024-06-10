@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine.UI;
 using UnityEditor.Experimental.GraphView;
 using System.Threading.Tasks;
+using static UnityEngine.GraphicsBuffer;
 
 public class AICardToHand : MonoBehaviour
 {
@@ -79,6 +80,21 @@ public class AICardToHand : MonoBehaviour
     public TextMeshProUGUI lightText;
 
     public bool canbestolen;
+
+
+    public static bool staticTargetingEnemy;
+    public static bool staticTargeting;
+    public static bool onlyThisCardAttack;
+
+    public bool targeting;
+    public bool targetingEnemy;
+    public GameObject Target;
+    public GameObject Enemy;
+    public bool cantAttack;
+    public bool cantTargeting;
+    public bool directattack;
+    public AICardToHand aiCardToHand;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -94,6 +110,11 @@ public class AICardToHand : MonoBehaviour
         z = 0;
         numberOfCardsInDeck = AI.deckSize;
 
+
+
+        Enemy = GameObject.Find("Enemy HP");
+
+
         Graveyard = GameObject.Find("EnemyGraveyard");
         StartCoroutine(AfterVoidStart());
         AiZone = GameObject.Find("EnemyZone");
@@ -102,6 +123,9 @@ public class AICardToHand : MonoBehaviour
         summoned = false;
         summoningSickness = true;
         beInGraveyard = false;
+        directattack = true;
+        targeting = false;
+        targetingEnemy = false;
 
         battlefield = GameObject.Find("EnemyZone");
 
@@ -275,6 +299,52 @@ public class AICardToHand : MonoBehaviour
         {
             canbestolen = true;
         }
+
+
+
+
+
+
+        if (TurnSystem.isYourTurn == true)
+        {
+            canAttack = true;
+        }
+        else
+        {
+            canAttack = false;
+        }
+
+        targeting = staticTargeting;
+        targetingEnemy = staticTargetingEnemy;
+
+        if (targetingEnemy == true)
+        {
+            Target = Enemy;
+        }
+        else
+        {
+            Target = null;
+        }
+
+        if (targeting == true && onlyThisCardAttack == true)
+        {
+            Attack();
+        }
+
+
+        foreach (Transform child in AiZone.transform)
+        {
+            AICardToHand childAICard = child.GetComponent<AICardToHand>();
+            if (childAICard.ward == true)
+            {
+                directattack = false;
+            }
+            else
+            {
+                directattack = true;
+            }
+        }
+
     }
 
     public void GiveLight()
@@ -354,6 +424,105 @@ public class AICardToHand : MonoBehaviour
     {
         EnemyHp.staticHp -= power;
         canAttack = false;
+    }
+
+
+
+
+
+    //Stolen
+
+    public void UntargetEnemy()
+    {
+        staticTargetingEnemy = false;
+        Arrow._Hide = true;
+
+    }
+    public void TargetEnemy()
+    {
+        staticTargetingEnemy = true;
+    }
+
+    public void StartAttack()
+    {
+        staticTargeting = true;
+        if (canAttack == true)
+        {
+            Arrow._Show = true;
+            Arrow.startPoint = transform.position;
+        }
+    }
+
+    public void StopAttack()
+    {
+        staticTargeting = false;
+        Arrow._Hide = true;
+        //  Arrow.startPoint = transform.position;
+
+    }
+    public void OneCardAttack()
+    {
+        onlyThisCardAttack = true;
+    }
+    public void OneCardAttackStop()
+    {
+        onlyThisCardAttack = false;
+
+    }
+
+
+
+
+
+
+    public void Attack()
+    {
+        if (canAttack && Target != null)
+        {
+            Debug.Log("Attempting to attack.");
+
+            if (Target == Enemy && directattack == true)
+            {
+                Debug.Log("Attacking Enemy");
+                EnemyHp.staticHp -= actualpower;
+                targeting = false;
+                cantAttack = true;
+
+
+                Arrow._Hide = true;
+            }
+        }
+        else
+        {
+            // Debug.Log("Attempting to attack AI.");
+
+            foreach (Transform child in AiZone.transform)
+            {
+                AICardToHand childAICard = child.GetComponent<AICardToHand>();
+
+                if (childAICard.isTarget == true && cantAttack == false)
+                {
+
+
+                    if (actualpower <= 0 || power <= 0)
+                    {
+                        actualpower = 0;
+                        Destroy();
+                    }
+                    Debug.Log("Target found in EnemyZone.");
+                    childAICard.hurted += actualpower;  // Adjusting hurted value by the power of the attacking card
+                    hurted += childAICard.actualpower;
+                    cantAttack = true;
+
+                    Arrow._Hide = true;
+                }
+                /* else
+                 {
+                     Debug.LogError("AICardToHand component not found or conditions not met on the target AI card.");
+                 }*/
+            }
+        }
+
     }
 
 
