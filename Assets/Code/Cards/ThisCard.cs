@@ -101,6 +101,9 @@ public class ThisCard : MonoBehaviour
 
     public bool canbestolen;
 
+    public int AOEDamage;
+    public bool AOE;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -146,6 +149,8 @@ public class ThisCard : MonoBehaviour
         givelight = thisCard[0].givelight;
         givedark = thisCard[0].givedark;
         steal = thisCard[0].steal;
+        AOEDamage = thisCard[0].aoedamage;
+        AOE = thisCard[0].aoe;
     }
 
     // Update is called once per frame
@@ -245,6 +250,12 @@ public class ThisCard : MonoBehaviour
                
 
             }
+            if (summoned == true && givedark == true)
+            {
+                GiveDark();
+                givedark = false;
+
+            }
 
             if (summoned == true && steal == true)
             {
@@ -255,6 +266,17 @@ public class ThisCard : MonoBehaviour
                 steal = false;  
 
 
+            }
+
+            if (lightStatus >= 3)
+            {
+                canbestolen = true;
+            }
+
+            if(summoned == true && AOE == true)
+            {
+                AOEAttack();
+                AOE = false;
             }
 
             if ((lightStatus >= 3))
@@ -546,6 +568,7 @@ public class ThisCard : MonoBehaviour
   
     public void UntargetEnemy()
     {
+
         staticTargetingEnemy = false;
         Arrow._Hide = true;
 
@@ -782,4 +805,15 @@ public class ThisCard : MonoBehaviour
         }
     }
 
+
+
+
+    public void AOEAttack()
+    {
+        foreach (Transform child in EnemyZone.transform)
+        {
+            AICardToHand childAICard = child.GetComponent<AICardToHand>();
+            childAICard.hurted += AOEDamage;
+        }
+    }
 }

@@ -2557,6 +2557,9 @@ MonoBehaviour:
   darkText: {fileID: 1347393691593224272}
   lightText: {fileID: 1183123050743397359}
   canbestolen: 0
+  staticTargetingEnemy: 0
+  staticTargeting: 0
+  onlyThisCardAttack: 0
   targeting: 0
   targetingEnemy: 0
   Target: {fileID: 0}
@@ -2564,6 +2567,7 @@ MonoBehaviour:
   cantAttack: 0
   cantTargeting: 0
   directattack: 0
+  aiCardToHand: {fileID: 0}
 --- !u!114 &2884989206699810467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2675,7 +2679,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 2339499335537532960}
           m_TargetAssemblyTypeName: AICardToHand, Assembly-CSharp
-          m_MethodName: Attack
+          m_MethodName: StartAttack
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

@@ -82,9 +82,9 @@ public class AICardToHand : MonoBehaviour
     public bool canbestolen;
 
 
-    public static bool staticTargetingEnemy;
-    public static bool staticTargeting;
-    public static bool onlyThisCardAttack;
+    public  bool staticTargetingEnemy;
+    public  bool staticTargeting;
+    public  bool onlyThisCardAttack;
 
     public bool targeting;
     public bool targetingEnemy;
@@ -95,6 +95,7 @@ public class AICardToHand : MonoBehaviour
     public bool directattack;
     public AICardToHand aiCardToHand;
 
+    public bool stolen;
     // Start is called before the first frame update
     void Start()
     {
@@ -134,6 +135,8 @@ public class AICardToHand : MonoBehaviour
 
         givelight = thisCardList[0].givelight;
         givedark = thisCardList[0].givedark;
+        canAttack = false;
+        stolen = false;
     }
 
     // Update is called once per frame
@@ -221,7 +224,7 @@ public class AICardToHand : MonoBehaviour
             cardBack.SetActive(false);
         }
 
-        if(TurnSystem.isYourTurn == false && summoningSickness == false)
+        if(TurnSystem.isYourTurn == true)
         {
            canAttack = true;
         }
@@ -230,7 +233,7 @@ public class AICardToHand : MonoBehaviour
             canAttack = false;
         }
 
-        if(TurnSystem.isYourTurn == true && this.transform.parent == AiZone.transform)
+        if(TurnSystem.isYourTurn == true)
         {
             summoningSickness = false;
         }
@@ -305,14 +308,7 @@ public class AICardToHand : MonoBehaviour
 
 
 
-        if (TurnSystem.isYourTurn == true)
-        {
-            canAttack = true;
-        }
-        else
-        {
-            canAttack = false;
-        }
+       
 
         targeting = staticTargeting;
         targetingEnemy = staticTargetingEnemy;
@@ -434,22 +430,31 @@ public class AICardToHand : MonoBehaviour
 
     public void UntargetEnemy()
     {
-        staticTargetingEnemy = false;
-        Arrow._Hide = true;
-
+        if (stolen == true)
+        {
+            staticTargetingEnemy = false;
+            Arrow._Hide = true;
+        }
     }
     public void TargetEnemy()
     {
-        staticTargetingEnemy = true;
+        if ((stolen == true))
+        {
+            staticTargetingEnemy = true;
+        }
+
     }
 
     public void StartAttack()
     {
-        staticTargeting = true;
-        if (canAttack == true)
+        if (stolen == true)
         {
-            Arrow._Show = true;
-            Arrow.startPoint = transform.position;
+            staticTargeting = true;
+            if (canAttack == true)
+            {
+                Arrow._Show = true;
+                Arrow.startPoint = transform.position;
+            }
         }
     }
 

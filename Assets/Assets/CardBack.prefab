@@ -442,7 +442,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8934991355552615291
 RectTransform:
   m_ObjectHideFlags: 0
@@ -583,6 +583,8 @@ MonoBehaviour:
   lightText: {fileID: 0}
   steal: 0
   canbestolen: 0
+  AOEDamage: 0
+  AOE: 0
 --- !u!114 &2625762926929055621
 MonoBehaviour:
   m_ObjectHideFlags: 0
