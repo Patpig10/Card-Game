@@ -35,7 +35,7 @@ public class DeckCreator : MonoBehaviour
     void Start()
     {
         sum = 0;
-        numberOfCardsInDatabase = 13;
+        numberOfCardsInDatabase = 21;
     }
 
     // Update is called once per frame

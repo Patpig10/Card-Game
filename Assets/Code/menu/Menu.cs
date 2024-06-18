@@ -67,7 +67,7 @@ public class Menu : MonoBehaviour
 
 
         // UnityEditor.EditorApplication.isPlaying = false;
-        UnityEditor.EditorApplication.isPlaying = false;
+       // UnityEditor.EditorApplication.isPlaying = false;
 
     }
 

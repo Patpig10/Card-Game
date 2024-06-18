@@ -103,6 +103,7 @@ public class ThisCard : MonoBehaviour
 
     public int AOEDamage;
     public bool AOE;
+    public bool rush;
 
     // Start is called before the first frame update
     void Start()
@@ -151,6 +152,7 @@ public class ThisCard : MonoBehaviour
         steal = thisCard[0].steal;
         AOEDamage = thisCard[0].aoedamage;
         AOE = thisCard[0].aoe;
+        rush = thisCard[0].rush;
     }
 
     // Update is called once per frame
@@ -255,6 +257,12 @@ public class ThisCard : MonoBehaviour
                 GiveDark();
                 givedark = false;
 
+            }
+
+            if (summoned == true && rush == true)
+            {
+                Rush();
+               
             }
 
             if (summoned == true && steal == true)
@@ -529,6 +537,8 @@ public class ThisCard : MonoBehaviour
 
 
                 Arrow._Hide = true;
+
+                rush = false;
             }
         }
         else
@@ -554,11 +564,13 @@ public class ThisCard : MonoBehaviour
                     cantAttack = true;
 
                     Arrow._Hide = true;
+                    rush = false;
+
                 }
-               /* else
-                {
-                    Debug.LogError("AICardToHand component not found or conditions not met on the target AI card.");
-                }*/
+                /* else
+                 {
+                     Debug.LogError("AICardToHand component not found or conditions not met on the target AI card.");
+                 }*/
             }
         }
 
@@ -816,4 +828,11 @@ public class ThisCard : MonoBehaviour
             childAICard.hurted += AOEDamage;
         }
     }
+
+
+    public void Rush()
+    {
+        summoningSickness = false;
+    }
+
 }

@@ -54,7 +54,7 @@ public class Collection : MonoBehaviour
             }
         }
 
-        cardsInCollection = 16; // 8 Cards in my database | 0 = none card | 1 - 8 = Cards
+        cardsInCollection = 21; // 8 Cards in my database | 0 = none card | 1 - 8 = Cards
         numberOfCardsOnPage = 4;
 
     }
@@ -62,42 +62,38 @@ public class Collection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        int arrayLength = HowManyCards.Length;
+
         if (openPack == false)
         {
-            CardOne.GetComponent<CardInCollection>().thisID = x;
-            CardTwo.GetComponent<CardInCollection>().thisID = x + 1;
-            CardThree.GetComponent<CardInCollection>().thisID = x + 2;
-            CardFour.GetComponent<CardInCollection>().thisID = x + 3;
+            CardOne.GetComponent<CardInCollection>().thisID = ((x - 1) % (arrayLength - 1)) + 1;
+            CardTwo.GetComponent<CardInCollection>().thisID = ((x) % (arrayLength - 1)) + 1;
+            CardThree.GetComponent<CardInCollection>().thisID = ((x + 1) % (arrayLength - 1)) + 1;
+            CardFour.GetComponent<CardInCollection>().thisID = ((x + 2) % (arrayLength - 1)) + 1;
 
-            CardOneText.text = "x" + HowManyCards[x];
-            CardTwoText.text = "x" + HowManyCards[x + 1];
-            CardThreeText.text = "x" + HowManyCards[x + 2];
-            CardFourText.text = "x" + HowManyCards[x + 3];
+            CardOneText.text = "x" + HowManyCards[((x - 1) % (arrayLength - 1)) + 1];
+            CardTwoText.text = "x" + HowManyCards[(x % (arrayLength - 1)) + 1];
+            CardThreeText.text = "x" + HowManyCards[((x + 1) % (arrayLength - 1)) + 1];
+            CardFourText.text = "x" + HowManyCards[((x + 2) % (arrayLength - 1)) + 1];
 
             CardOne.GetComponent<CardInCollection>().beGrey = CardOneText.text == "x0";
             CardTwo.GetComponent<CardInCollection>().beGrey = CardTwoText.text == "x0";
             CardThree.GetComponent<CardInCollection>().beGrey = CardThreeText.text == "x0";
             CardFour.GetComponent<CardInCollection>().beGrey = CardFourText.text == "x0";
         }
-        else
-        {
-          //  Debug.LogError("Invalid indices. Ensure x + 3 is within the bounds of HowManyCards array.");
-        }
-        for(int i = 1; i < HowManyCards.Length; i++)
+
+        for (int i = 1; i < arrayLength; i++)
         {
             PlayerPrefs.SetInt("x" + i, HowManyCards[i]);
         }
 
-
-
         if (openPack == true)
         {
-
-            CardOne.GetComponent<CardInCollection>().thisID = o[0];
-            CardTwo.GetComponent<CardInCollection>().thisID = o[1];
-            CardThree.GetComponent<CardInCollection>().thisID = o[2];
-            CardFour.GetComponent<CardInCollection>().thisID = o[3];
-            CardFive.GetComponent<CardInCollection>().thisID = o[4];
+            CardOne.GetComponent<CardInCollection>().thisID = ((o[0] - 1) % (arrayLength - 1)) + 1;
+            CardTwo.GetComponent<CardInCollection>().thisID = ((o[1] - 1) % (arrayLength - 1)) + 1;
+            CardThree.GetComponent<CardInCollection>().thisID = ((o[2] - 1) % (arrayLength - 1)) + 1;
+            CardFour.GetComponent<CardInCollection>().thisID = ((o[3] - 1) % (arrayLength - 1)) + 1;
+            CardFive.GetComponent<CardInCollection>().thisID = ((o[4] - 1) % (arrayLength - 1)) + 1;
         }
     }
 

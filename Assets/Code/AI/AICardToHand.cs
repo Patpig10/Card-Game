@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-using UnityEditor.Experimental.GraphView;
-using System.Threading.Tasks;
-using static UnityEngine.GraphicsBuffer;
+
 
 public class AICardToHand : MonoBehaviour
 {
@@ -96,6 +94,7 @@ public class AICardToHand : MonoBehaviour
     public AICardToHand aiCardToHand;
 
     public bool stolen;
+    public bool rush;   
     // Start is called before the first frame update
     void Start()
     {
@@ -135,8 +134,10 @@ public class AICardToHand : MonoBehaviour
 
         givelight = thisCardList[0].givelight;
         givedark = thisCardList[0].givedark;
+        rush = thisCardList[0].rush;
         canAttack = false;
         stolen = false;
+
     }
 
     // Update is called once per frame
@@ -305,10 +306,14 @@ public class AICardToHand : MonoBehaviour
 
 
 
+        if (summoned == true && rush == true)
+        {
+            Rush();
+
+        }
 
 
 
-       
 
         targeting = staticTargeting;
         targetingEnemy = staticTargetingEnemy;
@@ -430,11 +435,10 @@ public class AICardToHand : MonoBehaviour
 
     public void UntargetEnemy()
     {
-        if (stolen == true)
-        {
+        
             staticTargetingEnemy = false;
             Arrow._Hide = true;
-        }
+        
     }
     public void TargetEnemy()
     {
@@ -529,6 +533,9 @@ public class AICardToHand : MonoBehaviour
         }
 
     }
-
+    public void Rush()
+    {
+        summoningSickness = false;
+    }
 
 }

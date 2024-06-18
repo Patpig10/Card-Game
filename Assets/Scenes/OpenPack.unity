@@ -965,7 +965,7 @@ MonoBehaviour:
   oo: 0
   rand: 0
   card: 
-  HowManyCards: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  HowManyCards: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   CardOneText: {fileID: 0}
   CardTwoText: {fileID: 0}
   CardThreeText: {fileID: 0}
@@ -1642,7 +1642,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1596230988835689104, guid: f21f5e5127e16c542a93ab8a34f2fe4b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1661061129402892729, guid: f21f5e5127e16c542a93ab8a34f2fe4b, type: 3}
       propertyPath: m_Enabled
