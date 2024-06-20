@@ -442,24 +442,22 @@ public class AICardToHand : MonoBehaviour
     }
     public void TargetEnemy()
     {
-        if ((stolen == true))
-        {
+      
             staticTargetingEnemy = true;
-        }
+
 
     }
 
     public void StartAttack()
     {
-        if (stolen == true)
-        {
+       
             staticTargeting = true;
             if (canAttack == true)
             {
                 Arrow._Show = true;
                 Arrow.startPoint = transform.position;
             }
-        }
+        
     }
 
     public void StopAttack()

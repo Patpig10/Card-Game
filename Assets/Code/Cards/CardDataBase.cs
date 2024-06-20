@@ -8,7 +8,7 @@ public class CardDataBase : MonoBehaviour
 
     void Awake()
     {
-        //int ID, string CardName, int Cost, int Power, string CardDescription, Sprite ThisImage, string Color, int DrawXCards, int AddXmaxGil, int ReturnXcards, int HealXpower,int BoostXpower,bool Spell,int DamageDealtBySpell, bool Ward,int ResurrectXcards, int lightStatus, int darkStatus,bool givelight,bool givedark,steal, rush)
+        //int ID, string CardName, int Cost, int Power, string CardDescription, Sprite ThisImage, string Color, int DrawXCards, int AddXmaxGil, int ReturnXcards, int HealXpower,int BoostXpower,bool Spell,int DamageDealtBySpell, bool Ward,int ResurrectXcards, int lightStatus, int darkStatus,bool givelight,bool givedark, int aoe ,bool steal, bool rush)
 
         //monster
         cardList.Add(new Card (0, "None", 0, 0, "None", Resources.Load<Sprite>("1"), "None", 0, 0, 0, 0, 0, false, 0, false, 0, 0, 0, false, false, false, 0, false, false));
@@ -28,22 +28,22 @@ public class CardDataBase : MonoBehaviour
 
 
         //Monsters light
-       cardList.Add(new Card(9, "Alane", 1, 40, "Give 1 light", Resources.Load<Sprite>("2"), "White", 0, 0, 0, 0, 0, false, 0, false, 0, 1, 0, true, false, true,10,true, false));
-        cardList.Add(new Card(10, "Alice", 1, 40, "Give 1 light", Resources.Load<Sprite>("2"), "White", 0, 0, 0, 0, 0, false, 0, false, 0, 1, 0, true, false, true, 10, false, false));
-        cardList.Add(new Card(11, "Sora", 1, 40, "Give 1 light", Resources.Load<Sprite>("2"), "White", 0, 0, 0, 0, 0, false, 0, false, 0, 1, 0, true, false, true, 10, false,false));
-        cardList.Add(new Card(12, "Beta", 1, 40, "Give 1 light", Resources.Load<Sprite>("2"), "White", 0, 0, 0, 0, 0, false, 0, false, 0, 1, 0, true, false, true, 10, false, false));
+       cardList.Add(new Card(9, "Alane", 1, 40, "Give 1 light", Resources.Load<Sprite>("2"), "White", 0, 0, 0, 0, 0, false, 0, false, 0, 1, 0, true, false, true,0,true, false));
+        cardList.Add(new Card(10, "Alice", 1, 40, "Give 1 light", Resources.Load<Sprite>("2"), "White", 0, 0, 0, 0, 0, false, 0, false, 0, 1, 0, true, false, true, 0, false, false));
+        cardList.Add(new Card(11, "Sora", 1, 40, "Give 1 light", Resources.Load<Sprite>("2"), "White", 0, 0, 0, 0, 0, false, 0, false, 0, 1, 0, true, false, true, 0, false,false));
+        cardList.Add(new Card(12, "Beta", 1, 40, "Give 1 light", Resources.Load<Sprite>("2"), "White", 0, 0, 0, 0, 0, false, 0, false, 0, 1, 0, true, false, true, 0, false, false));
 
         //Monsters dark
-        cardList.Add(new Card(13, "Lust", 1, 40, "Give 1 dark", Resources.Load<Sprite>("2"), "White", 0, 0, 0, 0, 0, false, 0, false, 0, 0, 1, false, true, false, 10, false, false));
-        cardList.Add(new Card(14, "Greed", 1, 40, "Give 1 dark", Resources.Load<Sprite>("2"), "White", 0, 0, 0, 0, 0, false, 0, false, 0, 0, 1, false, true, false, 10, false, false));
-        cardList.Add(new Card(15, "Sloth", 1, 40, "Give 1 dark", Resources.Load<Sprite>("2"), "White", 0, 0, 0, 0, 0, false, 0, false, 0, 0, 1, false, true, false, 10, false, false));
-        cardList.Add(new Card(16, "Envy", 1, 40, "Give 1 dark", Resources.Load<Sprite>("2"), "White", 0, 0, 0, 0, 0, false, 0, false, 0, 0, 1, false, true, false, 10, false, false));
+        cardList.Add(new Card(13, "Lust", 1, 40, "Give 1 dark", Resources.Load<Sprite>("2"), "White", 0, 0, 0, 0, 0, false, 0, false, 0, 0, 1, false, true, false, 0, false, false));
+        cardList.Add(new Card(14, "Greed", 1, 40, "Give 1 dark", Resources.Load<Sprite>("2"), "White", 0, 0, 0, 0, 0, false, 0, false, 0, 0, 1, false, true, false, 0, false, false));
+        cardList.Add(new Card(15, "Sloth", 1, 40, "Give 1 dark", Resources.Load<Sprite>("2"), "White", 0, 0, 0, 0, 0, false, 0, false, 0, 0, 1, false, true, false, 0, false, false));
+        cardList.Add(new Card(16, "Envy", 1, 40, "Give 1 dark", Resources.Load<Sprite>("2"), "White", 0, 0, 0, 0, 0, false, 0, false, 0, 0, 1, false, true, false, 0, false, false));
 
         //ninja
-        cardList.Add(new Card(17, "red", 1, 40, "rush", Resources.Load<Sprite>("2"), "White", 0, 0, 0, 0, 0, false, 0, false, 0, 0, 1, false, true, false, 10, false, false));
-        cardList.Add(new Card(18, "green", 1, 40, "rush", Resources.Load<Sprite>("2"), "White", 0, 0, 0, 0, 0, false, 0, false, 0, 0, 1, false, true, false, 10, false, false));
-        cardList.Add(new Card(19, "blue", 1, 40, "rush", Resources.Load<Sprite>("2"), "White", 0, 0, 0, 0, 0, false, 0, false, 0, 0, 1, false, true, false, 10, false, false));
-        cardList.Add(new Card(20, "yellow", 1, 40, "rush", Resources.Load<Sprite>("2"), "White", 0, 0, 0, 0, 0, false, 0, false, 0, 0, 1, false, true, false, 10, false, false));
+        cardList.Add(new Card(17, "red", 1, 40, "rush", Resources.Load<Sprite>("2"), "White", 0, 0, 0, 0, 0, false, 0, false, 0, 0, 1, false, true, false, 0, false, false));
+        cardList.Add(new Card(18, "green", 1, 40, "rush", Resources.Load<Sprite>("2"), "White", 0, 0, 0, 0, 0, false, 0, false, 0, 0, 1, false, true, false, 0, false, false));
+        cardList.Add(new Card(19, "blue", 1, 40, "rush", Resources.Load<Sprite>("2"), "White", 0, 0, 0, 0, 0, false, 0, false, 0, 0, 1, false, true, false, 0, false, false));
+        cardList.Add(new Card(20, "yellow", 1, 40, "rush", Resources.Load<Sprite>("2"), "White", 0, 0, 0, 0, 0, false, 0, false, 0, 0, 1, false, true, false, 0, false, false));
 
 
     }

@@ -750,6 +750,7 @@ public class ThisCard : MonoBehaviour
             {
                 EnemyHp.staticHp -= damageDealtBySpell;
                 stopDealDamage = true;
+                Arrow._Hide = true;
 
             }
 
@@ -769,6 +770,7 @@ public class ThisCard : MonoBehaviour
                     childAICard.hurted += damageDealtBySpell;  // Adjusting hurted value by the power of the attacking card
                     stopDealDamage = true;
                    Debug.Log("Test)");
+                    Arrow._Hide = true;
                 }
             }
         }

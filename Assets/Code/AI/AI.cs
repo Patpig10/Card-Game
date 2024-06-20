@@ -259,8 +259,8 @@ public class AI : MonoBehaviour
             {
                 if (canAttack[i] == true)
                 {
-                    //AttackPlayerCards();
-                   PlayerHp.staticHp -= cardsInZone[i].power;
+                    AttackPlayerCards();
+                 //  PlayerHp.staticHp -= cardsInZone[i].power;
                 }
             }
 
