@@ -3,7 +3,157 @@ guid: d34cd4513c46a3a4c9daa1334818de03
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bg_ex4_03_kld_k5_fld_k5fa_bgparts_k5fa_a1_cry1b.mdl_17_0Mat
+    second: {fileID: 2100000, guid: c3c869abf00aa664db7b345e8beeef31, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bg_ex4_03_kld_k5_fld_k5fa_bgparts_k5fa_a1_cry1b.mdl_2_0Mat
+    second: {fileID: 2100000, guid: 9748c4d5074739a428bf2e6622367109, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bg_ex4_03_kld_k5_fld_k5fa_bgparts_k5fa_a1_cry1c.mdl_18_0Mat
+    second: {fileID: 2100000, guid: 28eee3bec49d0ea4d80ebca1b968330f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bg_ex4_03_kld_k5_fld_k5fa_bgparts_k5fa_a1_cry1c.mdl_3_0Mat
+    second: {fileID: 2100000, guid: 2ddbce2b8959de74f9e1aedcd189795e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bg_ex4_03_kld_k5_fld_k5fa_bgparts_k5fa_a1_cry1d.mdl_14_0Mat
+    second: {fileID: 2100000, guid: 5180848bc1aa4414686bbf3f56038c85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bg_ex4_03_kld_k5_fld_k5fa_bgparts_k5fa_a1_cry1d.mdl_19_0Mat
+    second: {fileID: 2100000, guid: 42a95dcc7f9ead841a65dfbeba16f685, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bg_ex4_03_kld_k5_fld_k5fa_bgparts_k5fa_a1_cry1d.mdl_29_0Mat
+    second: {fileID: 2100000, guid: 5c4f77e22d5f587429793f7b08aaf5e5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bg_ex4_03_kld_k5_fld_k5fa_bgparts_k5fa_a1_cry1d.mdl_4_0Mat
+    second: {fileID: 2100000, guid: 62e3f291e8ae55c4a8c1575d1b9b85a8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bg_ex4_03_kld_k5_fld_k5fa_bgparts_k5fa_a1_cry1e.mdl_10_0Mat
+    second: {fileID: 2100000, guid: f6652da76b0b03447b5b2038fbc06efa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bg_ex4_03_kld_k5_fld_k5fa_bgparts_k5fa_a1_cry1e.mdl_20_0Mat
+    second: {fileID: 2100000, guid: ca1c7f01bf1e516428f0c6f7d9331186, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bg_ex4_03_kld_k5_fld_k5fa_bgparts_k5fa_a1_cry1e.mdl_25_0Mat
+    second: {fileID: 2100000, guid: 3b9046ea24d5fa04bbdcfd74361a4d76, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bg_ex4_03_kld_k5_fld_k5fa_bgparts_k5fa_a1_cry1e.mdl_5_0Mat
+    second: {fileID: 2100000, guid: 7d6b8e45c6a2da848993ce2b00c287b9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bg_ex4_03_kld_k5_fld_k5fa_bgparts_k5fa_a1_cry1f.mdl_21_0Mat
+    second: {fileID: 2100000, guid: 38f104937c87b4e4a93d2d2f5d88c026, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bg_ex4_03_kld_k5_fld_k5fa_bgparts_k5fa_a1_cry1f.mdl_6_0Mat
+    second: {fileID: 2100000, guid: ea58325b2022276468d8381c0aaa99da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bg_ex4_03_kld_k5_fld_k5fa_bgparts_k5fa_a1_cry1g.mdl_11_0Mat
+    second: {fileID: 2100000, guid: ba04596cefafa5f45b92a032c50ba0b4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bg_ex4_03_kld_k5_fld_k5fa_bgparts_k5fa_a1_cry1g.mdl_15_0Mat
+    second: {fileID: 2100000, guid: 5696f6eb2f875ca4eae7b814d3945488, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bg_ex4_03_kld_k5_fld_k5fa_bgparts_k5fa_a1_cry1g.mdl_22_0Mat
+    second: {fileID: 2100000, guid: 314797b0f8b0fda488cf3179dd310857, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bg_ex4_03_kld_k5_fld_k5fa_bgparts_k5fa_a1_cry1g.mdl_26_0Mat
+    second: {fileID: 2100000, guid: e80f1d19600893f42ad9b5db8e5425ff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bg_ex4_03_kld_k5_fld_k5fa_bgparts_k5fa_a1_cry1g.mdl_30_0Mat
+    second: {fileID: 2100000, guid: c292585febb92d245bcd908d817a5734, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bg_ex4_03_kld_k5_fld_k5fa_bgparts_k5fa_a1_cry1g.mdl_7_0Mat
+    second: {fileID: 2100000, guid: 30c0f52d2cd893641b83701ebcba2641, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bg_ex4_03_kld_k5_fld_k5fa_bgparts_k5fa_a1_cry1h.mdl_23_0Mat
+    second: {fileID: 2100000, guid: a8c0834f0d648774e859bcf20d403bfc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bg_ex4_03_kld_k5_fld_k5fa_bgparts_k5fa_a1_cry1h.mdl_8_0Mat
+    second: {fileID: 2100000, guid: 448230328b426c44cb8f1560f8c5e3d3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bg_ex4_03_kld_k5_fld_k5fa_bgparts_k5fa_a1_cry1i.mdl_13_0Mat
+    second: {fileID: 2100000, guid: 85f835ec2fd000f4f861445f1b2566e9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bg_ex4_03_kld_k5_fld_k5fa_bgparts_k5fa_a1_cry1i.mdl_24_0Mat
+    second: {fileID: 2100000, guid: 834c7ab8358aab14c9d0b85648dd3759, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bg_ex4_03_kld_k5_fld_k5fa_bgparts_k5fa_a1_cry1i.mdl_28_0Mat
+    second: {fileID: 2100000, guid: 6422873958dbcf744b108a90d1a38bcc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bg_ex4_03_kld_k5_fld_k5fa_bgparts_k5fa_a1_cry1i.mdl_9_0Mat
+    second: {fileID: 2100000, guid: df0b5942a24e4f947913d57b134e33bb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bg_ex4_03_kld_k5_fld_k5fa_bgparts_k5fa_a1_cry1j.mdl_12_0Mat
+    second: {fileID: 2100000, guid: d9b2562cfd240ab49b35346192667657, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bg_ex4_03_kld_k5_fld_k5fa_bgparts_k5fa_a1_cry1j.mdl_27_0Mat
+    second: {fileID: 2100000, guid: 113dee1b54ee649459fb23762e1787e0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bg_ex4_03_kld_k5_fld_k5fa_bgparts_k5fa_a1_cry99.mdl_16_0Mat
+    second: {fileID: 2100000, guid: f2f4828a305ea754a9f0cb32a3b41f0e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bg_ex4_03_kld_k5_fld_k5fa_bgparts_k5fa_a1_cry99.mdl_1_0Mat
+    second: {fileID: 2100000, guid: 1b7994b04e8ecb1498279bbd5a7abf70, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

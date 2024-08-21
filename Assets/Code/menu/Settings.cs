@@ -48,11 +48,26 @@ public class Settings : MonoBehaviour
         }
 
         resolutionDropdown.AddOptions(options);
-        resolutionDropdown.value = currentResolutionIndex;
-        resolutionDropdown.RefreshShownValue();
 
-        // Set the fullscreen toggle to the current screen mode
-        fullscreenToggle.isOn = Screen.fullScreen;
+        // Load saved resolution and fullscreen settings
+        LoadSettings(out int savedResolutionIndex, out bool savedFullscreen);
+
+        // Apply saved settings
+        resolutionDropdown.value = savedResolutionIndex;
+        resolutionDropdown.RefreshShownValue();
+        fullscreenToggle.isOn = savedFullscreen;
+
+        // Apply the saved settings or default to max resolution
+        if (savedResolutionIndex >= 0 && savedResolutionIndex < predefinedResolutions.Count)
+        {
+            SetResolution(savedResolutionIndex);
+        }
+        else
+        {
+            SetResolution(predefinedResolutions.Count - 1); // Max resolution
+        }
+
+        SetFullscreen(savedFullscreen);
 
         // Add listeners to UI elements
         resolutionDropdown.onValueChanged.AddListener(SetResolution);
@@ -82,6 +97,7 @@ public class Settings : MonoBehaviour
     public void SetFullscreen(bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
+        PlayerPrefs.SetInt("fullscreen", isFullscreen ? 1 : 0);
         Debug.Log("Fullscreen mode set to: " + isFullscreen);
     }
 
@@ -95,7 +111,14 @@ public class Settings : MonoBehaviour
 
         Resolution resolution = predefinedResolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+        PlayerPrefs.SetInt("resolutionIndex", resolutionIndex);
         Debug.Log("Resolution set to: " + resolution.width + " x " + resolution.height);
+    }
+
+    private void LoadSettings(out int resolutionIndex, out bool isFullscreen)
+    {
+        resolutionIndex = PlayerPrefs.GetInt("resolutionIndex", -1); // -1 means default to max resolution
+        isFullscreen = PlayerPrefs.GetInt("fullscreen", 1) == 1; // 1 means fullscreen
     }
 
     // Update is called once per frame
