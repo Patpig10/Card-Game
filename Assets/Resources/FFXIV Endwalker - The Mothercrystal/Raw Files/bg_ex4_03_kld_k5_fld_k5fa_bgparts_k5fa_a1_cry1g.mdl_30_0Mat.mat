@@ -25,14 +25,14 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _bottomline: 0.991
-    - _metal: 0.719
-    - _smooth: 0.815
+    - _bottomline: 1
+    - _metal: 1
+    - _smooth: 0.947
     - _topline: 1
     m_Colors:
     - _base: {r: 0.020583814, g: 0.111592755, b: 0.18490559, a: 1}
-    - _bottom: {r: 0, g: 0.051745515, b: 0.2754717, a: 1}
-    - _top: {r: 0, g: 0.88104075, b: 1.3688895, a: 1}
+    - _bottom: {r: 0, g: 0.18571424, b: 1, a: 1}
+    - _top: {r: 0.024137687, g: 1.1855136, b: 1.827575, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &449878637204584606
 MonoBehaviour:

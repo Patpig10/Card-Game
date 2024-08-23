@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0202a3095b7477a4091d56344f0af6b3, type: 3}
+  m_Name: Act0Graph
+  m_EditorClassIdentifier: 
+  <FileName>k__BackingField: Act0
+  <Groups>k__BackingField: []
+  <Nodes>k__BackingField:
+  - <ID>k__BackingField: 1db4f683-2bc0-4d9e-b959-c8650916ed70
+    <Name>k__BackingField: Battle
+    <Text>k__BackingField: '???
+
+
+
+      WHY ARE YOU STILL FIGHTING THE INEVITABLE,
+      THIS IS BEYOND EVEN FOR ME TO DECIDE FATE.
+
+
+'
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 3db741e4-8112-4bc3-8528-001a4014cccb
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 12, y: 177.59999}
+  - <ID>k__BackingField: 3db741e4-8112-4bc3-8528-001a4014cccb
+    <Name>k__BackingField: Battle2
+    <Text>k__BackingField: 'Ascian
+
+
+      You should know by now, I will never yield.
+      For my people, for my world, I embrace this power, bestowed by you and the
+      true saviour of the realm. COME FORTH, MY LORD! BREAK YOUR CHAINS, ZODIARK
+
+
+
+'
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: c2072d27-0c8e-48ca-af71-02972a488c78
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 810.4, y: 177.59999}
+  - <ID>k__BackingField: c2072d27-0c8e-48ca-af71-02972a488c78
+    <Name>k__BackingField: Battle3
+    <Text>k__BackingField: 'Ascian
+
+
+      Be grateful my lord grants you one more
+      turn before erasing you from existence. Now, draw your last pathetic card and
+      wallow in defeat.'
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 1596.8, y: 177.59999}
+  <OldGroupNames>k__BackingField: []
+  <OldUngroupedNodeNames>k__BackingField:
+  - Battle
+  - Battle2
+  - Battle3
+  <OldGroupedNodeNames>k__BackingField:
+    list: []
