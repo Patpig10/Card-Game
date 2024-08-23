@@ -38103,8 +38103,8 @@ MonoBehaviour:
   deck: CreateDeck
   shop: Shop
   menu: menu
-  Book: 
-  options: {fileID: 0}
+  Book: Book
+  options: {fileID: 1130956111}
 --- !u!114 &1896203282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38118,7 +38118,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resolutionDropdown: {fileID: 1897761270}
-  fullscreenToggle: {fileID: 0}
   audioMixer: {fileID: 24100000, guid: 54a5e1c0521ac0c429bcdb1c56694e0b, type: 2}
   MasterVol: {fileID: 163882513}
   MusicVol: {fileID: 1784719791}

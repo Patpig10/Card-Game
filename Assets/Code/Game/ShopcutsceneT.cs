@@ -5,7 +5,7 @@ using UnityEngine;
 public class ShopcutsceneT : MonoBehaviour
 {
     public GameData gameData;
-    public TypingEffect typingEffect;
+    public ShopT shop;
     public GameObject shopcutscene;
     public GameObject Shop;
     // Start is called before the first frame update
@@ -23,7 +23,7 @@ public class ShopcutsceneT : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (typingEffect.currentLineIndex == 6)
+        if (shop.fin == true)
         {
             gameData.hasEnteredShop = true;
             gameData.isTutorialCompleted = true;

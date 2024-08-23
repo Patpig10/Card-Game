@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0202a3095b7477a4091d56344f0af6b3, type: 3}
+  m_Name: ShopGraph
+  m_EditorClassIdentifier: 
+  <FileName>k__BackingField: Shop
+  <Groups>k__BackingField: []
+  <Nodes>k__BackingField:
+  - <ID>k__BackingField: bf925f93-7b7a-46ab-abd7-6ad2b7a52b72
+    <Name>k__BackingField: Shop1
+    <Text>k__BackingField: 'Ann
+
+
+      Hello there, I''ve been expecting you. Welcome
+      to the edge of tomorrow.'
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 9d5c8482-cd54-49c6-bec3-e8fcb0ceeb83
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 18.400002, y: 111.2}
+  - <ID>k__BackingField: 9d5c8482-cd54-49c6-bec3-e8fcb0ceeb83
+    <Name>k__BackingField: Shop2
+    <Text>k__BackingField: 'Ann
+
+
+      In here I can view all worlds and collect
+      data inside these cystrals.'
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 81c807ba-9c36-496a-89bb-a4092fe700f9
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 856.8, y: 111.2}
+  - <ID>k__BackingField: 81c807ba-9c36-496a-89bb-a4092fe700f9
+    <Name>k__BackingField: Shop3
+    <Text>k__BackingField: 'Ann
+
+
+      You gain souls from defeating foes or doing
+      questing. Use those to unlock powerful heroes help you in battle.
+
+
+'
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 25de022a-0206-41f6-a784-53ad10558cc1
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 1709.6, y: 111.2}
+  - <ID>k__BackingField: 25de022a-0206-41f6-a784-53ad10558cc1
+    <Name>k__BackingField: Shop4
+    <Text>k__BackingField: 'Ann
+
+
+      Well that''s all you need to know, any questions
+      just let me know.
+
+
+'
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 1c17afad-a1e4-4a64-93b9-b97b5b5c1361
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 2451.2, y: 111.2}
+  - <ID>k__BackingField: 1c17afad-a1e4-4a64-93b9-b97b5b5c1361
+    <Name>k__BackingField: Shop5
+    <Text>k__BackingField: 'Ann
+
+
+      Damn, finally done with that boring speech,
+      I can be my true self.'
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: f5d94787-3603-46cc-ab24-0ad2d67b4f69
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 3257.5999, y: 111.2}
+  - <ID>k__BackingField: f5d94787-3603-46cc-ab24-0ad2d67b4f69
+    <Name>k__BackingField: Shop6
+    <Text>k__BackingField: 'Ann
+
+
+      How may I help you today.'
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 4055.2, y: 111.2}
+  <OldGroupNames>k__BackingField: []
+  <OldUngroupedNodeNames>k__BackingField:
+  - Shop1
+  - Shop2
+  - Shop3
+  - Shop4
+  - Shop5
+  - Shop6
+  <OldGroupedNodeNames>k__BackingField:
+    list: []
