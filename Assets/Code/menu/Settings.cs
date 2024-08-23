@@ -8,7 +8,7 @@ using UnityEngine.Audio;
 public class Settings : MonoBehaviour
 {
     public TMP_Dropdown resolutionDropdown;
-    public Toggle fullscreenToggle;
+   // public Toggle fullscreenToggle;
 
     public AudioMixer audioMixer;
     public Slider MasterVol, MusicVol, SFXVol;
@@ -55,7 +55,7 @@ public class Settings : MonoBehaviour
         // Apply saved settings
         resolutionDropdown.value = savedResolutionIndex;
         resolutionDropdown.RefreshShownValue();
-        fullscreenToggle.isOn = savedFullscreen;
+        //fullscreenToggle.isOn = savedFullscreen;
 
         // Apply the saved settings or default to max resolution
         if (savedResolutionIndex >= 0 && savedResolutionIndex < predefinedResolutions.Count)
@@ -71,7 +71,7 @@ public class Settings : MonoBehaviour
 
         // Add listeners to UI elements
         resolutionDropdown.onValueChanged.AddListener(SetResolution);
-        fullscreenToggle.onValueChanged.AddListener(SetFullscreen);
+      //  fullscreenToggle.onValueChanged.AddListener(SetFullscreen);
     }
 
     public void ChangeGraphQuality()
