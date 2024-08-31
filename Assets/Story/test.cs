@@ -9,6 +9,8 @@ public class test : MonoBehaviour
     [SerializeField] public DSDialogueSO startingDialogue;
     [SerializeField] public TextMeshProUGUI textUI;
 
+    public int clicks;
+
     private DSDialogueSO currentDialogue; // Update the type to DSDialogueSO
 
     private void Awake()
@@ -27,6 +29,7 @@ public class test : MonoBehaviour
         if (choiceIndex < 0 || choiceIndex >= currentDialogue.Choices.Count)
         {
             Debug.LogError("Invalid choice index");
+
             return;
         }
 
@@ -37,6 +40,8 @@ public class test : MonoBehaviour
             Debug.Log("End of dialogue");
             return; // No more dialogues to show, you can reset or end the dialogue flow here
         }
+
+        clicks++;
 
         currentDialogue = nextDialogue;
         ShowText();

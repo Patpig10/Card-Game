@@ -12508,7 +12508,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resolutionDropdown: {fileID: 948486445}
-  fullscreenToggle: {fileID: 181635600}
   audioMixer: {fileID: 24100000, guid: 54a5e1c0521ac0c429bcdb1c56694e0b, type: 2}
   MasterVol: {fileID: 315625172}
   MusicVol: {fileID: 1205677956}
@@ -23424,7 +23423,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &657587986
 RectTransform:
   m_ObjectHideFlags: 0
@@ -45096,7 +45095,7 @@ Transform:
   m_GameObject: {fileID: 1541607642}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.9799404, y: 0.3060249, z: 5.9012794}
+  m_LocalPosition: {x: 7.98, y: 0.29, z: 5.9012794}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -62205,8 +62204,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'This is a playable prototype. If there''s any bugs plz report it in the
-    comments. All art is temperay and All IP rights goes to Square Enix
+  m_text: 'This is a playable prototype. If there''s any bugs please report it in
+    the comments. All art is temperay and All IP rights goes to Square Enix
 
 
     Before

@@ -13,11 +13,8 @@ MonoBehaviour:
   m_Name: Shop2
   m_EditorClassIdentifier: 
   <DialogueName>k__BackingField: Shop2
-  <Text>k__BackingField: 'Ann
-
-
-    In here I can view all worlds and collect data
-    inside these cystrals.'
+  <Text>k__BackingField: In here I can view all worlds and collect data inside these
+    cystrals.
   <Choices>k__BackingField:
   - <Text>k__BackingField: Next Dialogue
     <NextDialogue>k__BackingField: {fileID: 11400000, guid: aca898d662451db46b3a469e22ba8552, type: 2}

@@ -13,10 +13,7 @@ MonoBehaviour:
   m_Name: Shop6
   m_EditorClassIdentifier: 
   <DialogueName>k__BackingField: Shop6
-  <Text>k__BackingField: 'Ann
-
-
-    How may I help you today.'
+  <Text>k__BackingField: How may I help you today.
   <Choices>k__BackingField:
   - <Text>k__BackingField: Next Dialogue
     <NextDialogue>k__BackingField: {fileID: 0}

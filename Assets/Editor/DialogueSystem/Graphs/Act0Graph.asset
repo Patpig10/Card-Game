@@ -17,12 +17,8 @@ MonoBehaviour:
   <Nodes>k__BackingField:
   - <ID>k__BackingField: 1db4f683-2bc0-4d9e-b959-c8650916ed70
     <Name>k__BackingField: Battle
-    <Text>k__BackingField: '???
-
-
-
-      WHY ARE YOU STILL FIGHTING THE INEVITABLE,
-      THIS IS BEYOND EVEN FOR ME TO DECIDE FATE.
+    <Text>k__BackingField: 'WHY ARE YOU STILL FIGHTING THE INEVITABLE, THIS IS BEYOND
+      EVEN FOR ME TO DECIDE FATE.
 
 
 '
@@ -31,15 +27,12 @@ MonoBehaviour:
       <NodeID>k__BackingField: 3db741e4-8112-4bc3-8528-001a4014cccb
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 12, y: 177.59999}
+    <Position>k__BackingField: {x: 12, y: 177.6}
   - <ID>k__BackingField: 3db741e4-8112-4bc3-8528-001a4014cccb
     <Name>k__BackingField: Battle2
-    <Text>k__BackingField: 'Ascian
-
-
-      You should know by now, I will never yield.
-      For my people, for my world, I embrace this power, bestowed by you and the
-      true saviour of the realm. COME FORTH, MY LORD! BREAK YOUR CHAINS, ZODIARK
+    <Text>k__BackingField: 'You should know by now, I will never yield. For my people,
+      for my world, I embrace this power, bestowed by you and the true saviour of
+      the realm. COME FORTH, MY LORD! BREAK YOUR CHAINS, ZODIARK
 
 
 
@@ -49,21 +42,17 @@ MonoBehaviour:
       <NodeID>k__BackingField: c2072d27-0c8e-48ca-af71-02972a488c78
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 810.4, y: 177.59999}
+    <Position>k__BackingField: {x: 810.4, y: 177.6}
   - <ID>k__BackingField: c2072d27-0c8e-48ca-af71-02972a488c78
     <Name>k__BackingField: Battle3
-    <Text>k__BackingField: 'Ascian
-
-
-      Be grateful my lord grants you one more
-      turn before erasing you from existence. Now, draw your last pathetic card and
-      wallow in defeat.'
+    <Text>k__BackingField: Be grateful my lord grants you one more turn before erasing
+      you from existence. Now, draw your last pathetic card and wallow in defeat.
     <Choices>k__BackingField:
     - <Text>k__BackingField: Next Dialogue
       <NodeID>k__BackingField: 
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 1596.8, y: 177.59999}
+    <Position>k__BackingField: {x: 1596.7999, y: 177.6}
   <OldGroupNames>k__BackingField: []
   <OldUngroupedNodeNames>k__BackingField:
   - Battle
