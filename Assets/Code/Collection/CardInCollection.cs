@@ -14,11 +14,13 @@ public class CardInCollection : MonoBehaviour
     public int cost;
     public int power;
     public string cardDescription;
+    public int battlepower;
 
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI costText;
     public TextMeshProUGUI powerText;
     public TextMeshProUGUI descriptionText;
+    public TextMeshProUGUI Battlepowertext;
 
     public Sprite thisSprite;
     public Image thatImage;
@@ -56,6 +58,7 @@ public class CardInCollection : MonoBehaviour
        // actualpower = power - hurted;
         cardDescription = thisCardList[0].cardDescription;
         thisSprite = thisCardList[0].thisImage;
+        battlepower = thisCardList[0].attackPower;
         if (beGrey == true)
         {
             frame.color = new Color(255, 0, 0, 255);
@@ -90,6 +93,7 @@ public class CardInCollection : MonoBehaviour
         powerText.text = power.ToString();
         descriptionText.text = cardDescription;
         thatImage.sprite = thisSprite;
+        Battlepowertext.text = "Attack: " + battlepower.ToString();
     }
     IEnumerator DelayedUpdate()
     {

@@ -33,6 +33,7 @@ public class Card
     public int aoedamage;
     public bool aoe;
     public bool rush;
+    public int attackPower;
 
     // Start is called before the first frame update
     public Card()
@@ -41,7 +42,7 @@ public class Card
     }
 
     // Update is called once per frame
-    public Card(int Id, string CardName, int Cost, int Power, string CardDescription, Sprite ThisImage, string Color, int DrawXCards, int AddXmaxGil, int ReturnXcards, int HealXpower,int BoostXpower,bool Spell,int DamageDealtBySpell, bool Ward,int ResurrectXcards, int LightStatus, int DarkStatus, bool Givelight, bool Givedark, bool Steal, int AOEDamage, bool AOE, bool Rush)
+    public Card(int Id, string CardName, int Cost, int Power, string CardDescription, Sprite ThisImage, string Color, int DrawXCards, int AddXmaxGil, int ReturnXcards, int HealXpower,int BoostXpower,bool Spell,int DamageDealtBySpell, bool Ward,int ResurrectXcards, int LightStatus, int DarkStatus, bool Givelight, bool Givedark, bool Steal, int AOEDamage, bool AOE, bool Rush, int AttackPower)
     {
         id = Id;
         cardName = CardName;
@@ -68,5 +69,6 @@ public class Card
         aoedamage = AOEDamage;
         aoe = AOE;
         rush = Rush;
+        attackPower = AttackPower;
     }
 }

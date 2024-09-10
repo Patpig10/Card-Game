@@ -22,6 +22,9 @@ public class ThisCard : MonoBehaviour
     public TextMeshProUGUI costText;
     public TextMeshProUGUI powerText;
     public TextMeshProUGUI descriptionText;
+    public TextMeshProUGUI AttackPowerText;
+
+
 
     public Sprite thisSprite;
     public Image thatImage;
@@ -104,7 +107,7 @@ public class ThisCard : MonoBehaviour
     public int AOEDamage;
     public bool AOE;
     public bool rush;
-
+    public int AttackPower;
     // Start is called before the first frame update
     void Start()
     {
@@ -140,6 +143,7 @@ public class ThisCard : MonoBehaviour
 
         returnXcards = thisCard[0].returnXcards;
 
+        AttackPower = thisCard[0].attackPower;
       //  power = thisCard[0].power;
 
         resurrectXcards = thisCard[0].resurrectXcards;
@@ -158,6 +162,21 @@ public class ThisCard : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if(AttackPower == 0)
+        {
+
+            AttackPowerText.gameObject.SetActive(false);
+        
+        
+        }
+
+
+        if (lightStatus == 0)
+        {
+            lightText.gameObject.SetActive(false);
+        }
+        
         Hand = GameObject.Find("Hand");
         if (this.transform.parent == Hand.transform)
         {
@@ -521,6 +540,7 @@ public class ThisCard : MonoBehaviour
         thatImage.sprite = thisSprite;
         darkText.text = darkStatus.ToString();
         lightText.text = lightStatus.ToString();
+        AttackPowerText.text = "Attack: " + AttackPower.ToString();
     }
     public void Attack()
     {
@@ -531,7 +551,7 @@ public class ThisCard : MonoBehaviour
             if (Target == Enemy && directattack == true)
             {
                 Debug.Log("Attacking Enemy");
-                EnemyHp.staticHp -= actualpower;
+                EnemyHp.staticHp -= AttackPower;
                 targeting = false;
                 cantAttack = true;
 
@@ -559,8 +579,8 @@ public class ThisCard : MonoBehaviour
                         Destroy();
                     }
                     Debug.Log("Target found in EnemyZone.");
-                    childAICard.hurted += actualpower;  // Adjusting hurted value by the power of the attacking card
-                    hurted += childAICard.actualpower;
+                    childAICard.hurted += AttackPower;  // Adjusting hurted value by the power of the attacking card
+                    hurted += childAICard.AttackPower; // change when fixing enemy attck code to AttackPower
                     cantAttack = true;
 
                     Arrow._Hide = true;

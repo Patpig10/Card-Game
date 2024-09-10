@@ -25,6 +25,7 @@ public class AICardToHand : MonoBehaviour
     public TextMeshProUGUI costText;
     public TextMeshProUGUI powerText;
     public TextMeshProUGUI descriptionText;
+    public TextMeshProUGUI AttackPowerText;
 
     public Sprite thisSprite;
     public Image thatImage;
@@ -94,7 +95,8 @@ public class AICardToHand : MonoBehaviour
     public AICardToHand aiCardToHand;
 
     public bool stolen;
-    public bool rush;   
+    public bool rush;
+    public int AttackPower; 
     // Start is called before the first frame update
     void Start()
     {
@@ -137,7 +139,7 @@ public class AICardToHand : MonoBehaviour
         rush = thisCardList[0].rush;
         canAttack = false;
         stolen = false;
-
+        AttackPower = thisCardList[0].attackPower;
     }
 
     // Update is called once per frame
@@ -393,6 +395,7 @@ public class AICardToHand : MonoBehaviour
         thatImage.sprite = thisSprite;
         darkText.text = darkStatus.ToString();
         lightText.text = lightStatus.ToString();
+        AttackPowerText.text = "Attack: " + AttackPower.ToString();
     }
 
     public void Destroy()

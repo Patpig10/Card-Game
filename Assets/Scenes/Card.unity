@@ -10640,6 +10640,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -10664,6 +10665,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -10688,6 +10690,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -10712,6 +10715,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -10736,6 +10740,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -10760,6 +10765,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -10784,6 +10790,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -10808,6 +10815,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -10832,6 +10840,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -10856,6 +10865,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -10880,6 +10890,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -10904,6 +10915,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -10928,6 +10940,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -10952,6 +10965,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -10976,6 +10990,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -11000,6 +11015,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -11024,6 +11040,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -11048,6 +11065,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -11072,6 +11090,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -11096,6 +11115,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -11120,6 +11140,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -11144,6 +11165,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -11168,6 +11190,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -11192,6 +11215,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -11216,6 +11240,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -11240,6 +11265,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -11264,6 +11290,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -11288,6 +11315,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -11312,6 +11340,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -11336,6 +11365,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -11360,6 +11390,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -11384,6 +11415,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -11408,6 +11440,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -11432,6 +11465,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -11456,6 +11490,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -11480,6 +11515,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -11504,6 +11540,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -11528,6 +11565,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -11552,6 +11590,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -11576,6 +11615,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   howManyCards: 0
   cardBack: {fileID: 5782265181162736036, guid: 3e792e454a6d3594f90d33fa4b1a3a59, type: 3}
   graveWindow: {fileID: 1277819752}
@@ -12265,6 +12305,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   cardsInHand: []
   cardsInZone:
   - id: 0
@@ -12291,6 +12332,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -12315,6 +12357,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -12339,6 +12382,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -12363,6 +12407,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -12387,6 +12432,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -12411,6 +12457,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -12435,6 +12482,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -12459,6 +12507,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -12483,6 +12532,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -12507,6 +12557,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -12531,6 +12582,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -12555,6 +12607,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -12579,6 +12632,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -12603,6 +12657,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -12627,6 +12682,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -12651,6 +12707,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -12675,6 +12732,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -12699,6 +12757,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -12723,6 +12782,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -12747,6 +12807,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -12771,6 +12832,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -12795,6 +12857,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -12819,6 +12882,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -12843,6 +12907,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -12867,6 +12932,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -12891,6 +12957,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -12915,6 +12982,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -12939,6 +13007,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -12963,6 +13032,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -12987,6 +13057,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -13011,6 +13082,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -13035,6 +13107,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -13059,6 +13132,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -13083,6 +13157,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -13107,6 +13182,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -13131,6 +13207,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -13155,6 +13232,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -13179,6 +13257,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -13203,6 +13282,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   - id: 0
     cardName: 
     cost: 0
@@ -13227,6 +13307,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   Hand: {fileID: 1805493393}
   Zone: {fileID: 1638073877}
   Graveyard: {fileID: 193027146}
@@ -37671,6 +37752,7 @@ MonoBehaviour:
     aoedamage: 0
     aoe: 0
     rush: 0
+    attackPower: 0
   x: 0
   cardInDeck1: {fileID: 880657472}
   cardInDeck2: {fileID: 870610817}

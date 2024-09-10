@@ -442,7 +442,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8934991355552615291
 RectTransform:
   m_ObjectHideFlags: 0
@@ -530,6 +530,7 @@ MonoBehaviour:
   costText: {fileID: 726528713826314276}
   powerText: {fileID: 6637137423759002901}
   descriptionText: {fileID: 1091971053252280737}
+  AttackPowerText: {fileID: 0}
   thisSprite: {fileID: 0}
   thatImage: {fileID: 19589670634743395}
   frame: {fileID: 1375192828824552989}
@@ -586,6 +587,7 @@ MonoBehaviour:
   AOEDamage: 0
   AOE: 0
   rush: 0
+  AttackPower: 0
 --- !u!114 &2625762926929055621
 MonoBehaviour:
   m_ObjectHideFlags: 0
