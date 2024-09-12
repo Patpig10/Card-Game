@@ -8,8 +8,8 @@ public class test : MonoBehaviour
 {
     [SerializeField] public DSDialogueSO startingDialogue;
     [SerializeField] public TextMeshProUGUI textUI;
+    [SerializeField] public TextMeshProUGUI nameUI;
 
-    public int clicks;
 
     private DSDialogueSO currentDialogue; // Update the type to DSDialogueSO
 
@@ -22,6 +22,7 @@ public class test : MonoBehaviour
     private void ShowText()
     {
         textUI.text = currentDialogue.Text;
+        nameUI.text = currentDialogue.Speaker;
     }
 
     public void OnOptionChosen(int choiceIndex) // Make this method public if you want to call it from outside
@@ -29,7 +30,6 @@ public class test : MonoBehaviour
         if (choiceIndex < 0 || choiceIndex >= currentDialogue.Choices.Count)
         {
             Debug.LogError("Invalid choice index");
-
             return;
         }
 
@@ -40,8 +40,6 @@ public class test : MonoBehaviour
             Debug.Log("End of dialogue");
             return; // No more dialogues to show, you can reset or end the dialogue flow here
         }
-
-        clicks++;
 
         currentDialogue = nextDialogue;
         ShowText();

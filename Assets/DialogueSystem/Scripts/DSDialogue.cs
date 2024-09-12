@@ -10,6 +10,9 @@ namespace DS
         [SerializeField] private DSDialogueContainerSO dialogueContainer;
         [SerializeField] private DSDialogueGroupSO dialogueGroup;
         [SerializeField] private DSDialogueSO dialogue;
+        [SerializeField] private DSDialogueSO name;
+
+
 
         /* Filters */
         [SerializeField] private bool groupedDialogues;

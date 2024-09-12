@@ -20,17 +20,7 @@ public class NamesAct0 : MonoBehaviour
     void Update()
     {
 
-        if(Test.clicks == 0)
-        {
-            Name1.SetActive(true);
-        }
-
-        if(Test.clicks == 1)
-        {
-            Name1.SetActive(false);
-            Name2.SetActive(true);
-        }
-
+      
 
         
     }

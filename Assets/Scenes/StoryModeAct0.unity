@@ -167,9 +167,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a455f62d12c0cc1428adf558eb1195f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingDialogue: {fileID: 11400000, guid: 4a80fdcda7dcf73459e2d2a23408bb75, type: 2}
+  startingDialogue: {fileID: 11400000, guid: 26c6103b00de740429d8ded36655fb0e, type: 2}
   textUI: {fileID: 923137344}
-  clicks: 0
+  nameUI: {fileID: 939277511}
 --- !u!114 &65060929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -722,8 +722,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6.8724, y: -150.5}
-  m_SizeDelta: {x: 579.7449, y: 103}
+  m_AnchoredPosition: {x: -6.8724, y: -154.20828}
+  m_SizeDelta: {x: 579.7449, y: 95.5834}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &485756425
 MonoBehaviour:

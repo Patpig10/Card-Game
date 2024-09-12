@@ -165,7 +165,8 @@ namespace DS.Utilities
                 Text = node.Text,
                 GroupID = node.Group?.ID,
                 DialogueType = node.DialogueType,
-                Position = node.GetPosition().position
+                Position = node.GetPosition().position,
+                Speaker = node.Speaker
             };
 
             graphData.Nodes.Add(nodeData);
@@ -193,7 +194,9 @@ namespace DS.Utilities
                 node.Text,
                 ConvertNodeChoicesToDialogueChoices(node.Choices),
                 node.DialogueType,
-                node.IsStartingNode()
+                node.IsStartingNode(),
+                node.Speaker
+
             );
 
             createdDialogues.Add(node.ID, dialogue);
@@ -325,7 +328,7 @@ namespace DS.Utilities
                 node.ID = nodeData.ID;
                 node.Choices = choices;
                 node.Text = nodeData.Text;
-
+                node.Speaker = nodeData.Speaker;
                 node.Draw();
 
                 graphView.AddElement(node);
@@ -351,7 +354,7 @@ namespace DS.Utilities
             {
                 foreach (Port choicePort in loadedNode.Value.outputContainer.Children())
                 {
-                    DSChoiceSaveData choiceData = (DSChoiceSaveData) choicePort.userData;
+                    DSChoiceSaveData choiceData = (DSChoiceSaveData)choicePort.userData;
 
                     if (string.IsNullOrEmpty(choiceData.NodeID))
                     {
@@ -360,7 +363,7 @@ namespace DS.Utilities
 
                     DSNode nextNode = loadedNodes[choiceData.NodeID];
 
-                    Port nextNodeInputPort = (Port) nextNode.inputContainer.Children().First();
+                    Port nextNodeInputPort = (Port)nextNode.inputContainer.Children().First();
 
                     Edge edge = choicePort.ConnectTo(nextNodeInputPort);
 
@@ -399,7 +402,7 @@ namespace DS.Utilities
 
                 if (graphElement.GetType() == groupType)
                 {
-                    DSGroup group = (DSGroup) graphElement;
+                    DSGroup group = (DSGroup)graphElement;
 
                     groups.Add(group);
 

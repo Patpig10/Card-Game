@@ -18,6 +18,9 @@ namespace DS.Elements
         public string DialogueName { get; set; }
         public List<DSChoiceSaveData> Choices { get; set; }
         public string Text { get; set; }
+        public string Speaker { get; set; }
+
+
         public DSDialogueType DialogueType { get; set; }
         public DSGroup Group { get; set; }
 
@@ -39,6 +42,7 @@ namespace DS.Elements
             DialogueName = nodeName;
             Choices = new List<DSChoiceSaveData>();
             Text = "Dialogue text.";
+            Speaker = "Speaker";
 
             SetPosition(new Rect(position, Vector2.zero));
 
@@ -111,23 +115,33 @@ namespace DS.Elements
             /* EXTENSION CONTAINER */
 
             VisualElement customDataContainer = new VisualElement();
-
             customDataContainer.AddToClassList("ds-node__custom-data-container");
 
+            // Existing foldout for Dialogue Text
             Foldout textFoldout = DSElementUtility.CreateFoldout("Dialogue Text");
-
             TextField textTextField = DSElementUtility.CreateTextArea(Text, null, callback => Text = callback.newValue);
-
             textTextField.AddClasses(
                 "ds-node__text-field",
                 "ds-node__quote-text-field"
             );
-
             textFoldout.Add(textTextField);
 
-            customDataContainer.Add(textFoldout);
+            // Adding foldout for Name field
+            Foldout nameFoldout = DSElementUtility.CreateFoldout("Speaker");
+            TextField nameTextField = DSElementUtility.CreateTextArea(Speaker, null, callback => Speaker = callback.newValue);
+            nameTextField.AddClasses(
+                "ds-node__text-field",
+                "ds-node__name-text-field" // You can define your own CSS class for the Name field if necessary
+            );
+            nameFoldout.Add(nameTextField);
 
+            // Add both foldouts to the customDataContainer
+            customDataContainer.Add(textFoldout);
+            customDataContainer.Add(nameFoldout);
+
+            // Add the customDataContainer to the extension container
             extensionContainer.Add(customDataContainer);
+
         }
 
         public void DisconnectAllPorts()

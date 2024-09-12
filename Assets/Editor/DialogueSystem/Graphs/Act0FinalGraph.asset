@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0202a3095b7477a4091d56344f0af6b3, type: 3}
+  m_Name: Act0FinalGraph
+  m_EditorClassIdentifier: 
+  <FileName>k__BackingField: Act0Final
+  <Groups>k__BackingField: []
+  <Nodes>k__BackingField:
+  - <ID>k__BackingField: 4ca5f75c-0366-446b-89ac-bbb882500596
+    <Name>k__BackingField: Act0A
+    <Text>k__BackingField: WHY ARE YOU STILL FIGHTING THE INEVITABLE, THIS IS BEYOND
+      EVEN FOR ME TO DECIDE FATE!!!
+    <Speaker>k__BackingField: ???
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 1d5c0d94-4b28-455a-a7e8-960947da227b
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 200.8, y: 194.40001}
+  - <ID>k__BackingField: 1d5c0d94-4b28-455a-a7e8-960947da227b
+    <Name>k__BackingField: Act0B
+    <Text>k__BackingField: You should know by now, I will never yield. For my people,
+      for my world, I embrace this power, bestowed by you and the true saviour of
+      the realm. COME FORTH, MY LORD! BREAK YOUR CHAINS, ZODIARK!!
+    <Speaker>k__BackingField: Dark hooded figure
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 20e5898e-efb3-41e8-ab97-ceaf1421e33f
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 919.2, y: 194.40001}
+  - <ID>k__BackingField: 6b68df34-2eb4-4a94-84bb-4608c95d032d
+    <Name>k__BackingField: Act0C
+    <Text>k__BackingField: Be grateful my lord grants you one more turn before erasing
+      you from existence. Now, draw your last pathetic card and wallow in defeat.
+    <Speaker>k__BackingField: Dark hooded figure
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 6c435f65-fd38-4d32-88f3-243d9b2509fa
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 2407.2, y: 181.6}
+  - <ID>k__BackingField: 20e5898e-efb3-41e8-ab97-ceaf1421e33f
+    <Name>k__BackingField: Narrtion
+    <Text>k__BackingField: The Aether itself trembles as the Ascian unveils his trump
+      card, pure darkness coalescing behind him, ready to unleash devastation. The
+      battlefield is decimated, leaving allies and monsters obliterated, and you
+      are left with nothing but your next draw step.
+    <Speaker>k__BackingField: Narrtor
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 6b68df34-2eb4-4a94-84bb-4608c95d032d
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 1678.3999, y: 181.6}
+  - <ID>k__BackingField: 6c435f65-fd38-4d32-88f3-243d9b2509fa
+    <Name>k__BackingField: Narrtion2
+    <Text>k__BackingField: 'You draw your card, uncertainty gripping you. As you
+      pull the card, it glows with a bright light, abruptly ending your dream.
+
+'
+    <Speaker>k__BackingField: Narrtor
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 3150.4, y: 181.6}
+  <OldGroupNames>k__BackingField: []
+  <OldUngroupedNodeNames>k__BackingField:
+  - Act0A
+  - Act0B
+  - Act0C
+  - Narrtion
+  - Narrtion2
+  <OldGroupedNodeNames>k__BackingField:
+    list: []
