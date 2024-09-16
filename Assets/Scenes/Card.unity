@@ -657,6 +657,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 45226676}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &57793432 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5622688513274315891, guid: f21f5e5127e16c542a93ab8a34f2fe4b, type: 3}
+  m_PrefabInstance: {fileID: 388969178}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &69058277
 GameObject:
   m_ObjectHideFlags: 0
@@ -8663,10 +8674,12 @@ MonoBehaviour:
   cost: 0
   power: 0
   cardDescription: 
+  battlepower: 0
   nameText: {fileID: 87539460}
   costText: {fileID: 1997938074}
   powerText: {fileID: 496892356}
   descriptionText: {fileID: 397657947}
+  Battlepowertext: {fileID: 1300318514}
   thisSprite: {fileID: 0}
   thatImage: {fileID: 34065159}
   frame: {fileID: 1392705395}
@@ -10595,10 +10608,12 @@ MonoBehaviour:
   cost: 0
   power: 0
   cardDescription: 
+  battlepower: 0
   nameText: {fileID: 0}
   costText: {fileID: 0}
   powerText: {fileID: 0}
   descriptionText: {fileID: 0}
+  Battlepowertext: {fileID: 0}
   thisSprite: {fileID: 0}
   thatImage: {fileID: 0}
   frame: {fileID: 0}
@@ -13480,10 +13495,12 @@ MonoBehaviour:
   cost: 0
   power: 0
   cardDescription: 
+  battlepower: 0
   nameText: {fileID: 768734891}
   costText: {fileID: 425113680}
   powerText: {fileID: 104222906}
   descriptionText: {fileID: 1440662314}
+  Battlepowertext: {fileID: 1177871762}
   thisSprite: {fileID: 0}
   thatImage: {fileID: 1029683417}
   frame: {fileID: 535787442}
@@ -13572,10 +13589,12 @@ MonoBehaviour:
   cost: 0
   power: 0
   cardDescription: 
+  battlepower: 0
   nameText: {fileID: 1667050103}
   costText: {fileID: 1844476324}
   powerText: {fileID: 29486149}
   descriptionText: {fileID: 552447500}
+  Battlepowertext: {fileID: 1280856744}
   thisSprite: {fileID: 0}
   thatImage: {fileID: 361230505}
   frame: {fileID: 1264187780}
@@ -27419,6 +27438,17 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1177871762 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5622688513274315891, guid: f21f5e5127e16c542a93ab8a34f2fe4b, type: 3}
+  m_PrefabInstance: {fileID: 1096518985}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1186070063
 GameObject:
   m_ObjectHideFlags: 0
@@ -28210,6 +28240,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1277819752}
   m_CullTransparentMesh: 1
+--- !u!114 &1280856744 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5622688513274315891, guid: f21f5e5127e16c542a93ab8a34f2fe4b, type: 3}
+  m_PrefabInstance: {fileID: 181044443}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1287000495
 GameObject:
   m_ObjectHideFlags: 0
@@ -28758,6 +28799,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1298602508}
   m_CullTransparentMesh: 1
+--- !u!114 &1300318514 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5622688513274315891, guid: f21f5e5127e16c542a93ab8a34f2fe4b, type: 3}
+  m_PrefabInstance: {fileID: 31399392}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1304915358
 GameObject:
   m_ObjectHideFlags: 0
@@ -37894,10 +37946,12 @@ MonoBehaviour:
   cost: 0
   power: 0
   cardDescription: 
+  battlepower: 0
   nameText: {fileID: 1235075168}
   costText: {fileID: 395175344}
   powerText: {fileID: 85682852}
   descriptionText: {fileID: 803351290}
+  Battlepowertext: {fileID: 57793432}
   thisSprite: {fileID: 0}
   thatImage: {fileID: 703239040}
   frame: {fileID: 1773740931}
