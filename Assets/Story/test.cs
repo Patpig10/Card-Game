@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using DS.ScriptableObjects; // Add this to include the correct namespace
+using DS.ScriptableObjects; 
 
 public class test : MonoBehaviour
 {
@@ -11,12 +11,12 @@ public class test : MonoBehaviour
     [SerializeField] public TextMeshProUGUI nameUI;
 
 
-    private DSDialogueSO currentDialogue; // Update the type to DSDialogueSO
+    private DSDialogueSO currentDialogue; 
 
     private void Awake()
     {
         currentDialogue = startingDialogue;
-        ShowText(); // Call this method to display the starting dialogue immediately if needed
+        ShowText(); 
     }
 
     private void ShowText()
@@ -25,7 +25,7 @@ public class test : MonoBehaviour
         nameUI.text = currentDialogue.Speaker;
     }
 
-    public void OnOptionChosen(int choiceIndex) // Make this method public if you want to call it from outside
+    public void OnOptionChosen(int choiceIndex) 
     {
         if (choiceIndex < 0 || choiceIndex >= currentDialogue.Choices.Count)
         {
@@ -44,4 +44,7 @@ public class test : MonoBehaviour
         currentDialogue = nextDialogue;
         ShowText();
     }
+
+
+
 }
